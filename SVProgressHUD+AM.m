@@ -1,6 +1,6 @@
-#import "SVProgressHUD+AMExtension.h"
+#import "SVProgressHUD+AM.h"
 
-@implementation SVProgressHUD (AMExtension)
+@implementation SVProgressHUD (AM)
 
 + (void)wx_showMaskTypeBlack
 {
