@@ -1,11 +1,17 @@
+//
+//  UIImageView+AM.h
+//  VRMAX
+//
+//  Created by AngieMita on 16/6/6.
+//  Copyright © 2016年 VRGATE. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (AM)
 
-+ (nullable UIImageView *)wx_imageViewWithImageName:(nullable NSString *)imageName
-                                              frame:(CGRect)frame;
+- (void)wx_setImageWithURLString:(NSString *)urlString;
 
-+ (nullable UIImageView *)wx_imageViewWithImageName:(nullable NSString *)imageName
-                               highlightedImageName:(nullable NSString *)highlightedImageName
-                                              frame:(CGRect)frame;
+- (void)wx_setImageWithURLString:(NSString *)urlString placeholderImageName:(NSString *)placeholder;
+
 @end

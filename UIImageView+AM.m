@@ -1,24 +1,23 @@
-#import "UIImageView+AM.h"
+//
+//  UIImageView+AM.m
+//  VRMAX
+//
+//  Created by AngieMita on 16/6/6.
+//  Copyright © 2016年 VRGATE. All rights reserved.
+//
 
+#import "UIImageView+AM.h"
+#import <UIImageView+WebCache.h>
 @implementation UIImageView (AM)
 
-+ (nullable UIImageView *)wx_imageViewWithImageName:(nullable NSString *)imageName frame:(CGRect)frame
+- (void)wx_setImageWithURLString:(NSString *)urlString
 {
-    UIImage *image = [UIImage imageNamed:imageName];
-    UIImageView *iconView = [[UIImageView alloc] initWithImage:image];
-    iconView.frame = frame;
-    return iconView;
+    [self sd_setImageWithURL:[NSURL URLWithString:urlString]];
 }
 
-
-+ (nullable UIImageView *)wx_imageViewWithImageName:(nullable NSString *)imageName
-                               highlightedImageName:(nullable NSString *)highlightedImageName
-                                              frame:(CGRect)frame
+- (void)wx_setImageWithURLString:(NSString *)urlString placeholderImageName:(NSString *)placeholder
 {
-    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]
-                                              highlightedImage:[UIImage imageNamed:highlightedImageName]];
-    iconView.frame = frame;
-    return iconView;
+    [self sd_setImageWithURL:[NSURL URLWithString:urlString] placeholderImage:[UIImage imageNamed:placeholder]];
 }
 
 @end
