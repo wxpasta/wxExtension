@@ -1,11 +1,3 @@
-//
-//  NSString+Util.m
-//  VRMAX
-//
-//  Created by VRGATE on 16/5/26.
-//  Copyright © 2016年 VRGATE. All rights reserved.
-//
-
 #import "NSString+Util.h"
 
 @implementation NSString (Util)
