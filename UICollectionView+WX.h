@@ -1,3 +1,11 @@
+//
+//  UICollectionView+WX.h
+//  VRMAX
+//
+//  Created by AngieMita on 16/6/6.
+//  Copyright © 2016年 VRGATE. All rights reserved.
+//
+
 #import <UIKit/UIKit.h>
 
 @interface UICollectionView (WX)
@@ -19,6 +27,12 @@
 
 - (void)wx_registerSectionHeaderClassName:(NSString *)className;
 
+- (void)wx_registerSectionFooterNibClass:(Class)customClass;
+
+- (void)wx_registerSectionFooterClass:(Class)customClass;
+
+- (void)wx_registerSectionFooterClassName:(NSString *)className;
+
 #pragma mark -
 - (void)wx_registerNib:(NSString *)nibname forCellWithReuseIdentifier:(NSString *)identifier;
 
@@ -31,5 +45,11 @@
 - (void)wx_registerSectionHeaderNibClass:(Class)customClass forCellWithReuseIdentifier:(NSString *)identifier;
 
 - (void)wx_registerSectionHeaderClassName:(NSString *)className forCellWithReuseIdentifier:(NSString *)identifier;
+
+- (void)wx_registerSectionFooterNib:(NSString *)nibname forCellWithReuseIdentifier:(NSString *)identifier;
+
+- (void)wx_registerSectionFooterNibClass:(Class)customClass forCellWithReuseIdentifier:(NSString *)identifier;
+
+- (void)wx_registerSectionFooterClassName:(NSString *)className forCellWithReuseIdentifier:(NSString *)identifier;
 
 @end
