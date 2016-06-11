@@ -11,23 +11,19 @@
 @implementation UIBarButtonItem (WX)
 
 
-- (instancetype)wx_itemWithTtile:(NSString *)title
-                           color:(UIColor *)color
-                          target:(id)target
-                          addTarget:(SEL)action
-                           frame:(CGRect)frame
-      contentHorizontalAlignment:(UIControlContentHorizontalAlignment)contentHorizontalAlignment
++ (instancetype)wx_itemWithImageName:(NSString *)imageName
+                       highImageName:(NSString *)highImageName
+                           addTarget:(id)target
+                              action:(SEL)action
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = frame;
-    [btn setTitle:title forState:UIControlStateNormal];
-   
-    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    
-    [btn setTitleColor:color forState:UIControlStateNormal];
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-
-    return [[UIBarButtonItem alloc]initWithCustomView:btn];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:highImageName] forState:UIControlStateHighlighted];
+    button.size = button.currentBackgroundImage.size;
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[self alloc] initWithCustomView:button];
 }
+
+
 
 @end
