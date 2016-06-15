@@ -32,4 +32,6 @@
 -(void)wx_setWidthKeepRight:(CGFloat)awidth;
 -(void)wx_setLeftKeepRight:(CGFloat)aleft;
 
+- (BOOL)wx_intersectWithView:(UIView *)view;
+
 @end

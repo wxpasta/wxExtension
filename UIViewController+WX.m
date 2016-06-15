@@ -28,4 +28,9 @@
 {
     return [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] lastObject];
 }
+
++ (instancetype)wx_viewControllerWithNibNameWithClass:(Class)coustomClass
+{
+    return [[coustomClass alloc] initWithNibName:NSStringFromClass([coustomClass class]) bundle:nil];
+}
 @end

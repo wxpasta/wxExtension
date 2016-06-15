@@ -16,4 +16,6 @@
 - (instancetype)wx_nibLastObjectWithClass:(Class)coustomClass;
 - (instancetype)wx_nibLastObjectWithNibName:(NSString *)nibName;
 
++ (instancetype)wx_viewControllerWithNibNameWithClass:(Class)coustomClass;
+
 @end

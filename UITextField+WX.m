@@ -14,9 +14,6 @@ static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabe
 
 @implementation UITextField (WX)
 
-@dynamic wx_placeHolderTextFont;
-@dynamic wx_placeHolderTextColor;
-
 - (void)setWx_placeHolderTextFont:(UIColor *)font
 {
     [self setValue:font forKeyPath:kTextFieldPlaceholderLabelFont];
@@ -25,6 +22,16 @@ static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabe
 - (void)setWx_placeHolderTextColor:(UIColor *)color
 {
     [self setValue:color forKeyPath:kTextFieldPlaceholderLabelTextColor];
+}
+
+- (UIColor *)wx_placeHolderTextColor
+{
+    return [self valueForKeyPath:kTextFieldPlaceholderLabelTextColor];
+}
+
+- (UIColor *)wx_placeHolderTextFont
+{
+    return [self valueForKeyPath:kTextFieldPlaceholderLabelFont];
 }
 
 @end
