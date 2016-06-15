@@ -17,5 +17,5 @@
 #import "UICollectionView+WX.h"
 #import "UIViewController+WX.h"
 
-#import "NSObject+Protocol.h"
-#import "UIViewController+VRMAX.h"
+
+#import "UINavigationBar+WX.h"

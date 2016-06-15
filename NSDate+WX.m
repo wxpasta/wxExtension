@@ -14,7 +14,6 @@
 {
     // 判断self这个日期是否为今年
     NSCalendar *calendar = [NSCalendar calendar];
-    
     // 年
     NSInteger selfYear = [calendar component:NSCalendarUnitYear fromDate:self];
     NSInteger nowYear = [calendar component:NSCalendarUnitYear fromDate:[NSDate date]];
