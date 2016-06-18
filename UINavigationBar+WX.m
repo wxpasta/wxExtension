@@ -13,7 +13,7 @@
 - (void)wx_setPureColorNavigationBar:(NSString *)imageName
 {
     [self setBackgroundImage:[UIImage imageNamed:imageName] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    [self setShadowImage:[UIImage imageNamed:imageName]];
+    [self setShadowImage:[[UIImage alloc]init]];
     
 }
 

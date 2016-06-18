@@ -40,4 +40,7 @@
 
 + (instancetype)circleImage:(NSString *)name;
 
+
+- (UIImage *)imageWithCornerRadius:(CGFloat)radius;
+
 @end
