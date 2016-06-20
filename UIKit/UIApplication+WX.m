@@ -38,7 +38,7 @@
     
     NSURL * url = [NSURL URLWithString:urlString];
     
-    if ([app openURL:url]) {
+    if ([app canOpenURL:url]) {
         [app openURL:url];
         return YES;
     }else{
