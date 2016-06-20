@@ -6,13 +6,13 @@
 #pragma mark -
 - (void)wx_addHeaderForScrollWithAddTarget:(nullable id)target action:(nullable SEL)action
 {
-    self.mj_header = [MJRefreshHeader headerWithRefreshingTarget:target refreshingAction:@selector(action)];
+    self.mj_header = [MJRefreshHeader headerWithRefreshingTarget:target refreshingAction:action];
     [self.mj_header beginRefreshing];
 }
 
 - (void)wx_addFooterForScrollWithAddTarget:(nullable id)target action:(nullable SEL)action
 {
-    self.mj_footer = [MJRefreshFooter footerWithRefreshingTarget:target refreshingAction:@selector(action)];
+    self.mj_footer = [MJRefreshFooter footerWithRefreshingTarget:target refreshingAction:action];
 }
 - (void)wx_removeFooterForScroll
 {

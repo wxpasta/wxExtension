@@ -25,4 +25,5 @@
 {
     return [[coustomClass alloc] initWithNibName:NSStringFromClass([coustomClass class]) bundle:nil];
 }
+
 @end

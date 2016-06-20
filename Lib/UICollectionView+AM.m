@@ -15,13 +15,13 @@
 #pragma mark -
 - (void)wx_addHeaderForCollectionWithAddTarget:(nullable id)target action:(nullable SEL)action
 {
-    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:target refreshingAction:@selector(action)];
+    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:target refreshingAction:action];
     [self.mj_header beginRefreshing];
 }
 
 - (void)wx_addFooterForCollectionWithAddTarget:(nullable id)target action:(nullable SEL)action
 {
-    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:target refreshingAction:@selector(action)];
+    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:target refreshingAction:action];
 }
 - (void)wx_removeFooterForCollection
 {
