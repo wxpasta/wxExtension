@@ -21,6 +21,15 @@
 + (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name;
 
 /**
+ *  获取文件的全路径的数组
+ *
+ *  @param name
+ *
+ *  @return 
+ */
++ (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name;
+
+/**
  *  读取info.plist某个值
  *
  *  @param key

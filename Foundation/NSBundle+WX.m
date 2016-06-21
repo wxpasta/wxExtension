@@ -13,6 +13,12 @@
     return [NSDictionary dictionaryWithContentsOfFile:filePath];
 }
 
++ (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    return [NSArray arrayWithContentsOfFile:filePath];
+}
+
 
 + (nullable NSString *)wx_infoDictionary:(nullable NSString *)key
 {
