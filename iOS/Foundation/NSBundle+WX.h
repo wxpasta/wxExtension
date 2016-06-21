@@ -47,5 +47,21 @@
  */
 + (nullable NSString *)wx_infoPlistForKey:(nullable NSString *)key;
 
+/**
+ *  得到数组最后的对象
+ *
+ *  @param coustomClass
+ *
+ *  @return
+ */
++ (nullable instancetype)wx_loadLastNibNamedClass:(nonnull Class)coustomClass;
 
+/**
+ *  得到数组最后的对象
+ *
+ *  @param nibName
+ *
+ *  @return
+ */
++ (nullable instancetype)wx_loadLastNibNamed:(nonnull NSString *)nibName;
 @end

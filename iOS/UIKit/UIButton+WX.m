@@ -44,4 +44,44 @@
     
     return btn;
 }
+
++ (nullable instancetype)wx_buttonWithImageName:(nullable NSString *)imageName
+                                  highImageName:(nullable NSString *)highImageName
+                                      addTarget:(nullable id)target
+                                         action:(nullable SEL)action
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:highImageName] forState:UIControlStateHighlighted];
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    return btn;
+}
+
++ (nullable instancetype)wx_buttonWithImageName:(nullable NSString *)imageName
+                                  highImageName:(nullable NSString *)highImageName
+                                          title:(nullable NSString *)title
+                                      highTitle:(nullable NSString *)highTitle
+                                     titleColor:(nullable UIColor *)titleColor
+                                 highTitleColor:(nullable UIColor *)highTitleColor
+                                      addTarget:(nullable id)target
+                                         action:(nullable SEL)action
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:highImageName] forState:UIControlStateHighlighted];
+    
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitle:highTitle forState:UIControlStateHighlighted];
+    
+    [btn setTitleColor:titleColor forState:UIControlStateNormal];
+    [btn setTitleColor:highTitleColor forState:UIControlStateHighlighted];
+
+    return btn;
+}
+
 @end

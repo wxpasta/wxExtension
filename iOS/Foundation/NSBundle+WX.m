@@ -19,7 +19,6 @@
     return [NSArray arrayWithContentsOfFile:filePath];
 }
 
-
 + (nullable NSString *)wx_infoDictionary:(nullable NSString *)key
 {
     return [NSBundle mainBundle].infoDictionary[key];
@@ -28,5 +27,15 @@
 + (nullable NSString *)wx_infoPlistForKey:(nullable NSString *)key
 {
     return [NSBundle mainBundle].infoDictionary[key];
+}
+
++ (nullable instancetype)wx_loadLastNibNamedClass:(nonnull Class)coustomClass
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([coustomClass class]) owner:nil options:nil] lastObject];
+}
+
++ (nullable instancetype)wx_loadLastNibNamed:(nonnull NSString *)nibName
+{
+    return [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] lastObject];
 }
 @end

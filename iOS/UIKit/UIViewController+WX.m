@@ -21,9 +21,19 @@
     return [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] lastObject];
 }
 
++ (instancetype)wx_viewControllerWithNibName:(NSString *)nibName
+{
+    return [[self alloc] initWithNibName:nibName bundle:nil];
+}
+
 + (instancetype)wx_viewControllerWithNibNameWithClass:(Class)coustomClass
 {
-    return [[coustomClass alloc] initWithNibName:NSStringFromClass([coustomClass class]) bundle:nil];
+    return [[self alloc] initWithNibName:NSStringFromClass([coustomClass class]) bundle:nil];
+}
+
++ (instancetype)wx_viewControllerWithNibName
+{
+    return [[self alloc] initWithNibName:NSStringFromClass([self class]) bundle:nil];
 }
 
 @end
