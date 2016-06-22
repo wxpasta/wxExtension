@@ -1,4 +1,5 @@
 #import "UIView+WX.h"
+#import "UIScreen+WX.h"
 
 @implementation UIView (WX)
 
@@ -161,4 +162,13 @@
     CGRect viewRect = [view convertRect:view.bounds toView:window];
     return CGRectIntersectsRect(selfRect, viewRect);
 }
+
++ (instancetype)wx_viewScreenFrameWithHeight:(CGFloat)height
+{
+    return [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].wx_screenWidth, height)];
+}
+
+
+
+
 @end

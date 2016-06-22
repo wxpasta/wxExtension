@@ -23,4 +23,6 @@
 - (void)wx_setLeftKeepRight:(CGFloat)aleft;
 - (BOOL)wx_intersectWithView:(UIView *)view;
 
++ (instancetype)wx_viewScreenFrameWithHeight:(CGFloat)height;
+
 @end
