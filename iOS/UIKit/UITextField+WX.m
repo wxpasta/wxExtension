@@ -28,7 +28,7 @@ static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabe
 
  - (void)wx_leftViewImageName:(nonnull NSString *)imageName  width:(CGFloat)width
 {
-    UIImageView *iv =[UIImageView wx_imageViewWithImageName:@"Icon_phone"];
+    UIImageView *iv =[UIImageView wx_imageViewWithImageName:imageName];
     iv.wx_width = width;
     iv.contentMode = UIViewContentModeCenter;
     self.leftView = iv;
