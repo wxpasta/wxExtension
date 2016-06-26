@@ -2,44 +2,38 @@
 
 @implementation NSFileManager (WX)
 
-- (NSString *)getDocumentsPath
++ (BOOL)wx_createfolder:(NSString *)folder path:(NSString *)path
 {
-    //获取Documents路径
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [paths objectAtIndex:0];
-    NSLog(@"path:%@", path);
-    return path;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *iOSDirectory = [path stringByAppendingPathComponent:folder];
+    return [fileManager createDirectoryAtPath:iOSDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+}
+
++ (BOOL)wx_createFile:(NSString *)file path:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *iOSPath = [path stringByAppendingPathComponent:file];
+    return [fileManager createFileAtPath:iOSPath contents:nil attributes:nil];
 }
 
 //创建文件夹
--(void)createDirectory{
-    NSString *documentsPath =[self getDocumentsPath];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *iOSDirectory = [documentsPath stringByAppendingPathComponent:@"iOS"];
-    BOOL isSuccess = [fileManager createDirectoryAtPath:iOSDirectory withIntermediateDirectories:YES attributes:nil error:nil];
-    if (isSuccess) {
-        NSLog(@"success");
-    } else {
-        NSLog(@"fail");
-    }
+- (BOOL)wx_createFolderToDocuments:(NSString *)folder
+{
+    NSString *documentsPath =[self wx_getDocumentsPath];
+    return [NSFileManager wx_createfolder:folder path:documentsPath];
 }
 
 //创建文件
--(void)createFile{
-    NSString *documentsPath =[self getDocumentsPath];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *iOSPath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
-    BOOL isSuccess = [fileManager createFileAtPath:iOSPath contents:nil attributes:nil];
-    if (isSuccess) {
-        NSLog(@"success");
-    } else {
-        NSLog(@"fail");
-    }
+- (BOOL)wx_createFileToDocuments:(NSString *)file
+{
+    NSString *documentsPath =[self wx_getDocumentsPath];
+    return [NSFileManager wx_createFile:file path:documentsPath];
 }
 
 //写文件
--(void)writeFile{
-    NSString *documentsPath =[self getDocumentsPath];
+-(void)writeFile
+{
+    NSString *documentsPath =[self wx_getDocumentsPath];
     NSString *iOSPath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
     NSString *content = @"我要写数据啦";
     BOOL isSuccess = [content writeToFile:iOSPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
@@ -51,22 +45,25 @@
 }
 
 //读取文件内容
--(void)readFileContent{
-    NSString *documentsPath =[self getDocumentsPath];
+-(void)readFileContent
+{
+    NSString *documentsPath =[self wx_getDocumentsPath];
     NSString *iOSPath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
     NSString *content = [NSString stringWithContentsOfFile:iOSPath encoding:NSUTF8StringEncoding error:nil];
     NSLog(@"read success: %@",content);
 }
 
 //判断文件是否存在
-- (BOOL)isSxistAtPath:(NSString *)filePath{
+- (BOOL)isSxistAtPath:(NSString *)filePath
+{
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isExist = [fileManager fileExistsAtPath:filePath];
     return isExist;
 }
 
 //计算文件大小
-- (unsigned long long)fileSizeAtPath:(NSString *)filePath{
+- (unsigned long long)fileSizeAtPath:(NSString *)filePath
+{
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isExist = [fileManager fileExistsAtPath:filePath];
     if (isExist){
@@ -79,7 +76,8 @@
 }
 
 //计算整个文件夹中所有文件大小
-- (unsigned long long)folderSizeAtPath:(NSString*)folderPath{
+- (unsigned long long)folderSizeAtPath:(NSString*)folderPath
+{
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isExist = [fileManager fileExistsAtPath:folderPath];
     if (isExist){
@@ -98,8 +96,9 @@
 }
 
 //删除文件
--(void)deleteFile{
-    NSString *documentsPath =[self getDocumentsPath];
+-(void)deleteFile
+{
+    NSString *documentsPath =[self wx_getDocumentsPath];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *iOSPath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
     BOOL isSuccess = [fileManager removeItemAtPath:iOSPath error:nil];
@@ -113,7 +112,7 @@
 //移动文件
 - (void)moveFileName
 {
-    NSString *documentsPath =[self getDocumentsPath];
+    NSString *documentsPath =[self wx_getDocumentsPath];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *filePath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
     NSString *moveToPath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
@@ -129,7 +128,7 @@
 - (void)renameFileName
 {
     //通过移动该文件对文件重命名
-    NSString *documentsPath =[self getDocumentsPath];
+    NSString *documentsPath =[self wx_getDocumentsPath];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *filePath = [documentsPath stringByAppendingPathComponent:@"iOS.txt"];
     NSString *moveToPath = [documentsPath stringByAppendingPathComponent:@"rename.txt"];

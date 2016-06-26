@@ -9,4 +9,10 @@
 
 - (void)wx_leftViewShowText:(nonnull NSString *)text rect:(CGRect)rect;
 - (void)wx_leftViewShowRightText:(nonnull NSString *)text rect:(CGRect)rect;
+
+- (void)wx_rightViewWithImageName:(nonnull NSString *)imageName
+                selectedImageName:(nonnull NSString *)selectedImageName
+                            width:(CGFloat)width
+                        addTarget:(nullable id)target
+                           action:(nonnull SEL)action;
 @end

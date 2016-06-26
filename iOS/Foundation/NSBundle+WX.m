@@ -9,13 +9,13 @@
 
 + (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSString *filePath = [NSBundle wx_pathForResource:name];
     return [NSDictionary dictionaryWithContentsOfFile:filePath];
 }
 
 + (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSString *filePath = [NSBundle wx_pathForResource:name];
     return [NSArray arrayWithContentsOfFile:filePath];
 }
 

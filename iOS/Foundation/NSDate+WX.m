@@ -13,17 +13,7 @@
     
     return selfYear == nowYear;
 }
-//- (BOOL)isThisYear
-//{
-//    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-//    fmt.dateFormat = @"yyyy";
-//
-//    // 年
-//    NSString *selfYear = [fmt stringFromDate:self];
-//    NSString *nowYear = [fmt stringFromDate:[NSDate date]];
-//
-//    return [selfYear isEqualToString:nowYear];
-//}
+
 - (BOOL)isToday
 {
     // 判断self这个日期是否为今天
@@ -38,18 +28,6 @@
     && selfCmps.month == nowCmps.month
     && selfCmps.day == nowCmps.day;
 }
-
-//- (BOOL)isToday
-//{
-//    // 判断self这个日期是否为今天
-//    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-//    fmt.dateFormat = @"yyyyMMdd";
-//
-//    NSString *selfString = [fmt stringFromDate:self];
-//    NSString *nowString = [fmt stringFromDate:[NSDate date]];
-//
-//    return [selfString isEqualToString:nowString];
-//}
 
 - (BOOL)isYesterday
 {
