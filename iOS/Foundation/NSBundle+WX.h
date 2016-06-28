@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSBundle (WX)
 
@@ -10,6 +11,7 @@
  *  @return
  */
 + (nullable NSString *)wx_pathForResource:(nullable NSString *)name;
++ (nullable NSString *)wx_pathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext;
 
 /**
  *  获取文件的全路径的字典
@@ -19,7 +21,7 @@
  *  @return
  */
 + (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name;
-
++ (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext;
 /**
  *  获取文件的全路径的数组
  *
@@ -28,6 +30,7 @@
  *  @return 
  */
 + (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name;
++ (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext;
 
 /**
  *  读取info.plist某个值
@@ -64,4 +67,22 @@
  *  @return
  */
 + (nullable instancetype)wx_loadLastNibNamed:(nonnull NSString *)nibName;
+
+/**
+ *  得到数组第一个的对象
+ *
+ *  @param coustomClass
+ *
+ *  @return
+ */
++ (nullable instancetype)wx_loadFirstNibNamedClass:(nonnull Class)coustomClass;
+
+/**
+ *  得到数组第一个的对象
+ *
+ *  @param nibName
+ *
+ *  @return
+ */
++ (nullable instancetype)wx_loadFirstNibNamed:(nonnull NSString *)nibName;
 @end

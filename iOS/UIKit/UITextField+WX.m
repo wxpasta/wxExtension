@@ -1,4 +1,6 @@
 #import "UITextField+WX.h"
+#import "UIImageView+WX.h"
+#import "UIView+WX.h"
 
 static NSString * const kTextFieldPlaceholderLabelFont = @"_placeholderLabel.font";
 static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabel.textColor";

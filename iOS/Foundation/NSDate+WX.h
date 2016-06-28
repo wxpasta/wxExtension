@@ -15,5 +15,7 @@
 - (BOOL)isTomorrow;
 
 
++ (instancetype)wx_1970;
++ (instancetype)wx_Today;
 
 @end

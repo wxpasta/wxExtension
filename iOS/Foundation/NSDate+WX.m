@@ -74,4 +74,15 @@
     && cmps.day == -1;
 }
 
+
++ (instancetype)wx_1970
+{
+    return [NSDate dateWithTimeIntervalSince1970:0];
+}
+
++ (instancetype)wx_Today
+{
+    return [NSDate date];
+}
+
 @end

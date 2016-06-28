@@ -2,8 +2,8 @@
 
 @interface UITextField (WX)
 
-@property(nonatomic) UIColor * wx_placeHolderTextColor;
-@property(nonatomic) UIColor * wx_placeHolderTextFont;
+@property(nonatomic, strong, nullable) UIColor * wx_placeHolderTextColor;
+@property(nonatomic, strong, nullable) UIColor * wx_placeHolderTextFont;
 
 - (void)wx_leftViewImageName:(nonnull NSString *)imageName  width:(CGFloat)width;
 
