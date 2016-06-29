@@ -40,4 +40,27 @@ typedef NS_ENUM(NSUInteger,HTTPSRequestType)
 - (nullable NSURLSessionDataTask *)wx_requestWithType:(HTTPSRequestType)type
                                             paraments:(nullable id)paraments
                                         completeBlock:(nullable wx_completeBlock)completeBlock;
+
+
+/**
+ *  上传文件方法
+ *
+ *  @param url            url地址
+ *  @param params         参数
+ *  @param progress       进度
+ *  @param fileDataArray  文件数组(图片数组)里面放的是NSData类型
+ *  @param name           文件参数名字
+ *  @param fileName       文件名字
+ *  @param mimeType       mimeType类型
+ *  @param completeBlock  block
+
+ */
+- (nullable NSURLSessionDataTask *)wx_fileUploadWithUrl:(nullable NSString *)url
+                                                 params:(nullable id)params
+                                               progress:(nullable void (^)(NSProgress * _Nullable downloadProgress))progress
+                                          fileDataArray:(nullable NSMutableArray *)fileDataArray
+                                                   name:(nullable NSString *)name
+                                               fileName:(nullable NSString *)fileName
+                                               mimeType:(nullable NSString *)mimeType
+                                          completeBlock:(nullable wx_completeBlock)completeBlock;
 @end

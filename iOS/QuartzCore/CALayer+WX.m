@@ -1,11 +1,3 @@
-//
-//  CALayer+WX.m
-//  xcode8New
-//
-//  Created by AngieMita on 16/6/22.
-//  Copyright © 2016年 AngieMita. All rights reserved.
-//
-
 #import "CALayer+WX.h"
 
 @implementation CALayer (WX)
@@ -20,5 +12,8 @@
 {
     return self.cornerRadius;
 }
+
+
+
 
 @end
