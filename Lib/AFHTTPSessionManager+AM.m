@@ -33,10 +33,10 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
             }progress:^(NSProgress * _Nonnull uploadProgress){
     
                 } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    NSLog(@"%@", responseObject);
-                    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                                         options:NSJSONReadingMutableContainers error:nil];
-                    NSLog(@"dict start ----\n%@   \n ---- end  -- ", dict);
+                    
+//                    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+//                                                                         options:NSJSONReadingMutableContainers error:nil];
+//                    NSLog(@"dict start ----\n%@   \n ---- end  -- ", dict);
                     // 请求成功，解析数据
                     completeBlock(responseObject,nil);
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -137,15 +137,15 @@ constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"%@", responseObject);
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                             options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"dict start ----\n%@   \n ---- end  -- ", dict);
+
+//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+//                                                             options:NSJSONReadingMutableContainers error:nil];
+//        NSLog(@"dict start ----\n%@   \n ---- end  -- ", dict);
         
         completeBlock(responseObject,nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         completeBlock(nil,error);
-        NSLog(@"error %@",error);
+
     }];
 }
 @end

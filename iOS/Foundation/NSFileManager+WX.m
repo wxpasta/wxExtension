@@ -48,7 +48,7 @@
     NSString *documentsPath = wx_getDocumentsPath();
     NSString *iOSPath = [documentsPath stringByAppendingPathComponent:file];
     NSString *content = [NSString stringWithContentsOfFile:iOSPath encoding:NSUTF8StringEncoding error:nil];
-    NSLog(@"read success: %@",content);
+//    NSLog(@"read success: %@",content);
 }
 
 //判断文件是否存在
