@@ -1,0 +1,29 @@
+#import "UICollectionView+MJRefresh.h"
+#import "MJRefresh.h"
+
+@implementation UICollectionView (MJRefresh)
+
+#pragma mark -
+- (void)wx_addHeaderForCollectionWithAddTarget:(nullable id)target action:(nullable SEL)action
+{
+    self.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:target refreshingAction:action];
+    [self.mj_header beginRefreshing];
+}
+
+- (void)wx_addFooterForCollectionWithAddTarget:(nullable id)target action:(nullable SEL)action
+{
+    self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:target refreshingAction:action];
+}
+- (void)wx_removeFooterForCollection
+{
+    [self.mj_footer endRefreshingWithNoMoreData];
+}
+
+- (void)wx_stopLoadingForCollection
+{
+    // 拿到当前的下拉刷新控件，结束刷新状态
+    [self.mj_header endRefreshing];
+    // 拿到当前的上拉刷新控件，结束刷新状态
+    [self.mj_footer endRefreshing];
+}
+@end
