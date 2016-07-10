@@ -12,55 +12,23 @@
     return [[NSBundle mainBundle] pathForResource:name ofType:ext];
 }
 
-+ (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name
-{
-    return [NSBundle wx_dictionaryWithPathForResource:name ofType:nil];
-}
-
-+ (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name  ofType:(nullable NSString *)ext
-{
-    NSString *filePath = [NSBundle wx_pathForResource:name ofType:ext];
-    return [NSDictionary dictionaryWithContentsOfFile:filePath];
-}
-
-+ (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name
-{
-    return [NSBundle wx_arayWithPathForResource:name ofType:nil];
-}
-
-+ (nullable NSArray *)wx_arayWithPathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext
-{
-    NSString *filePath = [NSBundle wx_pathForResource:name ofType:ext];
-    return [NSArray arrayWithContentsOfFile:filePath];
-}
-
-+ (nullable NSString *)wx_infoDictionary:(nullable NSString *)key
+#pragma mark -
++ (nullable NSString *)wx_bundleWithInfoDictionary:(nullable NSString *)key
 {
     return [NSBundle mainBundle].infoDictionary[key];
 }
 
-+ (nullable NSString *)wx_infoPlistForKey:(nullable NSString *)key
+#pragma mark -
+- (nullable NSArray *)wx_loadNibNamed:(nonnull NSString *)name
 {
-    return [NSBundle mainBundle].infoDictionary[key];
+    return [self loadNibNamed:name owner:nil options:nil];
 }
 
-+ (nullable instancetype)wx_loadLastNibNamedClass:(nonnull Class)coustomClass
+- (nullable NSArray *)wx_loadNibClassNamed:(nonnull Class)coustomClass
 {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([coustomClass class]) owner:nil options:nil] lastObject];
+    return [self wx_loadNibNamed:NSStringFromClass([coustomClass class])];
 }
 
-+ (nullable instancetype)wx_loadLastNibNamed:(nonnull NSString *)nibName
-{
-    return [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] lastObject];
-}
+#pragma mark -
 
-+ (nullable instancetype)wx_loadFirstNibNamedClass:(nonnull Class)coustomClass
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([coustomClass class]) owner:nil options:nil] firstObject];
-}
-
-+ (nullable instancetype)wx_loadFirstNibNamed:(nonnull NSString *)nibName
-{
-    return [[[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil] firstObject];
-}
 @end

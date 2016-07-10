@@ -2,7 +2,14 @@
 
 @interface UIImage (WX)
 
-+ (UIImage *)wx_imageRenderingModeAlwaysOriginalWithImageName:(NSString *)imageName;
+/**
+ *  给定一个最原始的图片名称生成一个原始的图片
+ *
+ *  @param imageName
+ *
+ *  @return
+ */
++ (instancetype)wx_imageWithOriginalImageName:(NSString *)imageName;
 
 /**
  *  图片的压缩方法

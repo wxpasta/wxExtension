@@ -4,7 +4,7 @@
 
 @implementation UIImage (WX)
 
-+ (UIImage *)wx_imageRenderingModeAlwaysOriginalWithImageName:(NSString *)imageName
++ (instancetype)wx_imageWithOriginalImageName:(NSString *)imageName
 {
     return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
