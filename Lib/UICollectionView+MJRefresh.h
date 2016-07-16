@@ -10,4 +10,5 @@
 
 - (void)wx_stopLoadingForCollection;
 
+- (void)wx_removeFooter;
 @end

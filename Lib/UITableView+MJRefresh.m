@@ -13,7 +13,16 @@
 
 - (void)wx_addHeaderForTableWithAddTarget:(nullable id)target action:(nullable SEL)action
 {
-    self.mj_header = [MJRefreshHeader headerWithRefreshingTarget:target refreshingAction:action];
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:target refreshingAction:action];
+    
+    header.lastUpdatedTimeLabel.textColor = [UIColor colorWithHexString:@"#8d8d8d"];
+    header.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:13];
+    
+    header.stateLabel.textColor = [UIColor colorWithHexString:@"#8d8d8d"];
+    header.stateLabel.font = [UIFont systemFontOfSize:13];
+    
+    self.mj_header = header;
+    
     [self.mj_header beginRefreshing];
 }
 

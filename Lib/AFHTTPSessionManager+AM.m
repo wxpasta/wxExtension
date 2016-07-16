@@ -11,6 +11,11 @@
             progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                
+//            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject
+//                                                                 options:NSJSONReadingMutableContainers error:nil];
+//            NSLog(@"dict start ----\n%@   \n ---- end  -- ", dict);
+                
                 completeBlock(responseObject,nil);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 completeBlock(nil,error);

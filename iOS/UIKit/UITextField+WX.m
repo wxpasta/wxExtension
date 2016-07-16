@@ -56,7 +56,6 @@ static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabe
     
 }
 
-
 - (void)wx_rightViewWithImageName:(nonnull NSString *)imageName
                 selectedImageName:(nonnull NSString *)selectedImageName
                             width:(CGFloat)width
@@ -64,19 +63,12 @@ static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabe
                            action:(SEL)action
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 40, width);
+    btn.frame = CGRectMake(0, 0, width, self.wx_height);
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:selectedImageName] forState:UIControlStateSelected];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     self.rightView = btn;
     self.rightViewMode = UITextFieldViewModeAlways;
 }
-
-
-
-
-
-
-
 
 @end
