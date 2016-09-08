@@ -8,8 +8,6 @@
 @property (nonatomic, assign, readonly) CGPoint wx_screenOrigin;
 
 
-
-
-
+@property (nonatomic, assign, readonly) CGFloat wx_screenScale;
 
 @end

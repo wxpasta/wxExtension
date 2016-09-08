@@ -168,7 +168,15 @@
     return [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].wx_screenWidth, height)];
 }
 
+-(CGFloat)wx_widthResolution
+{
+    return self.wx_width * [UIScreen mainScreen].wx_screenScale;
+}
 
+-(CGFloat)wx_heighthResolution
+{
+    return self.wx_height * [UIScreen mainScreen].wx_screenScale;
+}
 
 
 @end

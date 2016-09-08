@@ -14,8 +14,10 @@
 @property (nonatomic, assign) CGSize wx_size;
 @property (nonatomic, assign) CGPoint wx_origin;
 
-- (BOOL)wx_isShowingOnKeyWindow;
+@property (nonatomic, assign, readonly) CGFloat wx_widthResolution;
+@property (nonatomic, assign, readonly) CGFloat wx_heighthResolution;
 
+- (BOOL)wx_isShowingOnKeyWindow;
 
 + (instancetype)wx_viewFromXib;
 

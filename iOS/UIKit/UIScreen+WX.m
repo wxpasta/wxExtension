@@ -22,4 +22,9 @@
     return [UIScreen mainScreen].bounds.origin;
 }
 
+-(CGFloat)wx_screenScale
+{
+    return [UIScreen mainScreen].scale;
+}
+
 @end
