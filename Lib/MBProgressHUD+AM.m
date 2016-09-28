@@ -24,8 +24,9 @@ static const BOOL kMBProgressHUDIsAnimated = YES;
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:animated];
     hud.mode = MBProgressHUDModeText;
-    hud.labelText = text;
-    [hud hide:YES afterDelay:delay];
+    
+    hud.label.text = text;
+    [hud hideAnimated:YES afterDelay:delay];
 }
 
 @end
