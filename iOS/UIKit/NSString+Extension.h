@@ -34,6 +34,18 @@ typedef enum : NSUInteger {
 //解决IOS 中文unicode编码问题
 + (NSString *)replaceUnicode:(NSString *)unicodeStr;
 
-- (NSString *)setTextWithStr:(NSString *)str
-           textToSpeechState:(BJTextToSpeechState)state;
++(instancetype)wx_stringWithString:(NSString *)string state:(BJTextToSpeechState)state;
+
+- (NSString *)urlencode:(NSString*)data;
+
+//词典转换为字符串
+- (NSString*)dictionaryToJson:(NSDictionary *)dic;
+/*!
+ * @brief 把格式化的JSON格式的字符串转换成字典
+ * @param jsonString JSON格式的字符串
+ * @return 返回字典
+ */
+
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
 @end
