@@ -12,10 +12,6 @@
 
 /**
  *  获取文件的全路径的字典
- *
- *  @param name
- *
- *  @return
  */
 + (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name;
 + (nullable NSDictionary *)wx_dictionaryWithPathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext;

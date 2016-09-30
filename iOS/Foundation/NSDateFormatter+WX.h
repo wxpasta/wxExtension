@@ -12,5 +12,7 @@
 
 + (instancetype)wx_dateFormat:(NSString *)dateFormat;
 
-+ (NSString *)wx_dateFormat:(NSString *)dateFormat dateChamge:(NSDate *)date;
++ (NSString *)wx_stringFromDate:(NSDate *)date dateFormat:(NSString *)dateFormat;
++ (NSString *)wx_stringFromToday:(NSString *)dateFormat;
+
 @end

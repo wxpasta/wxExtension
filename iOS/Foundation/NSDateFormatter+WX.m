@@ -17,12 +17,16 @@
     return fmt;
 }
 
-+ (NSString *)wx_dateFormat:(NSString *)dateFormat dateChamge:(NSDate *)date
++ (NSString *)wx_stringFromDate:(NSDate *)date dateFormat:(NSString *)dateFormat
 {
     NSDateFormatter *fmt = [NSDateFormatter wx_dateFormat:dateFormat];
     return  [fmt stringFromDate:date];
 }
 
-
++ (NSString *)wx_stringFromToday:(NSString *)dateFormat
+{
+    NSString *dateTime = [NSDateFormatter  wx_stringFromDate:[NSDate date] dateFormat:dateFormat];
+    return dateTime;
+}
 
 @end

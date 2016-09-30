@@ -5,9 +5,9 @@
 /**
  *  给定一个最原始的图片名称生成一个原始的图片
  *
- *  @param imageName
+ *  @param imageName 图片名称
  *
- *  @return
+ *  @return UIImage
  */
 + (instancetype)wx_imageWithOriginalImageName:(NSString *)imageName;
 

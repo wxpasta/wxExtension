@@ -5,20 +5,12 @@
 
 /**
  *  获取文件的全路径
- *
- *  @param name
- *
- *  @return
  */
 + (nullable NSString *)wx_pathForResource:(nullable NSString *)name;
 + (nullable NSString *)wx_pathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext;
 
 /**
  *  读取info.plist某个值
- *
- *  @param key
- *
- *  @return
  */
 + (nullable NSString *)wx_bundleWithInfoDictionary:(nullable NSString *)key;
 

@@ -2,35 +2,46 @@
 
 @implementation NSFileManager (WX)
 
-
-
-
-+ (BOOL)wx_createfolder:(NSString *)folder path:(NSString *)path
++ (BOOL)wx_createDirectory:(NSString *)directory AtPath:(NSString *)path
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *iOSDirectory = [path stringByAppendingPathComponent:folder];
-    return [fileManager createDirectoryAtPath:iOSDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    NSString *directorypath = [path stringByAppendingPathComponent:directory];
+    return [fileManager createDirectoryAtPath:directorypath withIntermediateDirectories:YES attributes:nil error:nil];
 }
 
-+ (BOOL)wx_createFile:(NSString *)file path:(NSString *)path
++ (BOOL)wx_createFile:(NSString *)file AtPath:(NSString *)path
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *iOSPath = [path stringByAppendingPathComponent:file];
     return [fileManager createFileAtPath:iOSPath contents:nil attributes:nil];
 }
 
-//创建文件夹 在Documents
-+ (BOOL)wx_createFolderToDocuments:(NSString *)folder
+//创建目录 在Documents
++ (BOOL)wx_createDirectoryToDocuments:(NSString *)directory
 {
     NSString *documentsPath = wx_getDocumentsPath();
-    return [NSFileManager wx_createfolder:folder path:documentsPath];
+    return [NSFileManager wx_createDirectory:directory AtPath:documentsPath];
 }
 
 //创建文件 在Documents
 + (BOOL)wx_createFileToDocuments:(NSString *)file
 {
     NSString *documentsPath = wx_getDocumentsPath();
-    return [NSFileManager wx_createFile:file path:documentsPath];
+    return [NSFileManager wx_createFile:file AtPath:documentsPath];
+}
+
+//创建目录 在Caches
++ (BOOL)wx_createDirectoryToCaches:(NSString *)directory
+{
+    NSString *path = wx_getCachesPath();
+    return [NSFileManager wx_createDirectory:directory AtPath:path];
+}
+
+//创建文件 在Caches
++ (BOOL)wx_createFileToCaches:(NSString *)folder
+{
+    NSString *path = wx_getCachesPath();
+    return [NSFileManager wx_createFile:folder AtPath:path];
 }
 
 //写文件 在Documents
@@ -48,7 +59,7 @@
     NSString *documentsPath = wx_getDocumentsPath();
     NSString *iOSPath = [documentsPath stringByAppendingPathComponent:file];
     NSString *content = [NSString stringWithContentsOfFile:iOSPath encoding:NSUTF8StringEncoding error:nil];
-//    NSLog(@"read success: %@",content);
+    //    NSLog(@"read success: %@",content);
 }
 
 //判断文件是否存在
@@ -120,7 +131,7 @@
     return [fileManager moveItemAtPath:filePath toPath:moveToPath error:nil];
 }
 
-//获取沙盒根目录 
+//获取沙盒根目录
 FOUNDATION_EXPORT NSString *wx_getDirectoryPath(void)
 {
     return NSHomeDirectory();

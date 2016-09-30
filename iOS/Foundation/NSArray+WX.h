@@ -12,10 +12,6 @@
 
 /**
  *  获取文件的全路径的数组
- *
- *  @param name
- *
- *  @return
  */
 + (nullable NSArray *)wx_arrayWithPathForResource:(nullable NSString *)name;
 + (nullable NSArray *)wx_arrayWithPathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext;

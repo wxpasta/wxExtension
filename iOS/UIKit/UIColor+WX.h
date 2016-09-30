@@ -13,7 +13,7 @@
  *
  *  @param color color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
  *
- *  @return
+ *  @return UIColor
  */
 + (UIColor *)colorWithHexString:(NSString *)color;
 
@@ -23,30 +23,14 @@
  *  @param color 支持@“#123456”、 @“0X123456”、 @“123456”三种格式
  *  @param alpha 0.0~1.0
  *
- *  @return
+ *  @return UIColor
  */
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 
-/**
- *  
- *
- *  @param hexValue <#hexValue description#>
- *  @param alpha    <#alpha description#>
- *
- *  @return
- */
+
 + (UIColor *)colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alpha;
 
-/**
- *  RGBA
- *
- *  @param r 0~255
- *  @param g 0~255
- *  @param b 0~255
- *  @param a 0~1
- *
- *  @return
- */
+
 + (UIColor *)wx_colorWithRGBAWithRed:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(NSInteger)alpha;
 
 @end
