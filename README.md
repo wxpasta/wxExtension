@@ -11,7 +11,7 @@
 2.1| WX | iOS/Foundation|----|
 2.2| WX | iOS/QuartzCore|----|
 2.3| WX | iOS/UIKit|----|
-
+2.4| WX | iOS/AVFoundation|----|
 
 #结构
 - Lib
