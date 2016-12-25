@@ -4,6 +4,6 @@
 
 ----|name|type|----|
 ----|----|----|----|
-1| Objective-C | Lib|system|
+1| Objective-C | iOS|system|
 2| Swift | iOS|system|
-3| Tool | |----|
+3| Tool |Objective-C 和 Swift |----|
