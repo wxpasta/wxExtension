@@ -1,17 +1,9 @@
 #wxExtension
-</br>
-简化是为了偷懒,方便新手使用 
-----------------------
-</br>
+
+常用代码整理中
 
 ----|name|type|----|
 ----|----|----|----|
 1| Objective-C | Lib|system|
 2| Swift | iOS|system|
 3| Tool | |----|
-
-	- Foundation
-	- QuartzCore
-	- UIKit
-	
-
