@@ -13,7 +13,7 @@
 //***********************  centerX  ***********************//
 - (CGFloat)wx_centerX
 {
-    return CGRectGetMinX(self.frame);
+    return self.center.x;
 }
 
 - (void)setWx_centerX:(CGFloat)centerX
@@ -25,7 +25,7 @@
 //***********************  centerY  ***********************//
 - (CGFloat)wx_centerY
 {
-    return CGRectGetMinY(self.frame);
+    return self.center.y;
 }
 
 - (void)setWx_centerY:(CGFloat)centerY
