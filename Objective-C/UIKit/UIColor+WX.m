@@ -1,17 +1,17 @@
 #import "UIColor+WX.h"
-
+#import "NSString+Color.h"
 #define kImageWidth  1
 #define kImageHeight 1
 
 @implementation UIColor (WX)
 
-+ (UIImage *)imageWithColor:(UIColor *)color
++ (UIImage *)wx_imageWithColor:(UIColor *)color
 {
-    return [[self class] imageWithColor:color size:CGSizeMake(kImageWidth, kImageHeight)];
+    return [[self class] wx_imageWithColor:color size:CGSizeMake(kImageWidth, kImageHeight)];
 }
 
 ///< 根据颜色、图片大小 生成图片
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
++ (UIImage *)wx_imageWithColor:(UIColor *)color size:(CGSize)size
 {
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     
@@ -31,7 +31,7 @@
     return image;
 }
 
-+ (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
++ (UIColor *)wx_colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
 {
     //删除字符串中的空格
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
@@ -86,12 +86,12 @@
 }
 
 //默认alpha值为1
-+ (UIColor *)colorWithHexString:(NSString *)color
++ (UIColor *)wx_colorWithHexString:(NSString *)color
 {
-    return [self colorWithHexString:color alpha:1.0f];
+    return [self wx_colorWithHexString:color alpha:1.0f];
 }
 
-+ (UIColor *)colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alpha
++ (UIColor *)wx_colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alpha
 {
     return [UIColor colorWithRed:((CGFloat)((hexValue & 0xFF0000) >> 16)) / 255.0
                            green:((CGFloat)((hexValue & 0xFF00) >> 8)) / 255.0
@@ -104,5 +104,34 @@
     return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha];
 }
 
+
++ (NSString *)wx_hexFromUIColor:(UIColor *)color{
+    if (CGColorGetNumberOfComponents(color.CGColor) < 4) {
+        const CGFloat *components = CGColorGetComponents(color.CGColor);
+        color = [UIColor colorWithRed:components[0]
+                                green:components[0]
+                                 blue:components[0]
+                                alpha:components[1]];
+    }
+    
+    if (CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) != kCGColorSpaceModelRGB) {
+        return [NSString stringWithFormat:@"#FFFFFF"];
+    }
+    
+    const CGFloat *cs = CGColorGetComponents(color.CGColor);
+    NSString *r = [NSString  wx_toHex:cs[0]*255];
+    NSString *g = [NSString wx_toHex:cs[1]*255];
+    NSString *b = [NSString wx_toHex:cs[1]*255];
+    return [NSString stringWithFormat:@"#%@%@%@",r,g,b];
+}
+
+
++ (UIColor *)wx_randomColor
+{
+    CGFloat red = arc4random_uniform(255)/255.0;
+    CGFloat green = arc4random_uniform(255)/255.0;
+    CGFloat blue = arc4random_uniform(255)/255.0;
+    return [UIColor colorWithRed:red green:green blue:blue alpha:1];
+}
 
 @end
