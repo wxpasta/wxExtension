@@ -1,9 +1,7 @@
 //
 //  VC-Extension.swift
-//  DYZB
 //
 //  Created by 巴糖 on 2017/5/1.
-//  Copyright © 2017年 小码哥. All rights reserved.
 //
 
 import UIKit

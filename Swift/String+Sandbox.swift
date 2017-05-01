@@ -1,9 +1,7 @@
 //
 //  String+Sandbox.swift
 //
-//
 //  Created by 巴糖 on 2016/12/19.
-//  Copyright © 2016年 巴糖. All rights reserved.
 //
 
 import Foundation
