@@ -25,6 +25,13 @@ static FMDatabaseManager *_manager;
     dispatch_once(&onceToken, ^{
         _manager = [[FMDatabaseManager alloc] init];
     });
+    
+    // 防止子类使用
+    NSString *classString = NSStringFromClass([self class]);
+    if ([classString isEqualToString:@"FMDatabaseManager"] == NO) {
+        NSParameterAssert(nil);
+    }
+    
     return _manager;
 }
 
