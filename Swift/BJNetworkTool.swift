@@ -36,7 +36,6 @@ class BJNetworkTool {
                     #if DEBUG// 判断是否在测试环境下
                     print(response.result.error ?? "")
                     #endif
-                    
                     finishedCallback(nil, response.result.error)
                     return
                 }

@@ -2,29 +2,56 @@
 //  BJLog.swift
 //  vshiMessge
 //
-//  Created by 0547 on 2017/6/30.
+//  Created by 巴糖 on 2017/6/30.
 //  Copyright © 2017年 巴糖. All rights reserved.
 //
 
 import UIKit
 
-func BJErrorPrint( _ defaultString: String, _ error: Error, file: String = #file, methodName: String = #function, lineNumber: Int = #line) {
-    #if DEBUG// 判断是否在测试环境下
-        // TODO
+func BJPrint<T>(_ message: T,
+             file: String = #file,
+             methodName: String = #function,
+             lineNumber: Int = #line){
+    
+    #if DEBUG
+        // 文件名称
         let fileName = (file as NSString).lastPathComponent
-        print("\n\(fileName)[\(lineNumber)].\(methodName):\(defaultString): \(error)")
+        let datestr = Date().toSting()
+        let consoleStr = "\(fileName)[\(lineNumber)].\(methodName): \(message)"
+        print("\(datestr) \(consoleStr)\n")
     #else
-        // TODO
+        
     #endif
-    // 回调
 }
 
-func BJPrint<T>(_ message: T, file: String = #file, methodName: String = #function, lineNumber: Int = #line){
-    
-    #if DEBUG // 若是Debug模式下，则打印
-        let fileName = (file as NSString).lastPathComponent
-        print("\n\(fileName)[\(lineNumber)].\(methodName): \(message)")
-    #else
-        // TODO
-    #endif
+func BJLog<T>(_ message: T,
+           file: String = #file,
+           methodName: String = #function,
+           lineNumber: Int = #line){
+    // 文件名称
+    let fileName = (file as NSString).lastPathComponent
+    let datestr = Date().toSting()
+    let consoleStr = "\(fileName)[\(lineNumber)].\(methodName): \(message)"
+    //将内容同步写到文件中去（Caches文件夹下）
+    appendText(fileURL: LogFileURL, string: "\(datestr) \(consoleStr)")
+}
+
+//在文件末尾追加新内容
+func appendText(fileURL: URL, string: String) {
+    do {
+        //如果文件不存在则新建一个
+        if !FileManager.default.fileExists(atPath: fileURL.path) {
+            FileManager.default.createFile(atPath: fileURL.path, contents: nil)
+        }
+        
+        let fileHandle = try FileHandle(forWritingTo: fileURL)
+        let stringToWrite = "\n" + string
+        
+        //找到末尾位置并添加
+        fileHandle.seekToEndOfFile()
+        fileHandle.write(stringToWrite.data(using: String.Encoding.utf8)!)
+        
+    } catch let error as NSError {
+        print("failed to append: \(error)")
+    }
 }
