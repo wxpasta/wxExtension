@@ -12,6 +12,6 @@
 + (instancetype)wx_viewControllerWithNibName:(NSString *)nibName;
 + (instancetype)wx_viewControllerWithNibNameWithClass:(Class)coustomClass;
 
-
+- (BOOL)isVisible;
 
 @end

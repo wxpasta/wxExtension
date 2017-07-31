@@ -36,4 +36,8 @@
     return [[self alloc] initWithNibName:NSStringFromClass([self class]) bundle:nil];
 }
 
+- (BOOL)isVisible {
+    return [self isViewLoaded] && self.view.window;
+}
+
 @end
