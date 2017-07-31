@@ -8,7 +8,7 @@ import UIKit
 
 class Frame: UIView {
 
-    // MARK: -  Left(X)
+    /// x origin of view.
     public var wx_left: CGFloat {
         get {
             //self.frame.origin.x
@@ -19,7 +19,7 @@ class Frame: UIView {
         }
     }
     
-    // MARK: - Top(Y)
+    /// y origin of view
     public var wx_top: CGFloat {
         get {
             //self.frame.origin.y
@@ -29,7 +29,8 @@ class Frame: UIView {
             self.frame.origin.y = newValue
         }
     }
-    // MARK: - Width
+    
+    /// Width of view.
     public var wx_width: CGFloat {
         get {
             //self.frame.size.width
@@ -39,7 +40,8 @@ class Frame: UIView {
             self.frame.size.width = newValue
         }
     }
-    // MARK: - height
+    
+    /// Height of view.
     public var wx_height: CGFloat {
         get {
             //self.frame.size.height
@@ -49,7 +51,8 @@ class Frame: UIView {
             self.frame.size.height = newValue
         }
     }
-    // MARK: -  Right
+    
+    /// MARK: -  Right
     public var wx_right: CGFloat {
         get {
             //self.frame.origin.x + self.frame.size.width
@@ -59,6 +62,7 @@ class Frame: UIView {
             self.frame.origin.x = newValue - self.frame.width
         }
     }
+    
     // MARK: -  Bottom
     public var wx_bottom: CGFloat {
         get {
@@ -69,7 +73,8 @@ class Frame: UIView {
             self.frame.origin.y = newValue - self.frame.height
         }
     }
-    // MARK: -  Size
+    
+    /// Size of view.
     public var wx_size: CGSize {
         get {
             return self.frame.size
@@ -79,7 +84,7 @@ class Frame: UIView {
         }
     }
     
-    // MARK: -  Origin
+    /// origin of superView.
     public var wx_origin: CGPoint {
         get {
             return self.frame.origin
