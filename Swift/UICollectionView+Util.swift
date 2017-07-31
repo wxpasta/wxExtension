@@ -20,4 +20,13 @@ extension UICollectionView{
     }
     
     
+    func registerSectionHeader(_ nibName: String){
+        let nib = UINib(nibName: nibName, bundle: Bundle.main)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: nibName)
+    }
+    
+    func registerSectionFooter(_ nibName: String){
+        let nib = UINib(nibName: nibName, bundle: Bundle.main)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: nibName)
+    }
 }

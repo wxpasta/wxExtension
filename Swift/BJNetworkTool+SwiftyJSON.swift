@@ -22,10 +22,10 @@ extension BJNetworkTool{
                               type: type,
                               urlString: urlString,
                               paramters: paramters) { (result, error) in
-                                if error == nil{
+                                if error == nil {
                                     let swiftyJsonVar = JSON(result!)
-                                    let arr = swiftyJsonVar.arrayObject as! [[String : Any]]
-                                    finishedCallback(arr , nil)
+                                    let arr = swiftyJsonVar.arrayObject as! [[String : Any]]?
+                                        finishedCallback(arr , nil)
                                 }else{
                                     finishedCallback(nil , error)
                                 }

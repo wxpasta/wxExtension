@@ -2,7 +2,7 @@
 //  BJValidate.swift
 //  vshiMessge
 //
-//  Created by 0547 on 2017/7/6.
+//  Created by 巴糖 on 2017/7/6.
 //  Copyright © 2017年 巴糖. All rights reserved.
 //
 
@@ -36,7 +36,7 @@ enum BJValidate {
             predicateStr = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$"
             currObject = str
         case let .phoneNum(str):
-            predicateStr = "^((13[0-9])|(15[^4,\\D]) |(17[0,0-9])|(18[0,0-9]))\\d{8}$"
+            predicateStr = "^(13\\d|14[579]|15[^4,\\D]|17[^4|9]|18\\d)\\d{8}$"
             currObject = str
         case let .carNum(str):
             predicateStr = "^[A-Za-z]{1}[A-Za-z_0-9]{5}$"

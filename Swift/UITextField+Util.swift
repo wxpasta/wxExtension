@@ -2,7 +2,7 @@
 //  UITextField+Util.swift
 //  vshiMessge
 //
-//  Created by 0547 on 2017/7/12.
+//  Created by 巴糖 on 2017/7/12.
 //  Copyright © 2017年 巴糖. All rights reserved.
 //
 
@@ -15,5 +15,6 @@ extension UITextField{
         let neWtext = text
         text = ""
         text = neWtext
+        becomeFirstResponder()
     }
 }

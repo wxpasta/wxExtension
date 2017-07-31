@@ -2,7 +2,7 @@
 //  UIViewController+Util.swift
 //  vshiMessge
 //
-//  Created by 0547 on 2017/7/12.
+//  Created by 巴糖 on 2017/7/12.
 //  Copyright © 2017年 巴糖. All rights reserved.
 //
 
@@ -19,5 +19,20 @@ extension UIViewController{
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+    func popBack(){
+        navigationController?.popViewController(animated: true)
+    }
     
+    ///设置状态栏背景颜色
+    func setStatusBarBackgroundColor(color : UIColor) {
+        let statusBarWindow : UIView = UIApplication.shared.value(forKey: "statusBarWindow") as! UIView
+        let statusBar : UIView = statusBarWindow.value(forKey: "statusBar") as! UIView
+        /*
+         if statusBar.responds(to:Selector("setBackgroundColor:")) {
+         statusBar.backgroundColor = color
+         }*/
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = color
+        }
+    }
 }
