@@ -35,4 +35,15 @@ extension UIViewController{
             statusBar.backgroundColor = color
         }
     }
+    
+    /// Check if ViewController is onscreen and not hidden.
+    public var isVisible: Bool {
+        // http://stackoverflow.com/questions/2777438/how-to-tell-if-uiviewcontrollers-view-is-visible
+        return self.isViewLoaded && view.window != nil
+    }
+    
+    /// NavigationBar in a ViewController.
+    public var navigationBar: UINavigationBar? {
+        return navigationController?.navigationBar
+    }
 }
