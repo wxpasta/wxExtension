@@ -10,26 +10,38 @@ import UIKit
 
 extension UIView {
 
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable
+    /// Border width of view; also inspectable from Storyboard.
+    public var borderWidth: CGFloat {
         get {
-            return self.layer.borderWidth
+            return layer.borderWidth
         }
         set {
-            self.layer.borderWidth = newValue
+            layer.borderWidth = newValue
         }
     }
     
-    
-    @IBInspectable var borderColor: UIColor {
+    @IBInspectable
+    /// Border color of view; also inspectable from Storyboard.
+    public var borderColor: UIColor? {
         get {
-            return UIColor(cgColor: self.layer.borderColor!)
+            guard let color = layer.borderColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
         }
         set {
-            self.layer.borderColor = newValue.cgColor
+            guard let color = newValue else {
+                layer.borderColor = nil
+                return
+            }
+            layer.borderColor = color.cgColor
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable
+    /// Corner radius of view; also inspectable from Storyboard.
+    public var cornerRadius: CGFloat {
         get {
             return self.layer.cornerRadius
         }
@@ -38,6 +50,54 @@ extension UIView {
             self.layer.masksToBounds = newValue > 0
         }
     }
+    
+    @IBInspectable
+    /// Shadow color of view; also inspectable from Storyboard.
+    public var shadowColor: UIColor? {
+        get {
+            guard let color = layer.shadowColor else {
+                return nil
+            }
+            return UIColor(cgColor: color)
+        }
+        set {
+            layer.shadowColor = newValue?.cgColor
+        }
+    }
+    
+    @IBInspectable
+    /// Shadow offset of view; also inspectable from Storyboard.
+    public var shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable
+    /// Shadow opacity of view; also inspectable from Storyboard.
+    public var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable
+    /// Shadow radius of view; also inspectable from Storyboard.
+    public var shadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+
 
 }
 
