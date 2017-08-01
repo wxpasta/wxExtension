@@ -25,5 +25,8 @@ extension UIApplication {
         }
     }
     
-    
+    /// 禁止手机睡眠
+    open func noCellPhoneSleep() {
+        UIApplication.shared.isIdleTimerDisabled = true
+    }
 }
