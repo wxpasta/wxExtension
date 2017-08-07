@@ -1,25 +1,31 @@
 //
 //  UITextView+Util.swift
-//  vshiMessge
+//  TestSwiftEx
 //
-//  Created by 巴糖 on 2017/7/25.
+//  Created by 巴糖 on 2017/8/3.
 //  Copyright © 2017年 巴糖. All rights reserved.
 //
 
 import UIKit
 
 extension UITextView{
-    /**
-     根据字符串的的长度来计算UITextView的高度
-     
-     - parameter textView:   UITextView
-     - parameter fixedWidth:      UITextView宽度
-     - returns:              返回UITextView的高度
-     */
-    internal class func heightForTextView(textView: UITextView, fixedWidth: CGFloat) -> CGFloat {
-        let size = CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude)
-        let constraint = textView.sizeThatFits(size)
-        return constraint.height
+    
+    /// Clear text.
+    public func clear() {
+        text = ""
+        attributedText = NSAttributedString(string: "")
     }
+    
+    /// Scroll to the bottom of text view
+    public func scrollToBottom() {
+        let range = NSMakeRange((text as NSString).length - 1, 1)
+        scrollRangeToVisible(range)
+    }
+    
+    /// Scroll to the top of text view
+    public func scrollToTop() {
+        let range = NSMakeRange(0, 1)
+        scrollRangeToVisible(range)
+    }
+    
 }
-
