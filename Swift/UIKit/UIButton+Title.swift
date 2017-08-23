@@ -12,7 +12,7 @@ import UIKit
 public extension UIButton {
     
     @IBInspectable
-    /// SwifterSwift: Title of normal state for button; also inspectable from Storyboard.
+    /// Title of normal state for button; also inspectable from Storyboard.
     public var titleForNormal: String? {
         get {
             return title(for: .normal)
@@ -23,7 +23,7 @@ public extension UIButton {
     }
     
     @IBInspectable
-    /// SwifterSwift: Title of highlighted state for button; also inspectable from Storyboard.
+    /// Title of highlighted state for button; also inspectable from Storyboard.
     public var titleForHighlighted: String? {
         get {
             return title(for: .highlighted)
@@ -34,7 +34,7 @@ public extension UIButton {
     }
     
     @IBInspectable
-    /// SwifterSwift: Title of selected state for button; also inspectable from Storyboard.
+    /// Title of selected state for button; also inspectable from Storyboard.
     public var titleForSelected: String? {
         get {
             return title(for: .selected)
@@ -45,7 +45,7 @@ public extension UIButton {
     }
     
     @IBInspectable
-    /// SwifterSwift: Title of disabled state for button; also inspectable from Storyboard.
+    /// Title of disabled state for button; also inspectable from Storyboard.
     public var titleForDisabled: String? {
         get {
             return title(for: .disabled)

@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Properties
 public extension UIButton {
     @IBInspectable
-    /// SwifterSwift: Title color of normal state for button; also inspectable from Storyboard.
+    /// Title color of normal state for button; also inspectable from Storyboard.
     public var titleColorForNormal: UIColor? {
         get {
             return titleColor(for: .normal)
@@ -23,7 +23,7 @@ public extension UIButton {
     
     
     @IBInspectable
-    /// SwifterSwift: Title color of highlighted state for button; also inspectable from Storyboard.
+    /// Title color of highlighted state for button; also inspectable from Storyboard.
     public var titleColorForHighlighted: UIColor? {
         get {
             return titleColor(for: .highlighted)
@@ -34,7 +34,7 @@ public extension UIButton {
     }
     
     @IBInspectable
-    /// SwifterSwift: Title color of selected state for button; also inspectable from Storyboard.
+    /// Title color of selected state for button; also inspectable from Storyboard.
     public var titleColorForSelected: UIColor? {
         get {
             return titleColor(for: .selected)
@@ -45,7 +45,7 @@ public extension UIButton {
     }
     
     @IBInspectable
-    /// SwifterSwift: Title color of disabled state for button; also inspectable from Storyboard.
+    /// Title color of disabled state for button; also inspectable from Storyboard.
     public var titleColorForDisabled: UIColor? {
         get {
             return titleColor(for: .disabled)
