@@ -11,7 +11,7 @@ import UIKit
 extension UICollectionView{
     
     
-    /// register
+    /// Register UICollectionViewCell using class name
     /// identifier = nibName
     /// - Parameter nibName:
     func register(_ nibName: String){
@@ -20,11 +20,19 @@ extension UICollectionView{
     }
     
     
+    /// Register SectionHeader
+    ///
+    /// identifier = nibName
+    /// - Parameter nibName:
     func registerSectionHeader(_ nibName: String){
         let nib = UINib(nibName: nibName, bundle: Bundle.main)
         self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: nibName)
     }
     
+    /// Register SectionFooter
+    ///
+    /// identifier = nibName
+    /// - Parameter nibName:
     func registerSectionFooter(_ nibName: String){
         let nib = UINib(nibName: nibName, bundle: Bundle.main)
         self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: nibName)
@@ -37,5 +45,11 @@ extension UICollectionView{
     ///   - name: UICollectionViewCell type.
     public func register<T: UICollectionViewCell>(nib: UINib?, forCellWithClass name: T.Type) {
         register(nib, forCellWithReuseIdentifier: String(describing: name))
+    }
+    
+    public func register<T: UICollectionViewCell>(nibClass name: T.Type) {
+        let className = String(describing: name)
+        let nib = UINib(nibName: className, bundle: Bundle.main)
+        register(nib, forCellWithReuseIdentifier: String(describing: className))
     }
 }
