@@ -30,28 +30,6 @@ class Frame: UIView {
         }
     }
     
-    /// Width of view.
-    public var wx_width: CGFloat {
-        get {
-            //self.frame.size.width
-            return self.frame.width
-        }
-        set {
-            self.frame.size.width = newValue
-        }
-    }
-    
-    /// Height of view.
-    public var wx_height: CGFloat {
-        get {
-            //self.frame.size.height
-            return self.frame.height
-        }
-        set {
-            self.frame.size.height = newValue
-        }
-    }
-    
     /// MARK: -  Right
     public var wx_right: CGFloat {
         get {
@@ -73,17 +51,7 @@ class Frame: UIView {
             self.frame.origin.y = newValue - self.frame.height
         }
     }
-    
-    /// Size of view.
-    public var wx_size: CGSize {
-        get {
-            return self.frame.size
-        }
-        set {
-            self.frame.size = newValue
-        }
-    }
-    
+
     /// origin of superView.
     public var wx_origin: CGPoint {
         get {
