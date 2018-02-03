@@ -32,36 +32,11 @@
     [app setStatusBarHidden:YES withAnimation:animation];
 }
 
-+ (BOOL)wx_applicationOpenURLWithString:(NSString *)urlString
-{
-    UIApplication *app = [UIApplication sharedApplication];
-    
-    NSURL * url = [NSURL URLWithString:urlString];
-    
-    if ([app canOpenURL:url]) {
-        [app openURL:url];
-        return YES;
-    }else{
-        return NO;
-    }
-}
 
-+ (void)wx_applicationTelWithString:(NSString *)phoneString
-{
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"tel://%@",phoneString];
-    [self wx_applicationOpenURLWithString:urlString];
-}
 
-+ (void)wx_applicationSMSWithString:(NSString *)smsString
-{
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"sms://%@",smsString];
-    [self wx_applicationOpenURLWithString:urlString];
-}
 
-+ (void)wx_applicationMailtoWithString:(NSString *)mailtoString
-{
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"mailto://%@",mailtoString];
-    [self wx_applicationOpenURLWithString:urlString];
-}
+
+
+
 
 @end
