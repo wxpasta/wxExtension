@@ -27,7 +27,7 @@ extension UITextView{
         }
     }
     
-    func wx_textViewTextDidChange(notification:NSNotification)
+    @objc func wx_textViewTextDidChange(notification:NSNotification)
     {
         guard let prospectiveText = self.text,
             prospectiveText.characters.count > maxLength

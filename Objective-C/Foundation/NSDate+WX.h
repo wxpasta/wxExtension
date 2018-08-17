@@ -7,6 +7,7 @@
 
 /***  是否为今天*/
 - (BOOL)isToday;
+- (BOOL)isTodayWithTimeInterval:(NSTimeInterval)time;
 
 /***  是否为昨天*/
 - (BOOL)isYesterday;
@@ -19,12 +20,11 @@
 + (instancetype)wx_Today;
 
 /**
- *  字符串转NSDate
- *
- *  @param timeStr 字符串时间
- *  @param format  转化格式 如yyyy-MM-dd HH:mm:ss,即2015-07-15 15:00:00
- *
- *  @return 
+ 字符串转 NSDate
+
+ @param timeStr 字符串时间
+ @param format 转化格式 如yyyy-MM-dd HH:mm:ss,即2015-07-15 15:00:00
+ @return NSDate
  */
 + (NSDate *)dateFromString:(NSString *)timeStr
                     format:(NSString *)format;

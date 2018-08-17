@@ -28,20 +28,4 @@ extension NSData
         }
         return string
     }
-    func MD5() -> NSData
-    {
-        let result = NSMutableData(length: Int(CC_MD5_DIGEST_LENGTH))!
-        let unsafePointer = result.mutableBytes.assumingMemoryBound(to: UInt8.self)
-        CC_MD5(bytes, CC_LONG(length), UnsafeMutablePointer<UInt8>(unsafePointer))
-        return NSData(data: result as Data)
-    }
-}
-
-extension String
-{
-    func MD5() -> String
-    {
-        let data = (self as NSString).data(using: String.Encoding.utf8.rawValue)! as NSData
-        return data.MD5().hexedString()
-    }
 }

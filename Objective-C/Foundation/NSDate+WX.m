@@ -31,6 +31,22 @@ static NSDateFormatter *dateFormatter;
     && selfCmps.day == nowCmps.day;
 }
 
+- (BOOL)isTodayWithTimeInterval:(NSTimeInterval )time
+{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    // 指定日历单位，如日期和月份。(这里指定了年月日，还有其他字段添加单位.特别齐全 ：世纪，年月日时分秒等等等)
+    NSCalendarUnit dayInfoUnits  = NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSDateComponents *components = [cal components:dayInfoUnits fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    components = [cal components:dayInfoUnits fromDate:date];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    if([today isEqualToDate:otherDate]) {
+        return true;
+    }
+    return false;
+}
+
 - (BOOL)isYesterday
 {
     // 判断self这个日期是否为昨天

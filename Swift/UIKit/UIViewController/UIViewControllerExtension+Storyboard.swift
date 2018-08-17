@@ -11,7 +11,7 @@ import UIKit
 // MARK:- 添加子控制器
 extension UIViewController {
     
-    func addChildViewController(_ storyBoardName : String) ->Bool{
+    @discardableResult open func addChildViewController(_ storyBoardName : String) ->Bool{
         // 判断字符串是否为空
         if storyBoardName.isEmpty {
             return false
@@ -24,5 +24,12 @@ extension UIViewController {
             return true
         }
         return false
+    }
+    
+    open func addChildViewControllers(_ storyBoardNames : [String]) {
+        for index in 0..<storyBoardNames.count {
+            let name = storyBoardNames[index]
+            addChildViewController(name)
+        }
     }
 }

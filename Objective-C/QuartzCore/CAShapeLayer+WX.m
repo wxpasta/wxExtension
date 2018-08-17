@@ -1,4 +1,5 @@
 #import "CAShapeLayer+WX.h"
+#import <UIKit/UIKit.h>
 
 @implementation CAShapeLayer (WX)
 
