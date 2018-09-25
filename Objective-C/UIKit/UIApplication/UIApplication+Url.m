@@ -12,27 +12,29 @@
 @implementation UIApplication (Url)
 
 
-- (void)wx_openURL:(nonnull NSURL *)url completionHandler:(void (^ __nullable)(BOOL success))completion{
+- (void)wx_openURL:(nonnull NSURL *)url
+ completionHandler:(void (^ __nullable)(BOOL success))completion{
     if (url == nil) {
-        completion(false);
+        completion(NO);
     }
     if ([self respondsToSelector:@selector(openURL:options:completionHandler:)]) {
         [self openURL:url options:@{} completionHandler:^(BOOL success) {
             completion(success);
         }];
     } else {
-//        #pragma clang diagnostic push
-//        #pragma clang diagnostic ignored"-Wdeprecated-declarations"
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored"-Wdeprecated-declarations"
         BOOL success = [self openURL:url];
-//        #pragma clang diagnostic pop
+        #pragma clang diagnostic pop
         completion(success);
     }
 }
 
 
-- (void)openScheme:(nonnull NSString *)scheme completionHandler:(void (^ __nullable)(BOOL success))completion{
+- (void)openScheme:(nonnull NSString *)scheme
+ completionHandler:(void (^ __nullable)(BOOL success))completion{
     if (scheme.length == 0) {
-        completion(false);
+        completion(NO);
     }
     NSURL *url = [NSURL URLWithString:scheme];
     
@@ -41,7 +43,7 @@
             completion(success);
         }];
     }else{
-        completion(false);
+        completion(NO);
     }
     
 }
@@ -50,7 +52,7 @@
                completionHandler:(void (^ __nullable)(BOOL success))completion
 {
     if (phoneNumber.length == 0) {
-        completion(false);
+        completion(NO);
     }
     NSMutableString *urlString = [NSMutableString stringWithFormat:@"tel://%@", phoneNumber];
     
@@ -63,7 +65,7 @@
                       completionHandler:(void (^ __nullable)(BOOL success))completion
 {
     if (content.length == 0) {
-        completion(false);
+        completion(NO);
     }
     
     NSMutableString *urlString = [NSMutableString stringWithFormat:@"sms://%@", content];
@@ -77,7 +79,7 @@
           completionHandler:(void (^ __nullable)(BOOL success))completion
 {
     if (address.length == 0) {
-        completion(false);
+        completion(NO);
     }
     
     NSMutableString *urlString = [NSMutableString stringWithFormat:@"mailto://%@", address];
