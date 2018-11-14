@@ -66,7 +66,8 @@
 + (BOOL)isSxistAtPath:(NSString *)filePath
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    return [fileManager fileExistsAtPath:filePath];
+    BOOL exist = [fileManager fileExistsAtPath:path isDirectory:isDir];
+    return exist;
 }
 
 //计算文件大小

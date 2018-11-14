@@ -4,11 +4,6 @@
 
 @implementation UIImage (WX)
 
-+ (instancetype)wx_imageWithOriginalImageName:(NSString *)imageName
-{
-    return [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-}
-
 + (UIImage *)IMGCompressed:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth
 {
     

@@ -3,15 +3,6 @@
 @interface UIImage (WX)
 
 /**
- *  给定一个最原始的图片名称生成一个原始的图片
- *
- *  @param imageName 图片名称
- *
- *  @return UIImage
- */
-+ (instancetype)wx_imageWithOriginalImageName:(NSString *)imageName;
-
-/**
  *  图片的压缩方法
  *
  *  @param sourceImg   要被压缩的图片
