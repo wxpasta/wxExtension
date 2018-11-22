@@ -1,22 +1,23 @@
 //
-//  UIView+Nib.m
-//  BJCategory
+//  UIView+WXNIb.m
+//  ErrorHandle
 //
-//  Created by AngieMita on 2018/7/29.
-//  Copyright © 2018年 AngieMita. All rights reserved.
+//  Created by 许宝吉 on 2018/11/16.
+//  Copyright © 2018 许宝吉. All rights reserved.
 //
 
-#import "UIView+Nib.h"
+#import "UIView+WXNIb.h"
 
-@implementation UIView (Nib)
+@implementation UIView (WXNIb)
 
-- (id _Nullable)wx_loadNibFirstObject
+#pragma mark - NSBundle
+- (nullable instancetype)wx_loadNibFirstObject
 {
     NSString *name = NSStringFromClass([self class]);
     return [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil].firstObject;
 }
 
-- (id _Nullable)wx_loadNiblastObject
+- (nullable instancetype)wx_loadNiblastObject
 {
     NSString *name = NSStringFromClass([self class]);
     return [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil].lastObject;
@@ -27,5 +28,4 @@
     NSString *name = NSStringFromClass([self class]);
     return [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil];
 }
-
 @end

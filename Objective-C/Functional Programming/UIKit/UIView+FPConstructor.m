@@ -1,14 +1,14 @@
 //
-//  UIView+Constructor.m
+//  UIView+FPConstructor.m
 //  ErrorHandle
 //
 //  Created by 许宝吉 on 2018/10/20.
 //  Copyright © 2018 许宝吉. All rights reserved.
 //
 
-#import "UIView+Constructor.h"
+#import "UIView+FPConstructor.h"
 
-@implementation UIView (Constructor)
+@implementation UIView (FPConstructor)
 
 + (instancetype (^)(void))ffl_init{
     return ^(){

@@ -1,5 +1,5 @@
 //
-//  UIView+Constructor.h
+//  UIView+FPConstructor.h
 //  ErrorHandle
 //
 //  Created by 许宝吉 on 2018/10/20.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (Constructor)
+@interface UIView (FPConstructor)
 
 + (instancetype (^)(void))ffl_init;
 
