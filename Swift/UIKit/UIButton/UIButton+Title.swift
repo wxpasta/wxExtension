@@ -18,7 +18,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleForNormal: String? {
+    public var normalTitle: String? {
         get {
             return title(for: .normal)
         }
@@ -34,7 +34,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleForHighlighted: String? {
+    public var highlightedTitle: String? {
         get {
             return title(for: .highlighted)
         }
@@ -50,7 +50,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleForDisabled: String? {
+    public var disabledTitle: String? {
         get {
             return title(for: .disabled)
         }
@@ -66,7 +66,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleForSelected: String? {
+    public var selectedTitle: String? {
         get {
             return title(for: .selected)
         }
