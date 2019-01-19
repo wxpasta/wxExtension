@@ -23,13 +23,13 @@ extension UIButton{
                              title: String?, titleColor: UIColor?, titleFont: UIFont?,
                              backgroundColor: UIColor?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
-        button.setImage(UIImage(named: imageName!), for: UIControlState.normal)
+        button.setImage(UIImage(named: imageName!), for: UIControl.State.normal)
         button.backgroundColor = backgroundColor
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
 }

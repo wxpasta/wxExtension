@@ -21,12 +21,12 @@ extension UIButton{
     static func createButton(title: String?, titleColor: UIColor?, titleFont: UIFont?,
                              backgroundColor: UIColor?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
         button.backgroundColor = backgroundColor
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -40,9 +40,9 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?, titleColor: UIColor?, titleFont: UIFont?,
                              backgroundColor: UIColor?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
         button.backgroundColor = backgroundColor
         return button
@@ -57,9 +57,9 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?, titleColor: UIColor?,
                              backgroundColor: UIColor?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         button.backgroundColor = backgroundColor
         return button
     }
@@ -72,9 +72,9 @@ extension UIButton{
     ///   - titleFont: 字体大小
     /// - Returns: UIButton
     static func createButton(title: String?, titleColor: UIColor?, titleFont: UIFont?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
         return button
     }
@@ -86,8 +86,8 @@ extension UIButton{
     ///   - titleFont: 字体大小
     /// - Returns: UIButton
     static func createButton(title: String?, titleFont: UIFont?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
         return button
     }
@@ -100,8 +100,8 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?,
                              backgroundColor: UIColor?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
         button.backgroundColor = backgroundColor
         return button
     }
@@ -113,9 +113,9 @@ extension UIButton{
     ///   - titleColor: 字体颜色
     /// - Returns: UIButton
     static func createButton(title: String?, titleColor: UIColor?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         return button
     }
     
@@ -125,8 +125,8 @@ extension UIButton{
     ///   - title: 标题
     /// - Returns: UIButton
     static func createButton(title: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
         return button
     }
     
@@ -141,11 +141,11 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?, titleColor: UIColor?, titleFont: UIFont?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -158,10 +158,10 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?, titleColor: UIColor?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setTitleColor(titleColor, for: UIControlState.normal)
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setTitleColor(titleColor, for: UIControl.State.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -175,10 +175,10 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?, titleFont: UIFont?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
         button.titleLabel?.font = titleFont
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -190,9 +190,9 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(title: String?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setTitle(title, for: UIControlState.normal)
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setTitle(title, for: UIControl.State.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
 }

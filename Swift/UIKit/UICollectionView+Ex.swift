@@ -35,7 +35,7 @@ extension UICollectionView {
     /// - Parameter nibName:
     func register(supplementaryViewOfSectionHeaderName name: String){
         let nib = UINib(nibName: name, bundle: Bundle.main)
-        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: name)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: name)
     }
     
     /// Register SectionFooter
@@ -44,7 +44,7 @@ extension UICollectionView {
     /// - Parameter nibName:
     func register(supplementaryViewOfSectionFooter name: String){
         let nib = UINib(nibName: name, bundle: Bundle.main)
-        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: name)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: name)
     }
     
     /// Register Section
@@ -64,7 +64,7 @@ extension UICollectionView {
     func register<T: UICollectionReusableView>(supplementaryViewOfSectionHeader name: T.Type){
         let className = String(describing: name)
         let nib = UINib(nibName: className, bundle: Bundle.main)
-        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: className)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: className)
     }
     
     /// Register SectionFooter
@@ -74,6 +74,6 @@ extension UICollectionView {
     func register<T: UICollectionReusableView>(supplementaryViewOfSectionFooter name: T.Type){
         let className = String(describing: name)
         let nib = UINib(nibName: className, bundle: Bundle.main)
-        self.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: className)
+        self.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: className)
     }
 }

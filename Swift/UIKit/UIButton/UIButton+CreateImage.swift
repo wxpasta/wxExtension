@@ -18,10 +18,10 @@ extension UIButton{
     static func createButton(imageName: String?,
                              backgroundColor: UIColor?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setImage(UIImage(named: imageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: imageName!), for: UIControl.State.normal)
         button.backgroundColor = backgroundColor
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -33,8 +33,8 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(imageName: String?,
                              backgroundColor: UIColor?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setImage(UIImage(named: imageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: imageName!), for: UIControl.State.normal)
         button.backgroundColor = backgroundColor
         return button
     }
@@ -47,9 +47,9 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(imageName: String?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setImage(UIImage(named: imageName!), for: UIControlState.normal)
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: imageName!), for: UIControl.State.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -61,9 +61,9 @@ extension UIButton{
     /// - Returns: UIButton
     static func createButton(backgroundColor: UIColor?,
                              backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
+        let button = UIButton(type: UIButton.ButtonType.custom)
         button.backgroundColor = backgroundColor
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -73,8 +73,8 @@ extension UIButton{
     ///   - imageName: 图片名称
     /// - Returns: UIButton
     static func createButton(imageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setImage(UIImage(named: imageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: imageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -84,8 +84,8 @@ extension UIButton{
     ///   - backgroundImageName: 背景图片名称
     /// - Returns: UIButton
     static func createButton(backgroundImageName: String?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
-        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControlState.normal)
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setBackgroundImage(UIImage(named: backgroundImageName!), for: UIControl.State.normal)
         return button
     }
     
@@ -95,7 +95,7 @@ extension UIButton{
     ///   - backgroundColor: 背景颜色
     /// - Returns: UIButton
     static func createButton(backgroundColor: UIColor?) -> UIButton {
-        let button = UIButton(type: UIButtonType.custom)
+        let button = UIButton(type: UIButton.ButtonType.custom)
         button.backgroundColor = backgroundColor
         return button
     }

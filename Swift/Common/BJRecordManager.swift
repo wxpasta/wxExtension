@@ -28,9 +28,15 @@ class BJRecordManager {
         let session = AVAudioSession.sharedInstance()
         //设置session类型
         do {
-            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
-        } catch let err{
+            if #available(iOS 10.0, *) {
+                try session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.moviePlayback, options: AVAudioSession.CategoryOptions.allowBluetooth)
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+        catch let err{
             print("设置类型失败:\(err.localizedDescription)")
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
         //设置session动作
         do {

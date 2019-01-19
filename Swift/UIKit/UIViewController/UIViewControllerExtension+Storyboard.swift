@@ -20,7 +20,7 @@ extension UIViewController {
         let childViewController = UIStoryboard(name: storyBoardName, bundle: nil).instantiateInitialViewController()
         // 2.将控制器添加到UIViewController中
         if let viewController = childViewController {
-            addChildViewController(viewController)
+            addChild(viewController)
             return true
         }
         return false

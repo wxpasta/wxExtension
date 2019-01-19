@@ -12,7 +12,7 @@ extension String {
 
     
     var length: String.IndexDistance {
-        return self.characters.count
+        return self.count
     }
     
     var trim: String {

@@ -49,15 +49,15 @@ extension UIButton {
                 codeTimer.cancel()
                 DispatchQueue.main.async {
                     self.isUserInteractionEnabled = true
-                    self.setTitle(title, for: UIControlState.normal)
-                    self.setTitleColor(mainColor, for: UIControlState.normal)
+                    self.setTitle(title, for: UIControl.State.normal)
+                    self.setTitleColor(mainColor, for: UIControl.State.normal)
                     self.layer.borderColor = mainColor?.cgColor
                 }
                 return
             }
             DispatchQueue.main.async {
-                self.setTitle("\(time)", for: UIControlState.normal)
-                self.setTitleColor(countColor, for: UIControlState.normal)
+                self.setTitle("\(time)", for: UIControl.State.normal)
+                self.setTitleColor(countColor, for: UIControl.State.normal)
                 self.layer.borderColor = countColor?.cgColor
             }
         })
@@ -82,9 +82,9 @@ extension UIButton {
     func addClickEventWithBlock(block : @escaping clickEventBlock) -> Void {
         buttonEventBlock = block
         if (buttonEventBlock != nil) {
-            self.addTarget(self, action: #selector(btnTouchUpInSideEvent(button:)), for: UIControlEvents.touchUpInside)
+            self.addTarget(self, action: #selector(btnTouchUpInSideEvent(button:)), for: UIControl.Event.touchUpInside)
         }else {
-            self.removeTarget(self, action: #selector(btnTouchUpInSideEvent(button:)), for: UIControlEvents.touchUpInside)
+            self.removeTarget(self, action: #selector(btnTouchUpInSideEvent(button:)), for: UIControl.Event.touchUpInside)
         }
     }
     

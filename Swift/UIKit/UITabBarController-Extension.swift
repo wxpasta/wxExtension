@@ -12,6 +12,6 @@ extension UITabBarController {
         // 1.加载storyboard中的控制器
         let childVc = UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()!
         // 2.将控制器添加到TabBarController中
-        addChildViewController(childVc)
+        addChild(childVc)
     }
 }

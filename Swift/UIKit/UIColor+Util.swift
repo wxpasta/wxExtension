@@ -16,3 +16,9 @@ extension CGColor{
     }
     
 }
+
+
+extension UIColor{
+    /// SwifterSwift: Hexadecimal value string (read-only).
+    
+}

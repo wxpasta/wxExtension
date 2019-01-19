@@ -22,7 +22,7 @@ extension UITextView{
         }
         set {
             objc_setAssociatedObject(self, &kAssociationKeyTextViewMaxLength, newValue, .OBJC_ASSOCIATION_RETAIN)
-            NotificationCenter.default.addObserver(self, selector: .wx_textViewTextDidChange, name: NSNotification.Name.UITextViewTextDidChange, object: self)
+            NotificationCenter.default.addObserver(self, selector: .wx_textViewTextDidChange, name: UITextView.textDidChangeNotification, object: self)
             
         }
     }
@@ -30,14 +30,14 @@ extension UITextView{
     @objc func wx_textViewTextDidChange(notification:NSNotification)
     {
         guard let prospectiveText = self.text,
-            prospectiveText.characters.count > maxLength
+            prospectiveText.length > maxLength
             else {
                 return
         }
         
         let selection = selectedTextRange
         let maxCharIndex = prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength)
-        text = prospectiveText.substring(to: maxCharIndex)
+        text = String(prospectiveText[..<maxCharIndex]) // prospectiveText.substring(to: maxCharIndex)
         selectedTextRange = selection
     }
 }

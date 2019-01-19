@@ -23,17 +23,17 @@ extension UIBarButtonItem{
                      _ target: Any? = nil,
                      action: Selector? = nil) {
         
-        let btn = UIButton(type: UIButtonType.custom)
-        btn.setImage(UIImage(named: imageName), for: UIControlState.normal)
+        let btn = UIButton(type: UIButton.ButtonType.custom)
+        btn.setImage(UIImage(named: imageName), for: UIControl.State.normal)
         
-        if highImageName.characters.count > 0 {
-            btn.setImage(UIImage(named: highImageName), for: UIControlState.highlighted)
+        if highImageName.count > 0 {
+            btn.setImage(UIImage(named: highImageName), for: UIControl.State.highlighted)
         }
         var rect = btn.frame
         rect.size = (btn.currentImage?.size)!
         
         if target != nil || action != nil {
-            btn.addTarget(target, action: action!, for: UIControlEvents.touchUpInside)
+            btn.addTarget(target, action: action!, for: UIControl.Event.touchUpInside)
         }
         self.init(customView: btn)
     }
@@ -64,7 +64,7 @@ extension UIBarButtonItem{
         let btn = UIButton()
         
         // 2.设置btn的图片
-        btn.setImage(UIImage(named: imageName), for: UIControlState())
+        btn.setImage(UIImage(named: imageName), for: UIControl.State())
         if highImageName != "" {
             btn.setImage(UIImage(named: highImageName), for: .highlighted)
         }
@@ -76,7 +76,7 @@ extension UIBarButtonItem{
             btn.frame = CGRect(origin: CGPoint.zero, size: size)
         }
         
-        btn.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+        btn.addTarget(target, action: action, for: UIControl.Event.touchUpInside)
         
         // 4.创建UIBarButtonItem
         self.init(customView : btn)

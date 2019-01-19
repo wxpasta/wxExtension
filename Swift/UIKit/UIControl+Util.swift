@@ -23,17 +23,17 @@ import UIKit
 extension UIControl{
     
     open func addTarget(forTouchUpInside target: Any?, action: Selector){
-        addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+        addTarget(target, action: action, for: UIControl.Event.touchUpInside)
     }
     
     
     open func addTarget(forValueChanged target: Any?, action: Selector){
-        addTarget(target, action: action, for: UIControlEvents.valueChanged)
+        addTarget(target, action: action, for: UIControl.Event.valueChanged)
     }
     
     
     open func addTarget(forEditingChanged target: Any?, action: Selector){
-        addTarget(target, action: action, for: UIControlEvents.editingChanged)
+        addTarget(target, action: action, for: UIControl.Event.editingChanged)
     }
     
 }

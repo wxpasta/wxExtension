@@ -28,13 +28,12 @@ class BJCustomSegment: UIView {
         let height = frame.height
         maxNum = count - 1
         for index in 0..<count {
-            let btn = BJCustomButton(type: UIButtonType.custom)
-            btn.titleForNormal = titleArray[index]
+            let btn = BJCustomButton(type: .custom)
+            btn.normalTitle = titleArray[index]
             btn.frame = CGRect(x: CGFloat(index) * width, y: 0, width: width, height: height)
 
             btn.tag = BJCustomSegmentTag + index
-            btn.addTouchUpInsideTarget(self, action: .onButtonClicked)
-            
+            btn.addTarget(forTouchUpInside: self, action: .onButtonClicked)
             if index == 0 {
                 leftLayer(color: btn.titleColorForSelected!, btn: btn)
                 btn.isSelected = true

@@ -23,11 +23,6 @@ class BJCustomButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        
-        self.titleColorForNormal = UIColor(hexString: "#666666")
-        self.titleColorForSelected = UIColor(hexString: "#00a899")
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -28,14 +28,14 @@ extension UITextField {
     
     @objc func checkMaxLength(textField: UITextField) {
         guard let prospectiveText = self.text,
-            prospectiveText.characters.count > maxLength
+            prospectiveText.count > maxLength
             else {
                 return
         }
         
         let selection = selectedTextRange
         let maxCharIndex = prospectiveText.index(prospectiveText.startIndex, offsetBy: maxLength)
-        text = prospectiveText.substring(to: maxCharIndex)
+        text = String(prospectiveText[..<maxCharIndex]) // prospectiveText.substring(to: maxCharIndex)
         selectedTextRange = selection
     }
 }
