@@ -18,6 +18,7 @@
 - (void)setBorderColor:(UIColor *)borderColor{
     self.layer.borderColor = borderColor.CGColor;
 }
+
 - (CGFloat)cornerRadius{
     return self.layer.cornerRadius;
 }

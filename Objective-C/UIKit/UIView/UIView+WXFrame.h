@@ -12,16 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (WXFrame)
 
-@property (nonatomic, assign) CGFloat wx_top;   //y
-@property (nonatomic, assign) CGFloat wx_bottom;
-@property (nonatomic, assign) CGFloat wx_left;  //x
-@property (nonatomic, assign) CGFloat wx_right;
+#pragma mark - origin
+@property (nonatomic, readwrite, assign) CGFloat wx_top;   //y
+@property (nonatomic, readwrite, assign) CGFloat wx_bottom;
+@property (nonatomic, readwrite, assign) CGFloat wx_left;  //x
+@property (nonatomic, readwrite, assign) CGFloat wx_right;
 
-@property (nonatomic, assign) CGFloat wx_width;
-@property (nonatomic, assign) CGFloat wx_height;
+#pragma mark - size
+@property (nonatomic, readwrite, assign) CGFloat wx_width;
+@property (nonatomic, readwrite, assign) CGFloat wx_height;
 
-@property (nonatomic, assign) CGPoint wx_origin;
-@property (nonatomic, assign) CGSize wx_size;
+#pragma mark - properties
+@property (nonatomic, readwrite, assign) CGPoint wx_origin;
+@property (nonatomic, readwrite, assign) CGSize wx_size;
 
 @end
 

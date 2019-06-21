@@ -2,6 +2,7 @@
 
 @interface UIView (WX)
 
+#pragma mark - image resolution(分辨率)
 @property (nonatomic, assign, readonly) CGFloat wx_widthResolution;
 @property (nonatomic, assign, readonly) CGFloat wx_heighthResolution;
 

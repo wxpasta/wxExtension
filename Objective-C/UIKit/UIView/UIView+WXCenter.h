@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (WXCenter)
 
+#pragma mark - positions
 @property (nonatomic, assign) CGFloat wx_centerX;
 @property (nonatomic, assign) CGFloat wx_centerY;
 

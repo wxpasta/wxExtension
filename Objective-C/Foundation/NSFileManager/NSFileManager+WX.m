@@ -59,14 +59,14 @@
     NSString *documentsPath = wx_getDocumentsPath();
     NSString *iOSPath = [documentsPath stringByAppendingPathComponent:file];
     NSString *content = [NSString stringWithContentsOfFile:iOSPath encoding:NSUTF8StringEncoding error:nil];
-    //    NSLog(@"read success: %@",content);
+        NSLog(@"read success: %@",content);
 }
 
 //判断文件是否存在
-+ (BOOL)isSxistAtPath:(NSString *)filePath
++ (BOOL)isSxistAtPath:(NSString *)filePath isDirectory:(nullable BOOL *)isDirectory
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    BOOL exist = [fileManager fileExistsAtPath:path isDirectory:isDir];
+    BOOL exist = [fileManager fileExistsAtPath:filePath isDirectory:isDirectory];
     return exist;
 }
 

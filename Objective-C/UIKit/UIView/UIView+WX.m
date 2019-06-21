@@ -1,5 +1,5 @@
 #import "UIView+WX.h"
-#import "UIScreen+WX.h"
+#import "UIView+WXFrame.h"
 
 @implementation UIView (WX)
 
@@ -32,14 +32,14 @@
 
 -(void)wx_setWidthKeepRight:(CGFloat)awidth
 {
-    self.wx_x = self.wx_right - awidth;
+    self.wx_top = self.wx_right - awidth;
     self.wx_width = awidth;
 }
 
 -(void)wx_setLeftKeepRight:(CGFloat)aleft
 {
     self.wx_width = self.wx_right - aleft;
-    self.wx_x = aleft;
+    self.wx_top = aleft;
 }
 
 - (BOOL)wx_intersectWithView:(UIView *)view
@@ -52,17 +52,17 @@
 
 + (instancetype)wx_viewScreenFrameWithHeight:(CGFloat)height
 {
-    return [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].wx_screenWidth, height)];
+    return [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, height)];
 }
 
 -(CGFloat)wx_widthResolution
 {
-    return self.wx_width * [UIScreen mainScreen].wx_screenScale;
+    return self.wx_width * [UIScreen mainScreen].scale;
 }
 
 -(CGFloat)wx_heighthResolution
 {
-    return self.wx_height * [UIScreen mainScreen].wx_screenScale;
+    return self.wx_height * [UIScreen mainScreen].scale;
 }
 
 
