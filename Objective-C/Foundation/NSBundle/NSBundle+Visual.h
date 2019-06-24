@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSBundle (Visual)
 
 + (nullable NSArray *)wx_bundleLoadNibNamed:(NSString *)name;
@@ -17,3 +19,5 @@
 + (id _Nullable)wx_bundleLoadNibLastNamed:(NSString *)name;
 
 @end
+
+NS_ASSUME_NONNULL_END

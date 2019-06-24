@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIAlertController (WX)
 
 - (UIAlertAction *)addActionWithTitle:(nullable NSString *)title
@@ -16,3 +18,5 @@
                               handler:(void (^ __nullable)(UIAlertAction *action))handler;
 
 @end
+
+NS_ASSUME_NONNULL_END

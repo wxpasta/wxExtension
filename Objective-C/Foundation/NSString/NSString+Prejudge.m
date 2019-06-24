@@ -11,14 +11,13 @@
 @implementation NSString (Prejudge)
 
 + (BOOL)isEmptyString:(NSString *)string{
-    // 去掉字符串中的空格
-    NSString * newString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    // 判断是否为空字符串
-    if ([newString isEqualToString:@""]) {
+    if (string == nil || string == NULL) {
         return YES;
     }
-    // 判断字符串长度
-    if (newString.length <= 0) {
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
         return YES;
     }
     return NO;

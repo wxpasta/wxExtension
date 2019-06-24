@@ -11,10 +11,10 @@
 @interface UIButton (Util)
 
 /**
- * Set title for all states.
- * 为所有状态设置标题。
- *
- * @param title: title string.
+ Set title for all states.
+ 为所有状态设置标题。
+
+ @param title title description
  */
 - (void)setTitleForAllState:(NSString *)title;
 
@@ -22,7 +22,7 @@
  * Set title color for all states.
  * 为所有状态设置标题颜色。
  *
- * @param color: UIColor
+ * @param color  UIColor
  */
 - (void)setTitleColorForAllState:(UIColor *)color;
 
