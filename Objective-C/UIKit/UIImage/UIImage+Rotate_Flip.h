@@ -6,34 +6,34 @@
 //  Copyright © 2016年 GLK. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIImage (Rotate_Flip)
 
 /*
  * @brief rotate image 90 withClockWise
  */
-- (UIImage*)rotate90Clockwise;
+- (nullable UIImage*)rotate90Clockwise;
 
 /*
  * @brief rotate image 90 counterClockwise
  */
-- (UIImage*)rotate90CounterClockwise;
+- (nullable UIImage *)rotate90CounterClockwise;
 
 /*
  * @brief rotate image 180 degree
  */
-- (UIImage*)rotate180;
+- (nullable UIImage *)rotate180;
 
 /*
  * @brief rotate image to default orientation
  */
-- (UIImage*)rotateImageToOrientationUp;
+- (nullable UIImage *)rotateImageToOrientationUp;
 
 /*
  * @brief flip horizontal
  */
-- (UIImage*)flipHorizontal;
+- (nullable UIImage *)flipHorizontal;
 
 /*
  * @brief flip vertical
@@ -55,7 +55,7 @@
 /*
  * 压缩图片质量(图片体积减小,像素不变),图片大小不超过设定值
  */
-+ (UIImage *)compressImage:(UIImage *)image toMaxFileSize:(NSInteger)maxFileSize;
++ (UIImage *)compressImage:(UIImage *)image toMaxFileSize:(NSUInteger)maxFileSize;
 
 /*
  *

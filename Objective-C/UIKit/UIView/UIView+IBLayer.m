@@ -1,7 +1,7 @@
 
 //
 //  UIView+IBLayer.m
-//  ErrorHandle
+//  WXCategories
 //
 //  Created by 许宝吉 on 2018/11/15.
 //  Copyright © 2018 许宝吉. All rights reserved.
@@ -11,8 +11,13 @@
 
 @implementation UIView (IBLayer)
 
-- (UIColor *)borderColor{
-    return [UIColor colorWithCGColor:self.layer.borderColor];
+- (nullable UIColor *)borderColor {
+    CGColorRef borderColor = self.layer.borderColor;
+    if (borderColor) {
+        return [UIColor colorWithCGColor:borderColor];
+    }else{
+        return nil;
+    }
 }
 
 - (void)setBorderColor:(UIColor *)borderColor{
@@ -43,11 +48,11 @@
     self.layer.shadowRadius = shadowRadius;
 }
 
-- (CGFloat)shadowOpacity{
+- (float)shadowOpacity{
    return self.layer.shadowOpacity;
 }
 
-- (void)setShadowOpacity:(CGFloat)shadowOpacity{
+- (void)setShadowOpacity:(float)shadowOpacity{
     self.layer.shadowOpacity = shadowOpacity;
 }
 
@@ -59,8 +64,13 @@
     self.layer.shadowOffset = shadowOffset;
 }
 
-- (UIColor *)shadowColor{
-    return [UIColor colorWithCGColor:self.layer.shadowColor];
+- (nullable UIColor *)shadowColor{
+    CGColorRef shadowColor = self.layer.shadowColor;
+    if (shadowColor) {
+        return [UIColor colorWithCGColor:shadowColor];
+    }else{
+        return nil;
+    }
 }
 
 - (void)setShadowColor:(UIColor *)shadowColor{

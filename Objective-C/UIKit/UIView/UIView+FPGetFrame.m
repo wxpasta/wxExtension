@@ -1,6 +1,6 @@
 //
 //  UIView+FPGetFrame.m
-//  ErrorHandle
+//  WXCategories
 //
 //  Created by 许宝吉 on 2018/10/20.
 //  Copyright © 2018 许宝吉. All rights reserved.
@@ -11,67 +11,52 @@
 @implementation UIView (FPGetFrame)
 
 
-- (CGFloat (^)(void))ffl_left
-{
-    __weak typeof(self) weakSelf = self;
+- (CGFloat (^)(void))ffl_left {
     return ^(){
-        return CGRectGetMinX(weakSelf.frame);
+        return CGRectGetMinX(self.frame);
     };
 }
 
-- (CGFloat (^)(void))ffl_top
-{
-    __weak typeof(self) weakSelf = self;
+- (CGFloat (^)(void))ffl_top {
     return ^(){
-        return CGRectGetMinY(weakSelf.frame);
+        return CGRectGetMinY(self.frame);
     };
 }
 
-- (CGFloat (^)(void))ffl_width
-{
-    __weak typeof(self) weakSelf = self;
+- (CGFloat (^)(void))ffl_width {
     return ^(){
-        return CGRectGetWidth(weakSelf.frame);
+        return CGRectGetWidth(self.frame);
     };
 }
 
-- (CGFloat (^)(void))ffl_height
-{
-    __weak typeof(self) weakSelf = self;
+- (CGFloat (^)(void))ffl_height {
     return ^(){
-        return CGRectGetHeight(weakSelf.frame);
+        return CGRectGetHeight(self.frame);
     };
 }
 
-- (CGPoint (^)(void))ffl_origin
-{
-    __weak typeof(self) weakSelf = self;
+- (CGPoint (^)(void))ffl_origin {
     return ^(){
-        return weakSelf.frame.origin;
+        return self.frame.origin;
     };
 }
 
-- (CGSize (^)(void))ffl_size
-{
-    __weak typeof(self) weakSelf = self;
+- (CGSize (^)(void))ffl_size {
     return ^(){
-        return weakSelf.frame.size;
+        return self.frame.size;
     };
 }
 
-- (CGFloat (^)(void))ffl_right
-{
-    __weak typeof(self) weakSelf = self;
+- (CGFloat (^)(void))ffl_right {
     return ^(){
-        return CGRectGetMaxX(weakSelf.frame);
+        return CGRectGetMaxX(self.frame);
     };
 }
 
-- (CGFloat (^)(void))ffl_bottom
-{
-    __weak typeof(self) weakSelf = self;
+- (CGFloat (^)(void))ffl_bottom {
     return ^(){
-        return CGRectGetMaxY(weakSelf.frame);
+        return CGRectGetMaxY(self.frame);
     };
 }
+
 @end

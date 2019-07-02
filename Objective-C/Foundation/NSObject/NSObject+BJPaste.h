@@ -6,8 +6,8 @@
 //  Copyright © 2018年 许宝吉. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import Foundation;
+@import UIKit;
 
 @interface NSObject (BJPaste)
 

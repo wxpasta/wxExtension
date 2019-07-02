@@ -6,14 +6,15 @@
 //  Copyright © 2019 许宝吉. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (CustomColor)
 
-+ (UIColor *(^)(int, float))customColor;
++ (UIColor *(^)(int, CGFloat))customColor;
 
+UIColor* UIColorFromHex(NSInteger colorInHex);
 @end
 
 NS_ASSUME_NONNULL_END

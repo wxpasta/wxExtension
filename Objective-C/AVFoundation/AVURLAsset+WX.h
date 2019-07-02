@@ -6,7 +6,7 @@
 //  Copyright © 2016年 AngieMita. All rights reserved.
 //
 
-#import <AVFoundation/AVFoundation.h>
+@import AVFoundation;
 
 @interface AVURLAsset (WX)
 

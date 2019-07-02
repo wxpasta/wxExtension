@@ -6,8 +6,8 @@
 //  Copyright © 2016年 AngieMita. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import Foundation;
+@import UIKit;
 
 typedef enum : NSUInteger {
     BJTextToSpeechStateDefault,

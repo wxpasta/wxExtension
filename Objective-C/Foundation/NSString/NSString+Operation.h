@@ -6,22 +6,22 @@
 //  Copyright © 2017 ainemo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+@import Foundation;
+@import UIKit;
 
 @interface NSString (Operation)
 
-- (NSString *(^)())custom;
+- (NSString *(^)(void))custom;
 
-- (NSString *(^)())escape;
+- (NSString *(^)(void))escape;
 
-- (NSData *(^)())data;
+- (NSData *(^)(void))data;
 
-- (id (^)())serialization;
+- (id (^)(void))serialization;
 
-- (NSString *(^)())noWhiteSpaceString;
+- (NSString *(^)(void))noWhiteSpaceString;
 
-- (NSString *(^)())baseDecode;
+- (NSString *(^)(void))baseDecode;
 
 - (NSMutableAttributedString *(^)(NSString *, CGFloat font))appendBold;
 

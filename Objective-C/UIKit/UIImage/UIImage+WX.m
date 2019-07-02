@@ -1,6 +1,6 @@
 #import "UIImage+WX.h"
-#import <AVFoundation/AVFoundation.h>
-#import <MediaPlayer/MPMediaPlayback.h>
+@import AVFoundation;
+@import MediaPlayer.MPMediaPlayback;
 
 @implementation UIImage (WX)
 

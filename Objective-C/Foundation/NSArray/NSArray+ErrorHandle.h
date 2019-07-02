@@ -1,16 +1,16 @@
 //
-//  NSArray+ErrorHandle.h
-//  ErrorHandle
+//  NSArray+WXCategories.h
+//  WXCategories
 //
 //  Created by 许宝吉 on 2018/9/18.
 //  Copyright © 2018年 许宝吉. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSArray (ErrorHandle)
+@interface NSArray (WXCategories)
 
 /**
  为数组分类添加的方法  可以在应用中直接调用 可以防止数组越界导致的crash

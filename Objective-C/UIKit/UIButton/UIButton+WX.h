@@ -1,4 +1,6 @@
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (WX)
 
@@ -31,3 +33,5 @@
                                       addTarget:(nullable id)target
                                          action:(nullable SEL)action;
 @end
+
+NS_ASSUME_NONNULL_END

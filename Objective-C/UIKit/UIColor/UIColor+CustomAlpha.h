@@ -6,7 +6,7 @@
 //  Copyright © 2019 许宝吉. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 

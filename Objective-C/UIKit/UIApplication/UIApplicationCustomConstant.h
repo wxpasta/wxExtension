@@ -6,7 +6,7 @@
 //  Copyright © 2018年 巴糖. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 extern NSString * _Nonnull const kUIApplicationCustomConstantTel;
 extern NSString * _Nonnull const kUIApplicationCustomConstantSms;

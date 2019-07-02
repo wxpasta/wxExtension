@@ -10,7 +10,7 @@
     // 1.设置应用程序图标的提醒数字
     app.applicationIconBadgeNumber = number;
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0f) {
         // 创建通知对象
         UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
         // 注册用户通知

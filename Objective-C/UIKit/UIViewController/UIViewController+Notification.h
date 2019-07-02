@@ -6,7 +6,10 @@
 //  Copyright © 2018年 AngieMita. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 @interface UIViewController (Notification)
 
@@ -66,3 +69,5 @@
 - (void)wx_removeNotificationsObserverWithName:(nullable NSNotificationName)aName;
 
 @end
+
+NS_ASSUME_NONNULL_END

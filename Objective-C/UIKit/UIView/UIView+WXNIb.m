@@ -1,6 +1,6 @@
 //
 //  UIView+WXNIb.m
-//  ErrorHandle
+//  WXCategories
 //
 //  Created by 许宝吉 on 2018/11/16.
 //  Copyright © 2018 许宝吉. All rights reserved.

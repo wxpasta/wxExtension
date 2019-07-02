@@ -6,7 +6,7 @@
 //  Copyright © 2018年 AngieMita. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 @class  WXUINavigationControllerInitInfo;
 
 @interface UINavigationController (WXInitModel)

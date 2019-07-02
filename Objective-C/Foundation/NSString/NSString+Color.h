@@ -6,7 +6,7 @@
 //  Copyright © 2017年 巴糖. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSString (Color)
 

@@ -7,7 +7,7 @@
 //
 
 #import "NSString+Verify.h"
-#include <arpa/inet.h>
+@import Darwin.POSIX.arpa.inet;
 
 @implementation NSString (Verify)
 

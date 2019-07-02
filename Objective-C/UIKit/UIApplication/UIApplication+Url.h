@@ -6,7 +6,7 @@
 //  Copyright © 2018年 巴糖. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIApplication (Url)
 

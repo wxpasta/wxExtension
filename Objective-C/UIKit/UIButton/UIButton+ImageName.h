@@ -6,7 +6,7 @@
 //  Copyright © 2017年 crazyit.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIButton (ImageName)
 
@@ -34,7 +34,7 @@
 /**
  设置按钮Selected状态下的图片
  
- @return 图片名称
+ return 图片名称
  */
 - (void)setImageNameForSelected:(NSString *)imageName;
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 crazyit.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIButton (Image)
 

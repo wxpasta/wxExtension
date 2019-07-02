@@ -1,6 +1,6 @@
 //
 //  UIView+FPSetFrame.m
-//  ErrorHandle
+//  WXCategories
 //
 //  Created by 许宝吉 on 2018/10/16.
 //  Copyright © 2018 许宝吉. All rights reserved.
@@ -10,104 +10,87 @@
 
 @implementation UIView (FPSetFrame)
 
-- (void(^)(float))ffl_setTop
-{
-    __weak typeof(self) weakSelf = self;
-    void (^result)(float) = ^(float value){
-        CGRect frame = weakSelf.frame;
+- (void(^)(CGFloat))ffl_setTop {
+    void (^result)(CGFloat) = ^(CGFloat value){
+        CGRect frame = self.frame;
         frame.origin.y = value;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
-- (void(^)(float))ffl_setLeft
-{
-    __weak typeof(self) weakSelf = self;
-    void (^result)(float) = ^(float value){
-        CGRect frame = weakSelf.frame;
+- (void(^)(CGFloat))ffl_setLeft {
+    void (^result)(CGFloat) = ^(CGFloat value){
+        CGRect frame = self.frame;
         frame.origin.x = value;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
 
-- (void (^)(float))ffl_setWidth
-{
-    __weak typeof(self) weakSelf = self;
-    void (^result)(float) = ^(float value){
-        CGRect frame = weakSelf.frame;
+- (void (^)(CGFloat))ffl_setWidth {
+    void (^result)(CGFloat) = ^(CGFloat value){
+        CGRect frame = self.frame;
         frame.size.width = value;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
-- (void (^)(float))ffl_setHeight
-{
-    __weak typeof(self) weakSelf = self;
-    void (^result)(float) = ^(float value){
-        CGRect frame = weakSelf.frame;
+- (void (^)(CGFloat))ffl_setHeight {
+    void (^result)(CGFloat) = ^(CGFloat value){
+        CGRect frame = self.frame;
         frame.size.height = value;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
-- (void (^)(CGSize))ffl_setCGSize
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGSize))ffl_setCGSize {
     void (^result)(CGSize) = ^(CGSize value){
-        CGRect frame = weakSelf.frame;
+        CGRect frame = self.frame;
         frame.size = value;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
 
-- (void (^)(CGFloat dx,CGFloat dy))ffl_setSize
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGFloat dx,CGFloat dy))ffl_setSize {
     void (^result)(CGFloat dx,CGFloat dy) = ^(CGFloat dx,CGFloat dy){
-        CGRect frame = weakSelf.frame;
+        CGRect frame = self.frame;
         frame.size.width = dx;
         frame.size.height = dy;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
 
 
-- (void (^)(CGPoint))ffl_setCGPoint
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGPoint))ffl_setCGPoint {
     void (^result)(CGPoint) = ^(CGPoint value){
-        CGRect frame = weakSelf.frame;
+        CGRect frame = self.frame;
         frame.origin = value;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
-- (void (^)(CGFloat x,CGFloat y))ffl_setOrigin
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGFloat x,CGFloat y))ffl_setOrigin {
     void (^result)(CGFloat x,CGFloat y) = ^(CGFloat x,CGFloat y){
-        CGRect frame = weakSelf.frame;
+        CGRect frame = self.frame;
         frame.origin.x = x;
         frame.origin.y = y;
-        weakSelf.frame = frame;
+        self.frame = frame;
     };
     return result;
 }
 
-- (void (^)(CGFloat x,CGFloat y, CGFloat dx,CGFloat dy))ffl_setFrame{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGFloat x,CGFloat y, CGFloat dx,CGFloat dy))ffl_setFrame {
     void (^result)(CGFloat x,CGFloat y, CGFloat dx,CGFloat dy) = ^(CGFloat x,CGFloat y, CGFloat dx,CGFloat dy){
-        weakSelf.frame = CGRectMake(x, y, dx, dy);
+        self.frame = CGRectMake(x, y, dx, dy);
     };
     return result;
 }

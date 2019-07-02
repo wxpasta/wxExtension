@@ -1,7 +1,7 @@
 #import "NSCalendar+WX.h"
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 @implementation NSCalendar (WX)
 
 + (instancetype)calendar

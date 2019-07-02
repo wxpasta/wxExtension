@@ -2,9 +2,10 @@
 
 @implementation UIDatePicker (WX)
 
-+ (instancetype)wx_datePickerWithLocaleIdentifier:(nullable NSString *)ident
++ (instancetype)wx_datePickerWithLocaleIdentifier:(NSString *)ident
                                    datePickerMode:(UIDatePickerMode)datePickerMode
-                                        addTarget:(nullable id)target action:(SEL)action
+                                        addTarget:(nullable id)target
+                                           action:(SEL)action
 {
     UIDatePicker *datePicker = [[UIDatePicker alloc] init];
     //设置最大选择时间

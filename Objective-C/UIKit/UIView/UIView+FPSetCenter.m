@@ -1,6 +1,6 @@
 //
 //  UIView+FPSetCenter.m
-//  ErrorHandle
+//  WXCategories
 //
 //  Created by 许宝吉 on 2018/10/16.
 //  Copyright © 2018 许宝吉. All rights reserved.
@@ -10,46 +10,39 @@
 
 @implementation UIView (FPSetCenter)
 
-- (void (^)(CGPoint))ffl_setCGCenter
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGPoint))ffl_setCGCenter {
     void (^result)(CGPoint) = ^(CGPoint value){
-        weakSelf.center = value;
+        self.center = value;
     };
     return result;
 }
 
-- (void (^)(CGFloat x,CGFloat y))ffl_setCenter
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGFloat x,CGFloat y))ffl_setCenter {
     void (^result)(CGFloat x,CGFloat y) = ^(CGFloat x,CGFloat y){
-        CGPoint center = weakSelf.center;
+        CGPoint center = self.center;
         center.x = x;
         center.y = y;
-        weakSelf.center = center;
+        self.center = center;
     };
     return result;
 }
 
-- (void (^)(CGFloat))ffl_setCenterX
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGFloat))ffl_setCenterX {
     void (^result)(CGFloat) = ^(CGFloat value){
-        CGPoint center = weakSelf.center;
+        CGPoint center = self.center;
         center.x = value;
-        weakSelf.center = center;
+        self.center = center;
     };
     return result;
 }
 
-- (void (^)(CGFloat))ffl_setCenterY
-{
-    __weak typeof(self) weakSelf = self;
+- (void (^)(CGFloat))ffl_setCenterY {
     void (^result)(CGFloat) = ^(CGFloat value){
-        CGPoint center = weakSelf.center;
+        CGPoint center = self.center;
         center.y = value;
-        weakSelf.center = center;
+        self.center = center;
     };
     return result;
 }
+
 @end

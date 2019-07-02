@@ -6,7 +6,10 @@
 //  Copyright © 2018年 ainemo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 @interface UIStoryboard (WX)
 
@@ -19,7 +22,7 @@
 + (nullable __kindof UIViewController*)wx_storyboardInstantiateInitialViewControllerWithName:(NSString *)name;
 
 /**
- 用storyboard初始化UIViewController
+ 用story_Nonnullboard初始化UIViewController
 
  @param name storyboardName
  @param identifier UIViewController 唯一标识
@@ -28,3 +31,5 @@
 + (__kindof UIViewController *)wx_storyboardInstantiateViewControllerWithName:(NSString *)name
                                                                    identifier:(NSString *)identifier;
 @end
+
+NS_ASSUME_NONNULL_END

@@ -13,62 +13,66 @@
 /*
  * @brief rotate image 90 with CounterClockWise
  */
-- (UIImage*)rotate90CounterClockwise
+- (nullable UIImage *)rotate90CounterClockwise
 {
     UIImage *image = nil;
+    CGImageRef imageRef = self.CGImage;
+    if (!imageRef) {
+        return nil;
+    }
     switch (self.imageOrientation) {
         case UIImageOrientationUp:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationLeft];
             break;
         }
         case UIImageOrientationDown:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationRight];
             break;
         }
         case UIImageOrientationLeft:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationDown];
             break;
         }
         case UIImageOrientationRight:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationUp];
             break;
         }
         case UIImageOrientationUpMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationRightMirrored];
             break;
         }
         case UIImageOrientationDownMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationLeftMirrored];
             break;
         }
         case UIImageOrientationLeftMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationUpMirrored];
             break;
         }
         case UIImageOrientationRightMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationDownMirrored];
             break;
@@ -83,62 +87,66 @@
 /*
  * @brief rotate image 90 with Clockwise
  */
-- (UIImage*)rotate90Clockwise
+- (nullable UIImage *)rotate90Clockwise
 {
     UIImage *image = nil;
+    CGImageRef imageRef = self.CGImage;
+    if (!imageRef) {
+        return nil;
+    }
     switch (self.imageOrientation) {
         case UIImageOrientationUp:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationRight];
             break;
         }
         case UIImageOrientationDown:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationLeft];
             break;
         }
         case UIImageOrientationLeft:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationUp];
             break;
         }
         case UIImageOrientationRight:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationDown];
             break;
         }
         case UIImageOrientationUpMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationLeftMirrored];
             break;
         }
         case UIImageOrientationDownMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationRightMirrored];
             break;
         }
         case UIImageOrientationLeftMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationDownMirrored];
             break;
         }
         case UIImageOrientationRightMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationUpMirrored];
             break;
@@ -153,62 +161,66 @@
 /*
  * @brief rotate image 180 degree
  */
-- (UIImage*)rotate180
+- (nullable UIImage *)rotate180
 {
     UIImage *image = nil;
+    CGImageRef imageRef = self.CGImage;
+    if (!imageRef) {
+        return nil;
+    }
     switch (self.imageOrientation) {
         case UIImageOrientationUp:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationDown];
             break;
         }
         case UIImageOrientationDown:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationUp];
             break;
         }
         case UIImageOrientationLeft:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationRight];
             break;
         }
         case UIImageOrientationRight:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationLeft];
             break;
         }
         case UIImageOrientationUpMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationDownMirrored];
             break;
         }
         case UIImageOrientationDownMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationUpMirrored];
             break;
         }
         case UIImageOrientationLeftMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationRightMirrored];
             break;
         }
         case UIImageOrientationRightMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage
+            image = [UIImage imageWithCGImage:imageRef
                                         scale:1
                                   orientation:UIImageOrientationLeftMirrored];
             break;
@@ -244,45 +256,49 @@
 - (UIImage*)flipHorizontal
 {
     UIImage *image = nil;
+    CGImageRef imageRef = self.CGImage;
+    if (!imageRef) {
+        return nil;
+    }
     switch (self.imageOrientation) {
         case UIImageOrientationUp:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationUpMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationUpMirrored];
             break;
         }
         case UIImageOrientationDown:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationDownMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationDownMirrored];
             break;
         }
         case UIImageOrientationLeft:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationRightMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationRightMirrored];
             break;
         }
         case UIImageOrientationRight:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationLeftMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationLeftMirrored];
             break;
         }
         case UIImageOrientationUpMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationUp];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationUp];
             break;
         }
         case UIImageOrientationDownMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationDown];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationDown];
             break;
         }
         case UIImageOrientationLeftMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationRight];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationRight];
             break;
         }
         case UIImageOrientationRightMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationLeft];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationLeft];
             break;
         }
         default:
@@ -298,45 +314,49 @@
 - (UIImage*)flipVertical
 {
     UIImage *image = nil;
+    CGImageRef imageRef = self.CGImage;
+    if (!imageRef) {
+        return nil;
+    }
     switch (self.imageOrientation) {
         case UIImageOrientationUp:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationDownMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationDownMirrored];
             break;
         }
         case UIImageOrientationDown:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationUpMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationUpMirrored];
             break;
         }
         case UIImageOrientationLeft:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationLeftMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationLeftMirrored];
             break;
         }
         case UIImageOrientationRight:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationRightMirrored];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationRightMirrored];
             break;
         }
         case UIImageOrientationUpMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationDown];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationDown];
             break;
         }
         case UIImageOrientationDownMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationUp];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationUp];
             break;
         }
         case UIImageOrientationLeftMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationLeft];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationLeft];
             break;
         }
         case UIImageOrientationRightMirrored:
         {
-            image = [UIImage imageWithCGImage:self.CGImage scale:1 orientation:UIImageOrientationRight];
+            image = [UIImage imageWithCGImage:imageRef scale:1 orientation:UIImageOrientationRight];
             break;
         }
         default:
@@ -354,10 +374,10 @@
     return [self rotate180];
 }
 
-+ (UIImage *)compressImage:(UIImage *)image toMaxFileSize:(NSInteger)maxFileSize
++ (UIImage *)compressImage:(UIImage *)image toMaxFileSize:(NSUInteger)maxFileSize
 {
-    CGFloat compression = 0.9f;
-    CGFloat maxCompression = 0.1f;
+    CGFloat compression = 0.9;
+    CGFloat maxCompression = 0.1;
     
     NSData *imageData = UIImageJPEGRepresentation(image, compression);
     

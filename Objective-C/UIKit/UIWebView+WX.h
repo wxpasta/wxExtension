@@ -1,5 +1,5 @@
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+@import Foundation;
 
 @interface UIWebView (WX)
 

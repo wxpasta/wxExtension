@@ -6,9 +6,13 @@
 //  Copyright © 2018年 AngieMita. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface WXUINavigationControllerInitInfo : NSObject
+
+
 
 /** 视图控制器 */
 @property (nonatomic, strong) Class viewController;
@@ -29,3 +33,5 @@
 
 
 @end
+
+NS_ASSUME_NONNULL_END

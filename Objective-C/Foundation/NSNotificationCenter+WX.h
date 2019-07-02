@@ -6,7 +6,7 @@
 //  Copyright © 2016年 AngieMita. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSNotificationCenter (WX)
 

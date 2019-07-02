@@ -7,7 +7,7 @@
 //
 
 #import "UIButton+EventInterval.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 static char * const wx_eventTimeIntervalKey = "wx_eventTimeIntervalKey";
 static char * const wx_eventUnavailableKey = "wx_eventUnavailableKey";

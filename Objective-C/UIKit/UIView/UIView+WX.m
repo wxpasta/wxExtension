@@ -52,7 +52,7 @@
 
 + (instancetype)wx_viewScreenFrameWithHeight:(CGFloat)height
 {
-    return [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, height)];
+    return [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
 }
 
 -(CGFloat)wx_widthResolution

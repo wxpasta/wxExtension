@@ -1,14 +1,18 @@
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImageView (WX)
 
-+ (nonnull UIImageView *)wx_imageViewWithImageName:(nonnull NSString *)imageName;
++ (UIImageView *)wx_imageViewWithImageName:(NSString *)imageName;
 
-+ (nullable UIImageView *)wx_imageViewWithImageName:(nullable NSString *)imageName
-                                              frame:(CGRect)frame;
++ (UIImageView *)wx_imageViewWithImageName:(NSString *)imageName
+                                     frame:(CGRect)frame;
 
-+ (nullable UIImageView *)wx_imageViewWithImageName:(nullable NSString *)imageName
-                               highlightedImageName:(nullable NSString *)highlightedImageName
-                                              frame:(CGRect)frame;
++ (UIImageView *)wx_imageViewWithImageName:(NSString *)imageName
+                      highlightedImageName:(NSString *)highlightedImageName
+                                     frame:(CGRect)frame;
 
 @end
+
+NS_ASSUME_NONNULL_END

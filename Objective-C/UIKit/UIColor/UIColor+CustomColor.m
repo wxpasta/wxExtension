@@ -10,8 +10,8 @@
 
 @implementation UIColor (CustomColor)
 
-+ (UIColor *(^)(int, float))customColor{
-    return ^(int tone, float alpha){
++ (UIColor *(^)(int, CGFloat))customColor{
+    return ^(int tone, CGFloat alpha){
         return [UIColor colorWithRed:((tone & 0xFF0000) >> 16)/255.0
                                green:((tone & 0xFF00) >> 8)/255.0
                                 blue:((tone & 0xFF))/255.0
@@ -19,4 +19,14 @@
     };
 }
 
+UIColor* UIColorFromHex(NSInteger colorInHex) {
+    // colorInHex should be value like 0xFFFFFF
+    return [UIColor colorWithRed:((CGFloat) ((colorInHex & 0xFF0000) >> 16)) / 0xFF
+                           green:((CGFloat) ((colorInHex & 0xFF00)   >> 8))  / 0xFF
+                            blue:((CGFloat)  (colorInHex & 0xFF))            / 0xFF
+                           alpha:1.0];
+}
+
 @end
+
+

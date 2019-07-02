@@ -6,7 +6,7 @@
 //  Copyright © 2018年 chenwei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIAlertController (Alert)
 

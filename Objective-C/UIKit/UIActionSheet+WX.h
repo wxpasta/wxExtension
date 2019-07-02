@@ -6,7 +6,7 @@
 //  Copyright © 2016年 AngieMita. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIActionSheet (WX)
 

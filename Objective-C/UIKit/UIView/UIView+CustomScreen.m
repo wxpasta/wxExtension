@@ -10,37 +10,37 @@
 
 @implementation UIView (CustomScreen)
 
-+ (CGRect (^)())XYScreen{
++ (CGRect (^)(void))XYScreen{
     return ^(){
         return [UIScreen mainScreen].bounds;
     };
 }
 
-+ (CGSize (^)())XYScreenSize{
++ (CGSize (^)(void))XYScreenSize{
     return ^(){
         return self.XYScreen().size;
     };
 }
 
-+ (CGFloat (^)())XYScreenWidth{
++ (CGFloat (^)(void))XYScreenWidth{
     return ^(){
         return self.XYScreenSize().width;
     };
 }
 
-+ (CGFloat (^)())XYScreenHeight{
++ (CGFloat (^)(void))XYScreenHeight{
     return ^(){
         return self.XYScreenSize().height;
     };
 }
 
-+ (CGFloat (^)())XYScreenScale{
++ (CGFloat (^)(void))XYScreenScale{
     return ^(){
         return self.XYScreenWidth() / 375;
     };
 }
 
-+ (CGFloat (^)())XYScreenScale_320{
++ (CGFloat (^)(void))XYScreenScale_320{
     return ^(){
         return self.XYScreenWidth() / 320;
     };
