@@ -2,8 +2,8 @@
 //  NSObject+BJPaste.m
 //  Objc
 //
-//  Created by 许宝吉 on 2018/5/15.
-//  Copyright © 2018年 许宝吉. All rights reserved.
+//  Created by 巴糖 on 2018/5/15.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 #import "NSObject+BJPaste.h"

@@ -82,13 +82,16 @@
     [[NSScanner scannerWithString:gString] scanHexInt:&g];
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     
-    return [UIColor colorWithRed:((CGFloat)r / 255.0f) green:((CGFloat)g / 255.0f) blue:((CGFloat)b / 255.0f) alpha:alpha];
+    return [UIColor colorWithRed:((CGFloat)r / 255.0)
+                           green:((CGFloat)g / 255.0)
+                            blue:((CGFloat)b / 255.0)
+                           alpha:alpha];
 }
 
 //默认alpha值为1
 + (UIColor *)wx_colorWithHexString:(NSString *)color
 {
-    return [self wx_colorWithHexString:color alpha:1.0f];
+    return [self wx_colorWithHexString:color alpha:1.0];
 }
 
 + (UIColor *)wx_colorWithHex:(NSInteger)hexValue alpha:(CGFloat)alpha

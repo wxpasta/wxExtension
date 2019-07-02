@@ -2,8 +2,8 @@
 //  NSString+Extension.h
 //  BaiduOCR
 //
-//  Created by AngieMita on 16/8/31.
-//  Copyright © 2016年 AngieMita. All rights reserved.
+//  Created by 巴糖 on 16/8/31.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 @import Foundation;

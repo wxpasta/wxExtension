@@ -2,8 +2,8 @@
 //  NSFileManager+Constructor.m
 //  WXCategories
 //
-//  Created by 许宝吉 on 2018/11/14.
-//  Copyright © 2018 许宝吉. All rights reserved.
+//  Created by 巴糖 on 2018/11/14.
+//  Copyright © 2018 巴糖. All rights reserved.
 //
 
 #import "NSFileManager+Constructor.h"

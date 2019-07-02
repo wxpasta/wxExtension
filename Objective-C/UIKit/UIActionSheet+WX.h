@@ -1,9 +1,9 @@
 //
 //  UIActionSheet+WX.h
-//  ustar
+//  WXCategories
 //
-//  Created by imac on 2016/9/30.
-//  Copyright © 2016年 AngieMita. All rights reserved.
+//  Created by 巴糖 on 2016/9/30.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 @import UIKit;

@@ -2,8 +2,8 @@
 //  UIStoryboard+WX.h
 //  
 //
-//  Created by 许宝吉 on 2018/7/27.
-//  Copyright © 2018年 ainemo. All rights reserved.
+//  Created by 巴糖 on 2018/7/27.
+//  Copyright © 2019年 ainemo. All rights reserved.
 //
 
 @import UIKit;

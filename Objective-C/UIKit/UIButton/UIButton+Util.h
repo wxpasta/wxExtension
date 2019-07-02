@@ -2,8 +2,8 @@
 //  UIButton+Util.h
 //  UIButtonTest
 //
-//  Created by AngieMIta on 2017/8/24.
-//  Copyright © 2017年 crazyit.org. All rights reserved.
+//  Created by 巴糖 on 2017/8/24.
+//  Copyright © 2019年 crazyit.org. All rights reserved.
 //
 
 @import UIKit;

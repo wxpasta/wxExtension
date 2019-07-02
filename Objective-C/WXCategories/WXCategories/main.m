@@ -2,8 +2,8 @@
 //  main.m
 //  WXCategories
 //
-//  Created by 许宝吉 on 2019/6/17.
-//  Copyright © 2019 许宝吉. All rights reserved.
+//  Created by 巴糖 on 2019/6/17.
+//  Copyright © 2019 巴糖. All rights reserved.
 //
 
 @import UIKit;

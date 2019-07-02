@@ -2,8 +2,8 @@
 //  NSArray+PrintChinese.m
 //  WXCategories
 //
-//  Created by 许宝吉 on 2018/10/17.
-//  Copyright © 2018 许宝吉. All rights reserved.
+//  Created by 巴糖 on 2018/10/17.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 #import "NSArray+PrintChinese.h"

@@ -1,9 +1,9 @@
 //
 //  NSNotificationCenter+WX.m
-//  ustar
+//  WXCategories
 //
-//  Created by imac on 2016/10/14.
-//  Copyright © 2016年 AngieMita. All rights reserved.
+//  Created by 巴糖 on 2019/10/14.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 #import "NSNotificationCenter+WX.h"

@@ -147,7 +147,7 @@
 + (NSString *)md5StringWithType:(NSString *)type
                        platform:(NSInteger)platform
 {
-    return [[NSString stringWithFormat:@"%@VRGate%ld",type,platform] md5String];
+    return [[NSString stringWithFormat:@"%@巴糖%ld",type,platform] md5String];
     
 }
 
@@ -155,7 +155,7 @@
 + (NSString *)notMD5StringWithType:(NSString *)type
                           platform:(NSString *)platform
 {
-    return [NSString stringWithFormat:@"%@VRGate%@",type,platform];
+    return [NSString stringWithFormat:@"%@巴糖%@",type,platform];
     
 }
 @end

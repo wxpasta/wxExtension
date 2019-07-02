@@ -2,8 +2,8 @@
 //  UINavigationController+Custom.h
 //  WXCategories
 //
-//  Created by 许宝吉 on 2019/7/1.
-//  Copyright © 2019 许宝吉. All rights reserved.
+//  Created by 巴糖 on 2019/7/1.
+//  Copyright © 2019 巴糖. All rights reserved.
 //
 
 @import UIKit;

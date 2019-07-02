@@ -2,7 +2,7 @@
 //  NSBundle+XYLanguage.m
 //  NemoOfficeClient
 //
-//  Created by 许宝吉 on 2019/6/4.
+//  Created by 巴糖 on 2019/6/4.
 //  Copyright © 2019 ainemo. All rights reserved.
 //
 

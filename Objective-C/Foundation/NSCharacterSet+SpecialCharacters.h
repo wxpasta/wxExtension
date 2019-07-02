@@ -1,9 +1,9 @@
 //
 //  NSCharacterSet+SpecialCharacters.h
-//  NemoSDK
+//  WXCategories
 //
-//  Created by 许宝吉 on 2018/7/24.
-//  Copyright © 2018年 JackYang. All rights reserved.
+//  Created by 巴糖 on 2018/7/24.
+//  Copyright © 2019年 JackYang. All rights reserved.
 //
 
 @import Foundation;

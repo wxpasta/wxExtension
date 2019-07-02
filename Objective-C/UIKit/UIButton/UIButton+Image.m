@@ -2,8 +2,8 @@
 //  UIButton+Image.m
 //  UIButtonTest
 //
-//  Created by AngieMIta on 2017/8/23.
-//  Copyright © 2017年 crazyit.org. All rights reserved.
+//  Created by 巴糖 on 2017/8/23.
+//  Copyright © 2019年 crazyit.org. All rights reserved.
 //
 
 #import "UIButton+Image.h"

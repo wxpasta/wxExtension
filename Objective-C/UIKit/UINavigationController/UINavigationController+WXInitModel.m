@@ -2,8 +2,8 @@
 //  UINavigationController+WXInitModel.m
 //  
 //
-//  Created by AngieMita on 2018/07/20.
-//  Copyright © 2018年 AngieMita. All rights reserved.
+//  Created by 巴糖 on 2018/07/20.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 #import "UINavigationController+WXInitModel.h"

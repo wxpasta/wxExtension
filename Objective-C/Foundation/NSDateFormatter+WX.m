@@ -1,9 +1,9 @@
 //
 //  NSDateFormatter+WX.m
-//  VRMAX
+//  WXCategories
 //
-//  Created by AngieMita on 16/6/26.
-//  Copyright © 2016年 VRGATE. All rights reserved.
+//  Created by 巴糖 on 16/6/26.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 #import "NSDateFormatter+WX.h"

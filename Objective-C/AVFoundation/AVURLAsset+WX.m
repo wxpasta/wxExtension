@@ -1,9 +1,9 @@
 //
 //  AVURLAsset+WX.m
-//  ustar
+//  WXCategories
 //
-//  Created by imac on 2016/10/10.
-//  Copyright © 2016年 AngieMita. All rights reserved.
+//  Created by 巴糖 on 2016/10/10.
+//  Copyright © 2019年 巴糖. All rights reserved.
 //
 
 #import "AVURLAsset+WX.h"

@@ -2,8 +2,8 @@
 //  UIButton+IBLayerTitle.m
 //  XYAPPTest
 //
-//  Created by 许宝吉 on 2019/1/18.
-//  Copyright © 2019 许宝吉. All rights reserved.
+//  Created by 巴糖 on 2019/1/18.
+//  Copyright © 2019 巴糖. All rights reserved.
 //
 
 #import "UIButton+IBLayerTitle.h"

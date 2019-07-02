@@ -2,7 +2,7 @@
 //  NSString+XYEmoticon.h
 //  NemoOfficeClient
 //
-//  Created by 许宝吉 on 2019/3/13.
+//  Created by 巴糖 on 2019/3/13.
 //  Copyright © 2019 ainemo. All rights reserved.
 //
 

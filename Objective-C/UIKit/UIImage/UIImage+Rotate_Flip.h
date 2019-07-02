@@ -3,7 +3,7 @@
 //  BaiduOCR
 //
 //  Created by 王严 on 16/9/5.
-//  Copyright © 2016年 GLK. All rights reserved.
+//  Copyright © 2019年 GLK. All rights reserved.
 //
 
 @import UIKit;
