@@ -29,6 +29,7 @@
             }
             @catch (NSException *exception) {
                 // Do nothing
+                NSLog(@"swizzledDealloc exception %@",exception);
             }
         }
     }

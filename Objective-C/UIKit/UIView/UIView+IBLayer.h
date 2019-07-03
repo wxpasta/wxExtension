@@ -12,19 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (IBLayer)
 
-@property (nonatomic, strong, nullable) IBInspectable UIColor *borderColor;
+@property (nonatomic, readwrite, strong, nullable) IBInspectable UIColor *borderColor;
 
-@property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
+@property (nonatomic, readwrite, assign) IBInspectable CGFloat cornerRadius;
 
-@property (nonatomic, assign) IBInspectable CGFloat borderWidth;
+@property (nonatomic, readwrite, assign) IBInspectable CGFloat borderWidth;
 
-@property (nonatomic, assign) IBInspectable CGFloat shadowRadius;
+@property (nonatomic, readwrite, assign) IBInspectable CGFloat shadowRadius;
 
-@property (nonatomic, assign) IBInspectable float shadowOpacity;
+@property (nonatomic, readwrite, assign) IBInspectable float shadowOpacity;
 
-@property (nonatomic, assign) IBInspectable CGSize shadowOffset;
+@property (nonatomic, readwrite, assign) IBInspectable CGSize shadowOffset;
 
-@property (nonatomic, strong, nullable) IBInspectable UIColor *shadowColor;
+@property (nonatomic, readwrite, strong, nullable) IBInspectable UIColor *shadowColor;
 
 @end
 

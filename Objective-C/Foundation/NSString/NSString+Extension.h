@@ -10,6 +10,7 @@
 @import UIKit;
 
 typedef enum : NSUInteger {
+    BJTextToSpeechStateUnkown,
     BJTextToSpeechStateDefault,
     BJTextToSpeechStateWithoutWords,
     BJTextToSpeechStateParseFailure

@@ -15,7 +15,7 @@
     [self setTitle:title forState:UIControlStateDisabled];
 }
 
-- (NSString *)disabledTitle{
+- (nullable NSString *)disabledTitle{
     return [self titleForState:UIControlStateDisabled];
 }
 
@@ -23,7 +23,7 @@
     [self setTitle:title forState:UIControlStateHighlighted];
 }
 
-- (NSString *)highlightedTitle{
+- (nullable NSString *)highlightedTitle{
     return [self titleForState:UIControlStateHighlighted];
 }
 
@@ -31,7 +31,7 @@
     [self setTitle:title forState:UIControlStateNormal];
 }
 
-- (NSString *)normalTitle{
+- (nullable NSString *)normalTitle{
     return [self titleForState:UIControlStateNormal];
 }
 
@@ -40,7 +40,7 @@
     [self setTitle:title forState:UIControlStateSelected];
 }
 
-- (NSString *)selectedTitle{
+- (nullable NSString *)selectedTitle{
     return [self titleForState:UIControlStateSelected];
 }
 

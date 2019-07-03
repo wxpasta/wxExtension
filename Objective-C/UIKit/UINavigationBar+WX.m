@@ -2,11 +2,15 @@
 
 @implementation UINavigationBar (WX)
 
-- (void)wx_setPureColorNavigationBar:(NSString *)imageName
-{
-    [self setBackgroundImage:[UIImage imageNamed:imageName] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    [self setShadowImage:[[UIImage alloc]init]];
-    
+- (void)setPureColorNavigationBar:(NSString *)imageName {
+    UIImage *image = [UIImage imageNamed:imageName];
+    if (image) {
+        [self setBackgroundImage:image
+                  forBarPosition:UIBarPositionAny
+                      barMetrics:UIBarMetricsDefault];
+        UIImage *shadowImage = [[UIImage alloc]init];
+        [self setShadowImage:shadowImage];
+    }
 }
 
 

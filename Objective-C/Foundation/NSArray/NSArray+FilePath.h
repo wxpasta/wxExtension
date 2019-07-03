@@ -8,7 +8,9 @@
 
 @import Foundation;
 
-@interface NSArray (WX)
+NS_ASSUME_NONNULL_BEGIN
+
+@interface NSArray (FilePath)
 
 /**
  *  获取文件的全路径的数组
@@ -23,3 +25,5 @@
 + (nullable instancetype)wx_arrayFirstObjectWithLoadNibNamedClass:(nonnull Class)coustomClass;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -7,7 +7,7 @@
 //
 
 #import "NSBundle+XYLanguage.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 static const char _bundle = 0;
 
@@ -34,7 +34,10 @@ static const char _bundle = 0;
         object_setClass([NSBundle mainBundle], [BundleEx class]);
     });
     
-    objc_setAssociatedObject([NSBundle mainBundle], &_bundle, language ? [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:language ofType:@"lproj"]] : nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    NSString *path = [[NSBundle mainBundle] pathForResource:language ofType:@"lproj"];
+    if (path) {
+        objc_setAssociatedObject([NSBundle mainBundle], &_bundle, language ? [NSBundle bundleWithPath:path] : nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
 }
 
 @end

@@ -10,6 +10,7 @@
 
 @interface UIActionSheet (WX)
 
-- (BOOL)wx_isEquaTitle:(NSString *)title buttonIndex:(NSInteger)buttonIndex;
+- (BOOL)wx_isEquaTitle:(NSString *)title
+           buttonIndex:(NSInteger)buttonIndex;
 
 @end

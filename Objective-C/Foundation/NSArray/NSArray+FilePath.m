@@ -6,10 +6,11 @@
 //  Copyright © 2019年 巴糖. All rights reserved.
 //
 
-#import "NSArray+WX.h"
+#import "NSArray+FilePath.h"
+
 #import "NSBundle+WX.h"
 
-@implementation NSArray (WX)
+@implementation NSArray (FilePath)
 
 + (nullable NSArray *)wx_arrayWithPathForResource:(nullable NSString *)name
 {

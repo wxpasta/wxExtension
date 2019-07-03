@@ -3,13 +3,13 @@
 @implementation UIButton (WX)
 
 #pragma mark 添加按钮
-+ (nullable instancetype)wx_buttonWithImageName:(nullable NSString *)imageName
-                                  highImageName:(nullable NSString *)highImageName
-                               disableImageName:(nullable NSString *)disableImageName
++ (nullable instancetype)wx_buttonWithImageName:(NSString *)imageName
+                                  highImageName:(NSString *)highImageName
+                               disableImageName:(NSString *)disableImageName
                                           frame:(CGRect)frame
                                             tag:(NSInteger)tag
                                       addTarget:(nullable id)target
-                                         action:(nullable SEL)action;
+                                         action:(SEL)action;
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -29,7 +29,7 @@
 + (nullable instancetype)wx_buttonWithTtile:(nullable NSString *)title
                                       color:(nullable UIColor *)color
                                      target:(nullable id)target
-                                  addTarget:(nullable SEL)action
+                                  addTarget:(SEL)action
                                       frame:(CGRect)frame
                  contentHorizontalAlignment:(UIControlContentHorizontalAlignment)contentHorizontalAlignment
 {
@@ -45,10 +45,10 @@
     return btn;
 }
 
-+ (nullable instancetype)wx_buttonWithImageName:(nullable NSString *)imageName
-                                  highImageName:(nullable NSString *)highImageName
++ (nullable instancetype)wx_buttonWithImageName:(NSString *)imageName
+                                  highImageName:(NSString *)highImageName
                                       addTarget:(nullable id)target
-                                         action:(nullable SEL)action
+                                         action:(SEL)action
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -59,14 +59,14 @@
     return btn;
 }
 
-+ (nullable instancetype)wx_buttonWithImageName:(nullable NSString *)imageName
-                                  highImageName:(nullable NSString *)highImageName
++ (nullable instancetype)wx_buttonWithImageName:(NSString *)imageName
+                                  highImageName:(NSString *)highImageName
                                           title:(nullable NSString *)title
                                       highTitle:(nullable NSString *)highTitle
                                      titleColor:(nullable UIColor *)titleColor
                                  highTitleColor:(nullable UIColor *)highTitleColor
                                       addTarget:(nullable id)target
-                                         action:(nullable SEL)action
+                                         action:(SEL)action
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     

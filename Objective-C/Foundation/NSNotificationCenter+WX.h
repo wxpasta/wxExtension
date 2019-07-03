@@ -8,8 +8,12 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSNotificationCenter (WX)
 
 - (void)wx_postNotificationName:(NSNotificationName)aName;
 
 @end
+
+NS_ASSUME_NONNULL_END

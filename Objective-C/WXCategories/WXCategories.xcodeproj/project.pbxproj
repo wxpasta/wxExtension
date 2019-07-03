@@ -56,8 +56,8 @@
 		61A4451422B7454600D4976E /* UIDatePicker+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A444E322B7454600D4976E /* UIDatePicker+WX.m */; };
 		61A4451522B7454600D4976E /* UICollectionView+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A444E622B7454600D4976E /* UICollectionView+WX.m */; };
 		61A4451622B7454600D4976E /* UINavigationBar+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A444EB22B7454600D4976E /* UINavigationBar+WX.m */; };
-		61A4458122B7456200D4976E /* AVAudioPlayer+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4451822B7456100D4976E /* AVAudioPlayer+WX.m */; };
-		61A4458222B7456200D4976E /* AVURLAsset+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4451922B7456100D4976E /* AVURLAsset+WX.m */; };
+		61A4458122B7456200D4976E /* AVAudioPlayer+FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4451822B7456100D4976E /* AVAudioPlayer+FilePath.m */; };
+		61A4458222B7456200D4976E /* AVURLAsset+FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4451922B7456100D4976E /* AVURLAsset+FilePath.m */; };
 		61A4458322B7456200D4976E /* UIImage+FPOriginal.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4451E22B7456100D4976E /* UIImage+FPOriginal.m */; };
 		61A4458422B7456200D4976E /* UIButton+FPTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4452022B7456100D4976E /* UIButton+FPTitle.m */; };
 		61A4458522B7456200D4976E /* UIView+FPSetCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4452122B7456100D4976E /* UIView+FPSetCenter.m */; };
@@ -91,7 +91,7 @@
 		61A445A122B7456200D4976E /* NSString+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456422B7456100D4976E /* NSString+Color.m */; };
 		61A445A222B7456200D4976E /* NSString+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456522B7456100D4976E /* NSString+WX.m */; };
 		61A445A322B7456200D4976E /* NSArray+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456722B7456100D4976E /* NSArray+ErrorHandle.m */; };
-		61A445A422B7456200D4976E /* NSArray+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456822B7456100D4976E /* NSArray+WX.m */; };
+		61A445A422B7456200D4976E /* NSArray+FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456822B7456100D4976E /* NSArray+FilePath.m */; };
 		61A445A522B7456200D4976E /* NSArray+PrintChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456922B7456100D4976E /* NSArray+PrintChinese.m */; };
 		61A445A622B7456200D4976E /* NSUUID+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456D22B7456100D4976E /* NSUUID+WX.m */; };
 		61A445A722B7456200D4976E /* NSCharacterSet+SpecialCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4456E22B7456100D4976E /* NSCharacterSet+SpecialCharacters.m */; };
@@ -250,10 +250,10 @@
 		61A444EB22B7454600D4976E /* UINavigationBar+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WX.m"; sourceTree = "<group>"; };
 		61A444EC22B7454600D4976E /* UIActionSheet+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+WX.h"; sourceTree = "<group>"; };
 		61A444ED22B7454600D4976E /* UIImage+Rotate_Flip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate_Flip.h"; sourceTree = "<group>"; };
-		61A4451822B7456100D4976E /* AVAudioPlayer+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioPlayer+WX.m"; sourceTree = "<group>"; };
-		61A4451922B7456100D4976E /* AVURLAsset+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVURLAsset+WX.m"; sourceTree = "<group>"; };
-		61A4451A22B7456100D4976E /* AVAudioPlayer+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioPlayer+WX.h"; sourceTree = "<group>"; };
-		61A4451B22B7456100D4976E /* AVURLAsset+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVURLAsset+WX.h"; sourceTree = "<group>"; };
+		61A4451822B7456100D4976E /* AVAudioPlayer+FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioPlayer+FilePath.m"; sourceTree = "<group>"; };
+		61A4451922B7456100D4976E /* AVURLAsset+FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVURLAsset+FilePath.m"; sourceTree = "<group>"; };
+		61A4451A22B7456100D4976E /* AVAudioPlayer+FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioPlayer+FilePath.h"; sourceTree = "<group>"; };
+		61A4451B22B7456100D4976E /* AVURLAsset+FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVURLAsset+FilePath.h"; sourceTree = "<group>"; };
 		61A4451E22B7456100D4976E /* UIImage+FPOriginal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FPOriginal.m"; sourceTree = "<group>"; };
 		61A4451F22B7456100D4976E /* UIScreen+FPBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+FPBounds.h"; sourceTree = "<group>"; };
 		61A4452022B7456100D4976E /* UIButton+FPTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FPTitle.m"; sourceTree = "<group>"; };
@@ -321,10 +321,10 @@
 		61A4456422B7456100D4976E /* NSString+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Color.m"; sourceTree = "<group>"; };
 		61A4456522B7456100D4976E /* NSString+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WX.m"; sourceTree = "<group>"; };
 		61A4456722B7456100D4976E /* NSArray+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ErrorHandle.m"; sourceTree = "<group>"; };
-		61A4456822B7456100D4976E /* NSArray+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WX.m"; sourceTree = "<group>"; };
+		61A4456822B7456100D4976E /* NSArray+FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FilePath.m"; sourceTree = "<group>"; };
 		61A4456922B7456100D4976E /* NSArray+PrintChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PrintChinese.m"; sourceTree = "<group>"; };
 		61A4456A22B7456100D4976E /* NSArray+ErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ErrorHandle.h"; sourceTree = "<group>"; };
-		61A4456B22B7456100D4976E /* NSArray+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WX.h"; sourceTree = "<group>"; };
+		61A4456B22B7456100D4976E /* NSArray+FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FilePath.h"; sourceTree = "<group>"; };
 		61A4456C22B7456100D4976E /* NSArray+PrintChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PrintChinese.h"; sourceTree = "<group>"; };
 		61A4456D22B7456100D4976E /* NSUUID+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUUID+WX.m"; sourceTree = "<group>"; };
 		61A4456E22B7456100D4976E /* NSCharacterSet+SpecialCharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+SpecialCharacters.m"; sourceTree = "<group>"; };
@@ -645,10 +645,10 @@
 		61A4451722B7456100D4976E /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				61A4451A22B7456100D4976E /* AVAudioPlayer+WX.h */,
-				61A4451822B7456100D4976E /* AVAudioPlayer+WX.m */,
-				61A4451B22B7456100D4976E /* AVURLAsset+WX.h */,
-				61A4451922B7456100D4976E /* AVURLAsset+WX.m */,
+				61A4451A22B7456100D4976E /* AVAudioPlayer+FilePath.h */,
+				61A4451822B7456100D4976E /* AVAudioPlayer+FilePath.m */,
+				61A4451B22B7456100D4976E /* AVURLAsset+FilePath.h */,
+				61A4451922B7456100D4976E /* AVURLAsset+FilePath.m */,
 			);
 			name = AVFoundation;
 			path = ../../AVFoundation;
@@ -784,8 +784,8 @@
 				61E5730722C0BBDD001EFD83 /* NSArray+Serializer.m */,
 				61D76C4022C9A8F300947C7B /* NSArray+SourceDeduplication.h */,
 				61D76C4122C9A8F300947C7B /* NSArray+SourceDeduplication.m */,
-				61A4456B22B7456100D4976E /* NSArray+WX.h */,
-				61A4456822B7456100D4976E /* NSArray+WX.m */,
+				61A4456B22B7456100D4976E /* NSArray+FilePath.h */,
+				61A4456822B7456100D4976E /* NSArray+FilePath.m */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -1019,7 +1019,7 @@
 				61A4459F22B7456200D4976E /* NSString+Base64.m in Sources */,
 				61A445AF22B7456200D4976E /* CALayer+WX.m in Sources */,
 				61A4450922B7454600D4976E /* UITextField+WX.m in Sources */,
-				61A4458122B7456200D4976E /* AVAudioPlayer+WX.m in Sources */,
+				61A4458122B7456200D4976E /* AVAudioPlayer+FilePath.m in Sources */,
 				61A4458D22B7456200D4976E /* NSString+FPSandBox.m in Sources */,
 				61A4451222B7454600D4976E /* UIImage+WXOriginal.m in Sources */,
 				61A4458622B7456200D4976E /* UIView+FPLayer.m in Sources */,
@@ -1028,7 +1028,7 @@
 				61A445A822B7456200D4976E /* NSObject+BJPaste.m in Sources */,
 				61E5730B22C0BC39001EFD83 /* NSData+Operation.m in Sources */,
 				61E5731D22C0BF11001EFD83 /* NSString+Operation.m in Sources */,
-				61A445A422B7456200D4976E /* NSArray+WX.m in Sources */,
+				61A445A422B7456200D4976E /* NSArray+FilePath.m in Sources */,
 				61A445AB22B7456200D4976E /* NSScanner+WX.m in Sources */,
 				61A4451422B7454600D4976E /* UIDatePicker+WX.m in Sources */,
 				61A4459722B7456200D4976E /* NSString+notEmpty.m in Sources */,
@@ -1113,7 +1113,7 @@
 				61D76C4222C9A8F300947C7B /* NSArray+SourceDeduplication.m in Sources */,
 				61A444FA22B7454600D4976E /* UIButton+Util.m in Sources */,
 				61A4450022B7454600D4976E /* UIView+WXFrame.m in Sources */,
-				61A4458222B7456200D4976E /* AVURLAsset+WX.m in Sources */,
+				61A4458222B7456200D4976E /* AVURLAsset+FilePath.m in Sources */,
 				61A4451522B7454600D4976E /* UICollectionView+WX.m in Sources */,
 				61A4459522B7456200D4976E /* NSBundle+Visual.m in Sources */,
 				61A4451622B7454600D4976E /* UINavigationBar+WX.m in Sources */,

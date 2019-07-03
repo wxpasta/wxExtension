@@ -8,6 +8,9 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
+
 @interface UIImage (Rotate_Flip)
 
 /*
@@ -43,7 +46,7 @@
 /*
  * @brief flip horizontal and vertical
  */
-- (UIImage*)flipAll;
+- (nullable UIImage *)flipAll;
 
 
 /*
@@ -79,4 +82,7 @@
  * 保持原来的长宽比，生成一个缩略图
  */
 + (UIImage *)thumbnailWithImageWithoutScale:(UIImage *)image size:(CGSize)asize;
+
 @end
+
+NS_ASSUME_NONNULL_END

@@ -20,51 +20,51 @@
     }
 }
 
-- (void)setBorderColor:(UIColor *)borderColor{
+- (void)setBorderColor:(UIColor *)borderColor {
     self.layer.borderColor = borderColor.CGColor;
 }
 
-- (CGFloat)cornerRadius{
+- (CGFloat)cornerRadius {
     return self.layer.cornerRadius;
 }
 
-- (void)setCornerRadius:(CGFloat)cornerRadius{
+- (void)setCornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
 }
 
-- (CGFloat)borderWidth{
+- (CGFloat)borderWidth {
     return self.layer.borderWidth;
 }
 
-- (void)setBorderWidth:(CGFloat)borderWidth{
+- (void)setBorderWidth:(CGFloat)borderWidth {
     self.layer.borderWidth = borderWidth;
 }
 
-- (CGFloat)shadowRadius{
+- (CGFloat)shadowRadius {
     return self.layer.shadowRadius;
 }
 
-- (void)setShadowRadius:(CGFloat)shadowRadius{
+- (void)setShadowRadius:(CGFloat)shadowRadius {
     self.layer.shadowRadius = shadowRadius;
 }
 
-- (float)shadowOpacity{
+- (float)shadowOpacity {
    return self.layer.shadowOpacity;
 }
 
-- (void)setShadowOpacity:(float)shadowOpacity{
+- (void)setShadowOpacity:(float)shadowOpacity {
     self.layer.shadowOpacity = shadowOpacity;
 }
 
-- (CGSize)shadowOffset{
+- (CGSize)shadowOffset {
     return self.layer.shadowOffset;
 }
 
-- (void)setShadowOffset:(CGSize)shadowOffset{
+- (void)setShadowOffset:(CGSize)shadowOffset {
     self.layer.shadowOffset = shadowOffset;
 }
 
-- (nullable UIColor *)shadowColor{
+- (nullable UIColor *)shadowColor {
     CGColorRef shadowColor = self.layer.shadowColor;
     if (shadowColor) {
         return [UIColor colorWithCGColor:shadowColor];
@@ -73,7 +73,7 @@
     }
 }
 
-- (void)setShadowColor:(UIColor *)shadowColor{
+- (void)setShadowColor:(UIColor *)shadowColor {
     self.layer.shadowColor = shadowColor.CGColor;
 }
 @end

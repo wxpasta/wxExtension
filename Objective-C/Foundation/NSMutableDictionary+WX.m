@@ -19,9 +19,21 @@
     //Delete old item before add new item
     SecItemDelete((CFDictionaryRef)keychainQuery);
     //Add new object to search dictionary(Attention:the data format)
-    [keychainQuery setObject:[NSKeyedArchiver archivedDataWithRootObject:data] forKey:(id)kSecValueData];
-    //Add item to keychain with the search dictionary
-    SecItemAdd((CFDictionaryRef)keychainQuery, NULL);
+    NSData *dataArchiver;
+    
+    if (@available(iOS 12, *)) {
+        NSError *error = nil;
+        dataArchiver = [NSKeyedArchiver archivedDataWithRootObject:data
+                                             requiringSecureCoding:YES
+                                                             error:&error];
+    }else{
+        dataArchiver = [NSKeyedArchiver archivedDataWithRootObject:data];
+    }
+    if (dataArchiver) {
+        [keychainQuery setObject:dataArchiver forKey:(id)kSecValueData];
+        //Add item to keychain with the search dictionary
+        SecItemAdd((CFDictionaryRef)keychainQuery, NULL);
+    }
 }
 
 + (id)wx_loadKeyChain:(NSString *)service
@@ -35,7 +47,18 @@
     CFDataRef keyData = NULL;
     if (SecItemCopyMatching((CFDictionaryRef)keychainQuery, (CFTypeRef *)&keyData) == noErr) {
         @try {
-            ret = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
+            if (@available(iOS 11, *)) {
+                NSError *error;
+                ret = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSData class] fromData:(__bridge NSData *)keyData error:&error];
+                if (error) {
+                    NSLog(@"unarchivedObjectOfClass:fromData:error: error: %@", error);
+                }
+            }else{
+                ret = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)keyData];
+            }
+            
+            
+            
         } @catch (NSException *e) {
             NSLog(@"Unarchive of %@ failed: %@", service, e);
         } @finally {

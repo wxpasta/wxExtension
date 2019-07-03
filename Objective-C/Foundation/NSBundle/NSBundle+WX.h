@@ -1,5 +1,7 @@
-@import Foundation;
+
 @import UIKit;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSBundle (WX)
 
@@ -12,10 +14,12 @@
 /**
  *  读取info.plist某个值
  */
-+ (nullable NSString *)wx_bundleWithInfoDictionary:(nullable NSString *)key;
++ (nullable NSString *)wx_bundleWithInfoDictionary:(NSString *)key;
 
 
 - (nullable NSArray *)wx_loadNibNamed:(nonnull NSString *)name;
 - (nullable NSArray *)wx_loadNibClassNamed:(nonnull Class)coustomClass;
 
 @end
+
+NS_ASSUME_NONNULL_END

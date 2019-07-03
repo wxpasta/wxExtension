@@ -32,7 +32,7 @@
         return nil;
     }
     NSMutableArray *arr = [[NSMutableArray alloc]init];
-    for (int i=0; i<[strInput length]; i++) {
+    for (NSUInteger i = 0; i < [strInput length] ; i++ ) {
         
         int a = [strInput characterAtIndex:i];
         if (a < 0x9fff && a > 0x4e00) {

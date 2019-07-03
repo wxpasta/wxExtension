@@ -3,7 +3,7 @@
 //  WXCategories
 //
 //  Created by 巴糖 on 2018/11/16.
-//  Copyright © 2018 巴糖. All rights reserved.
+//  Copyright © 2019 巴糖. All rights reserved.
 //
 
 #import "UIView+WXFrame.h"

@@ -14,7 +14,7 @@
 //图片转字符串
 - (NSString *)wx_imageToBase64Str:(UIImage *)image
 {
-    NSData *data = UIImageJPEGRepresentation(image, 1.0f);
+    NSData *data = UIImageJPEGRepresentation(image, 1.0);
     NSString *encodedImageStr = [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     return encodedImageStr;
 }
@@ -80,6 +80,9 @@
 {
     NSString *speakStr;
     switch (state) {
+        case BJTextToSpeechStateUnkown:
+            speakStr = @"未知";
+            break;
         case BJTextToSpeechStateDefault:
             speakStr = str;
             break;
@@ -97,10 +100,7 @@
                 speakStr = str;
             }
             break;
-        default:
-            break;
     }
-    
     return speakStr;
 }
 
@@ -112,9 +112,9 @@
 - (NSString *)urlencode:(NSString*)data
 {
     NSMutableString *output = [NSMutableString string];
-    const unsigned char *source = [data UTF8String];
-    int sourceLen = strlen((const char *)source);
-    for (int i = 0; i < sourceLen; ++i) {
+    const char *source = [data UTF8String];
+    unsigned long sourceLen = strlen(source);
+    for (unsigned long i = 0; i < sourceLen; ++i) {
         const unsigned char thisChar = source[i];
         if (thisChar == ' '){
             [output appendString:@"+"];

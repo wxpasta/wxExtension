@@ -23,17 +23,17 @@
 
 + (instancetype)wx_viewControllerWithNibName:(NSString *)nibName
 {
-    return [[self alloc] initWithNibName:nibName bundle:nil];
+    return [[UIViewController alloc] initWithNibName:nibName bundle:nil];
 }
 
 + (instancetype)wx_viewControllerWithNibNameWithClass:(Class)coustomClass
 {
-    return [[self alloc] initWithNibName:NSStringFromClass([coustomClass class]) bundle:nil];
+    return [[UIViewController alloc] initWithNibName:NSStringFromClass([coustomClass class]) bundle:nil];
 }
 
 + (instancetype)wx_viewControllerWithNibName
 {
-    return [[self alloc] initWithNibName:NSStringFromClass([self class]) bundle:nil];
+    return [[UIViewController alloc] initWithNibName:NSStringFromClass([self class]) bundle:nil];
 }
 
 - (BOOL)isVisible {

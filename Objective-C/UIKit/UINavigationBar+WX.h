@@ -1,6 +1,11 @@
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UINavigationBar (WX)
 
-- (void)wx_setPureColorNavigationBar:(NSString *)imageName;
+- (void)setPureColorNavigationBar:(NSString *)imageName;
+
 @end
+
+NS_ASSUME_NONNULL_END

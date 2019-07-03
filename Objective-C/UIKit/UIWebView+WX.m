@@ -1,12 +1,11 @@
 #import "UIWebView+WX.h"
-#import "NSURLRequest+WX.h"
 
 @implementation UIWebView (WX)
 
-
-- (void)wx_loadRequestFileURLWithPath:(NSString *)path
-{
-    NSURLRequest *request =[NSURLRequest wx_requestFileURLWithPath:path];
+- (void)loadRequestWithURLPath:(NSString *)URLPath {
+    NSString * filename =  [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:URLPath];
+    NSURL * url = [[NSURL alloc] initFileURLWithPath:filename];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self loadRequest:request];
 }
 

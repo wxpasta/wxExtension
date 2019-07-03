@@ -11,21 +11,19 @@
 @implementation UIView (WXNIb)
 
 #pragma mark - NSBundle
-- (nullable instancetype)wx_loadNibFirstObject
-{
+- (nullable instancetype)wx_loadNibFirstObject {
     NSString *name = NSStringFromClass([self class]);
     return [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil].firstObject;
 }
 
-- (nullable instancetype)wx_loadNiblastObject
-{
+- (nullable instancetype)wx_loadNiblastObject {
     NSString *name = NSStringFromClass([self class]);
     return [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil].lastObject;
 }
 
-- (nullable NSArray *)wx_loadNibObject
-{
+- (nullable NSArray *)wx_loadNibObject {
     NSString *name = NSStringFromClass([self class]);
     return [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil];
 }
+
 @end

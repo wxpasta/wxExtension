@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  * also inspectable from Storyboard.
  * 可在nib(xib) Storyboard 中使用。
  */
-@property (nonatomic, copy) IBInspectable NSString *disabledTitle;
+@property (nonatomic, copy, nullable) IBInspectable NSString *disabledTitle;
 
 /**
  * Title of highlighted state for button;
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  * also inspectable from Storyboard.
  * 可在nib(xib) Storyboard 中使用。
  */
-@property (nonatomic, copy) IBInspectable NSString *highlightedTitle;
+@property (nonatomic, copy, nullable) IBInspectable NSString *highlightedTitle;
 
 
 /**
@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  * also inspectable from Storyboard.
  * 可在nib(xib) Storyboard 中使用。
  */
-@property (nonatomic, copy) IBInspectable NSString *normalTitle;
+@property (nonatomic, copy, nullable) IBInspectable NSString *normalTitle;
 
 /**
  * Title of selected state for button;
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
  * also inspectable from Storyboard.
  * 可在nib(xib) Storyboard 中使用。
  */
-@property (nonatomic, copy) IBInspectable NSString *selectedTitle;
+@property (nonatomic, copy, nullable) IBInspectable NSString *selectedTitle;
 
 @end
 

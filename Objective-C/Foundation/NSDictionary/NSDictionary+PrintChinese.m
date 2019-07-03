@@ -7,7 +7,7 @@
 //
 
 #import "NSDictionary+PrintChinese.h"
-#import <objc/message.h>
+@import ObjectiveC.message;
 
 @implementation NSDictionary (PrintChinese)
 
@@ -30,14 +30,23 @@
 
 - (NSString *)rewrite_description{
     NSString *description = [self rewrite_description];
-    description = [NSString stringWithCString:[description cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
+    const char *cString = [description cStringUsingEncoding:NSUTF8StringEncoding];
+    if (cString) {
+        description = [NSString stringWithCString:cString encoding:NSNonLossyASCIIStringEncoding];
+    }
     return description;
 }
 
 - (NSString *)rewrite_descriptionWithLocale:(id)local{
     NSString *logString;
     @try {
-        logString=[[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
+        NSData *data = [NSJSONSerialization dataWithJSONObject:self
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:nil];
+        if (data) {
+            logString = [[NSString alloc] initWithData:data
+                                              encoding:NSUTF8StringEncoding];
+        }
         
     } @catch (NSException *exception) {
         

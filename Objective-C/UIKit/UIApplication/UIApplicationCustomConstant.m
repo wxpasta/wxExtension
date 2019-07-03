@@ -9,6 +9,6 @@
 
 #import "UIApplicationCustomConstant.h"
 
-NSString * const kUIApplicationConstantCustomTel = @"tel://";
-NSString * const kUIApplicationConstantCustomSms = @"sms://";
-NSString * const kUIApplicationConstantCustomMailto = @"mailto://";
+NSString * const kUIApplicationCustomConstantTel = @"tel://";
+NSString * const kUIApplicationCustomConstantSms = @"sms://";
+NSString * const kUIApplicationCustomConstantMailto = @"mailto://";

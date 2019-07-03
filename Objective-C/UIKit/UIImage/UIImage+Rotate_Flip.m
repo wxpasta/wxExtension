@@ -369,7 +369,7 @@
 /*
  * @brief flip horizontal and vertical
  */
-- (UIImage*)flipAll
+- (nullable UIImage *)flipAll
 {
     return [self rotate180];
 }

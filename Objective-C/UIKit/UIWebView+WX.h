@@ -1,13 +1,12 @@
 @import UIKit;
-@import Foundation;
 
 @interface UIWebView (WX)
 
 /**
- *  跟loadRequest功能相同(简化步骤)
- *
- *  @param path 本地路径
+ 跟loadRequest功能相同(简化步骤)
+
+ @param URLPath URL Path
  */
-- (void)wx_loadRequestFileURLWithPath:(NSString *)path;
+- (void)loadRequestWithURLPath:(NSString *)URLPath;
 
 @end

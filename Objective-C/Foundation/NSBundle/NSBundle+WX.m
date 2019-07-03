@@ -7,13 +7,14 @@
     return [NSBundle wx_pathForResource:name ofType:nil];
 }
 
-+ (nullable NSString *)wx_pathForResource:(nullable NSString *)name ofType:(nullable NSString *)ext
++ (nullable NSString *)wx_pathForResource:(nullable NSString *)name
+                                   ofType:(nullable NSString *)ext
 {
     return [[NSBundle mainBundle] pathForResource:name ofType:ext];
 }
 
 #pragma mark -
-+ (nullable NSString *)wx_bundleWithInfoDictionary:(nullable NSString *)key
++ (nullable NSString *)wx_bundleWithInfoDictionary:(NSString *)key
 {
     return [NSBundle mainBundle].infoDictionary[key];
 }
