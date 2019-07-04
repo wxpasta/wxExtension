@@ -1,6 +1,6 @@
 //
 //  NSScanner+WX.h
-//  xcode8New
+//  
 //
 //  Created by 巴糖 on 16/6/22.
 //  Copyright © 2019年 巴糖. All rights reserved.

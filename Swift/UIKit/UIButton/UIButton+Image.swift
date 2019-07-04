@@ -18,7 +18,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var imageForNormal: UIImage? {
+    var imageForNormal: UIImage? {
         get {
             return image(for: .normal)
         }
@@ -34,7 +34,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var imageForHighlighted: UIImage? {
+    var imageForHighlighted: UIImage? {
         get {
             return image(for: .highlighted)
         }
@@ -50,7 +50,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var imageForDisabled: UIImage? {
+    var imageForDisabled: UIImage? {
         get {
             return image(for: .disabled)
         }
@@ -66,7 +66,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var imageForSelected: UIImage? {
+    var imageForSelected: UIImage? {
         get {
             return image(for: .selected)
         }

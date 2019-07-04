@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-public extension UIButton {
+extension UIButton {
     @IBInspectable
     /**
      * Title Color of normal state for button;
@@ -17,7 +17,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleColorForNormal: UIColor? {
+    var titleColorForNormal: UIColor? {
         get {
             return titleColor(for: .normal)
         }
@@ -34,7 +34,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleColorForHighlighted: UIColor? {
+    var titleColorForHighlighted: UIColor? {
         get {
             return titleColor(for: .highlighted)
         }
@@ -50,7 +50,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleColorForSelected: UIColor? {
+    var titleColorForSelected: UIColor? {
         get {
             return titleColor(for: .selected)
         }
@@ -66,7 +66,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var titleColorForDisabled: UIColor? {
+    var titleColorForDisabled: UIColor? {
         get {
             return titleColor(for: .disabled)
         }

@@ -1,6 +1,6 @@
 //
 //  UIButton+EventInterval.m
-//  BJCategory
+//  WXCategories
 //
 //  Created by 巴糖 on 2018/8/24.
 //  Copyright © 2019年 巴糖. All rights reserved.
@@ -41,8 +41,9 @@ static char * const wx_eventUnavailableKey = "wx_eventUnavailableKey";
 #pragma mark - Setter & Getter functions
 
 - (NSTimeInterval)wx_eventTimeInterval {
+    NSNumber *value = (NSNumber *)objc_getAssociatedObject(self, wx_eventTimeIntervalKey);
+    return [(NSNumber *)value doubleValue];
     
-    return [objc_getAssociatedObject(self, wx_eventTimeIntervalKey) doubleValue];
 }
 
 - (void)setWx_eventTimeInterval:(NSTimeInterval)eventTimeInterval{
@@ -50,7 +51,8 @@ static char * const wx_eventUnavailableKey = "wx_eventUnavailableKey";
 }
 
 - (BOOL)wx_eventUnavailable{
-    return [objc_getAssociatedObject(self, wx_eventUnavailableKey) boolValue];
+    NSNumber *value = (NSNumber *) objc_getAssociatedObject(self, wx_eventUnavailableKey);
+    return [value boolValue];
 }
 
 - (void)setWx_eventUnavailable:(BOOL)eventUnavailable{

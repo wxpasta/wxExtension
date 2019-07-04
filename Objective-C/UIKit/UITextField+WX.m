@@ -1,5 +1,4 @@
 #import "UITextField+WX.h"
-#import "UIImageView+WX.h"
 #import "UIView+WXFrame.h"
 
 static NSString * const kTextFieldPlaceholderLabelFont = @"_placeholderLabel.font";
@@ -8,60 +7,51 @@ static NSString * const kTextFieldPlaceholderLabelTextColor = @"_placeholderLabe
 
 @implementation UITextField (WX)
 
-- (void)setWx_placeHolderTextFont:(UIColor *)font
-{
+- (void)setWx_placeHolderTextFont:(UIColor *)font {
     [self setValue:font forKeyPath:kTextFieldPlaceholderLabelFont];
 }
 
-- (void)setWx_placeHolderTextColor:(UIColor *)color
-{
+- (void)setWx_placeHolderTextColor:(UIColor *)color {
     [self setValue:color forKeyPath:kTextFieldPlaceholderLabelTextColor];
 }
 
-- (UIColor *)wx_placeHolderTextColor
-{
+- (UIColor *)wx_placeHolderTextColor {
     return [self valueForKeyPath:kTextFieldPlaceholderLabelTextColor];
 }
 
-- (UIColor *)wx_placeHolderTextFont
-{
+- (UIColor *)wx_placeHolderTextFont {
     return [self valueForKeyPath:kTextFieldPlaceholderLabelFont];
 }
 
- - (void)wx_leftViewImageName:(nonnull NSString *)imageName  width:(CGFloat)width
-{
-    UIImageView *iv =[UIImageView wx_imageViewWithImageName:imageName];
+ - (void)leftViewWithImageName:(nonnull NSString *)imageName  width:(CGFloat)width {
+    UIImage *image = [UIImage imageNamed:imageName];
+    UIImageView *iv =[[UIImageView alloc]initWithImage:image];
     iv.wx_width = width;
     iv.contentMode = UIViewContentModeCenter;
     self.leftView = iv;
     self.leftViewMode = UITextFieldViewModeAlways;
 }
 
-- (void)wx_leftViewShowText:(nonnull NSString *)text rect:(CGRect)rect
-{
+- (void)wx_leftViewShowText:(nonnull NSString *)text rect:(CGRect)rect {
     UILabel *label = [[UILabel alloc]initWithFrame:rect];
     label.text = text;
     self.leftView = label;
     self.leftViewMode = UITextFieldViewModeAlways;
-    
 }
 
-- (void)wx_leftViewShowRightText:(nonnull NSString *)text rect:(CGRect)rect
-{
+- (void)wx_leftViewShowRightText:(nonnull NSString *)text rect:(CGRect)rect {
     UILabel *label = [[UILabel alloc]initWithFrame:rect];
     label.text = text;
     label.textAlignment = NSTextAlignmentRight;
     self.leftView = label;
     self.leftViewMode = UITextFieldViewModeAlways;
-    
 }
 
 - (void)wx_rightViewWithImageName:(nonnull NSString *)imageName
                 selectedImageName:(nonnull NSString *)selectedImageName
                             width:(CGFloat)width
                         addTarget:(nullable id)target
-                           action:(SEL)action
-{
+                           action:(SEL)action {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, width, self.wx_height);
     [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];

@@ -1,6 +1,6 @@
 //
 //  NSBundle+Visual.m
-//  BJCategory
+//  WXCategories
 //
 //  Created by 巴糖 on 2018/7/29.
 //  Copyright © 2019年 巴糖. All rights reserved.

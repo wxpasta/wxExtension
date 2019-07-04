@@ -1,5 +1,5 @@
 //
-//  NSArray+WXCategories.m
+//  NSArray+ErrorHandle.m
 //  WXCategories
 //
 //  Created by 巴糖 on 2018/9/18.
@@ -8,23 +8,17 @@
 
 #import "NSArray+ErrorHandle.h"
 
-@implementation NSArray (WXCategories)
+@implementation NSArray (ErrorHandle)
 
-/**
- *  防止数组越界
- */
-
-- (nullable id)objectAtIndexVerify:(NSUInteger)index{
+- (nullable id)objectSafeAtIndex:(NSUInteger)index {
     if (index < self.count) {
         return [self objectAtIndex:index];
     }else{
         return nil;
     }
 }
-/**
- *  防止数组越界
- */
-- (nullable id)objectAtIndexedSubscriptVerify:(NSUInteger)idx{
+
+- (nullable id)objectSafeAtIndexedSubscript:(NSUInteger)idx {
     if (idx < self.count) {
         return [self objectAtIndexedSubscript:idx];
     }else{

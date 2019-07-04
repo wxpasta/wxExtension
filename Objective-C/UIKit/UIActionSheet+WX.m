@@ -10,10 +10,9 @@
 
 @implementation UIActionSheet (WX)
 
-
-- (BOOL)wx_isEquaTitle:(NSString *)title buttonIndex:(NSInteger)buttonIndex
-{
-    return [[self buttonTitleAtIndex:buttonIndex] isEqualToString:title];
+- (BOOL)isButtonWithTitle:(NSString *)title atIndex:(NSInteger)buttonIndex {
+    NSString *buttonTitle = [self buttonTitleAtIndex:buttonIndex];
+    return [buttonTitle isEqualToString:title];
 }
 
 @end

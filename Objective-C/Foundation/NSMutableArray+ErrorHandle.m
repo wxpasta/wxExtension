@@ -1,5 +1,5 @@
 //
-//  NSMutableArray+WXCategories.m
+//  NSMutableArray+ErrorHandle.m
 //  WXCategories
 //
 //  Created by 巴糖 on 2018/9/18.
@@ -8,23 +8,22 @@
 
 #import "NSMutableArray+ErrorHandle.h"
 
-@implementation NSMutableArray (WXCategories)
+@implementation NSMutableArray (ErrorHandle)
 
-/**
- *  数组中插入数据
- */
-- (void)insertObjectVerify:(id)object atIndex:(NSUInteger)index{
-    if (index < self.count && object) {
-        [self insertObject:object atIndex:index];
-    }
-}
-/**
- *  数组中添加数据
- */
-- (void)addObjectVerify:(id)object{
-    if (object) {
-        [self addObject:object];
+- (void)insertSafeObject:(id)anObject atIndex:(NSUInteger)index {
+    if (index < self.count && anObject) {
+        [self insertObject:anObject atIndex:index];
     }
 }
 
+- (void)addSafeObject:(id)anObject{
+    if (anObject) {
+        [self addObject:anObject];
+    }
+}
+- (void)removeSafeObject:(id)anObject{
+    if (anObject) {
+        [self removeObject:anObject];
+    }
+}
 @end

@@ -136,27 +136,11 @@
 
 #pragma mark - Helpers
 
-- (NSString *)stringFromBytes:(unsigned char *)bytes length:(NSInteger)length
-{
-    NSMutableString *mutableString = @"".mutableCopy;
-    for (int i = 0; i < length; i++)
-        [mutableString appendFormat:@"%02x", bytes[i]];
-    return [NSString stringWithString:mutableString];
+- (NSString *)stringFromBytes:(const void *)bytes length:(NSInteger)length {
+    NSString *str  = [[NSString alloc] initWithBytes:bytes
+                                              length:length
+                                            encoding:NSUTF8StringEncoding];
+    return str;
 }
 
-#pragma mark - VRMAX MD5
-+ (NSString *)md5StringWithType:(NSString *)type
-                       platform:(NSInteger)platform
-{
-    return [[NSString stringWithFormat:@"%@巴糖%ld",type,platform] md5String];
-    
-}
-
-
-+ (NSString *)notMD5StringWithType:(NSString *)type
-                          platform:(NSString *)platform
-{
-    return [NSString stringWithFormat:@"%@巴糖%@",type,platform];
-    
-}
 @end

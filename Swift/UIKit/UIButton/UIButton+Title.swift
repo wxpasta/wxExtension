@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Properties
-public extension UIButton {
+extension UIButton {
     
     @IBInspectable
     /**
@@ -18,7 +18,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var normalTitle: String? {
+    var normalTitle: String? {
         get {
             return title(for: .normal)
         }
@@ -34,7 +34,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var highlightedTitle: String? {
+    var highlightedTitle: String? {
         get {
             return title(for: .highlighted)
         }
@@ -50,7 +50,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var disabledTitle: String? {
+    var disabledTitle: String? {
         get {
             return title(for: .disabled)
         }
@@ -66,7 +66,7 @@ public extension UIButton {
      * also inspectable from Storyboard.
      * 可在nib(xib) Storyboard 中使用。
      */
-    public var selectedTitle: String? {
+    var selectedTitle: String? {
         get {
             return title(for: .selected)
         }

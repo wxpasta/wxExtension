@@ -20,11 +20,4 @@
 - (NSString *)hmacSHA256StringWithKey:(NSString *)key;
 - (NSString *)hmacSHA512StringWithKey:(NSString *)key;
 
-#pragma mark - VRMAX MD5
-+ (NSString *)md5StringWithType:(NSString *)type
-                       platform:(NSInteger)platform;
-
-+ (NSString *)notMD5StringWithType:(NSString *)type
-                          platform:(NSString *)platform;
-
 @end

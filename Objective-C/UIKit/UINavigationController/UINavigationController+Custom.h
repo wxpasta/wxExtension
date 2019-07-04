@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param view view description
  @return return value description
  */
-- (UIImageView *)findHairlineImageViewUnder:(UIView *)view;
+- (nullable UIImageView *)findHairlineImageViewUnder:(UIView *)view;
 
 @end
 

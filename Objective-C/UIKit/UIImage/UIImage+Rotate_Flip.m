@@ -311,7 +311,7 @@
 /*
  * @brief flip vertical
  */
-- (UIImage*)flipVertical
+- (nullable UIImage *)flipVertical
 {
     UIImage *image = nil;
     CGImageRef imageRef = self.CGImage;
@@ -417,8 +417,8 @@
     return newImage;
 }
 
--(UIImage *) imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size
-{
+-(nullable UIImage *)imageCompressForSize:(UIImage *)sourceImage
+                               targetSize:(CGSize)size {
     UIImage *newImage = nil;
     CGSize imageSize = sourceImage.size;
     CGFloat width = imageSize.width;
@@ -462,7 +462,8 @@
     return newImage;
 }
 
-- (UIImage *)imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth
+- (nullable UIImage *)imageCompressForWidth:(UIImage *)sourceImage
+                                targetWidth:(CGFloat)defineWidth
 {
     UIImage *newImage = nil;
     CGSize imageSize = sourceImage.size;

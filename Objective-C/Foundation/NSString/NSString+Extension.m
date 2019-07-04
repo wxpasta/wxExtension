@@ -26,29 +26,13 @@
 
 //URLEncode
 + (NSString*)encodeString:(NSString*)unencodedString{
-    
-    // CharactersToBeEscaped = @":/?&=;+!@#$()~',*";
-    // CharactersToLeaveUnescaped = @"[].";
-    
-    NSString *encodedString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                              (CFStringRef)unencodedString,
-                                                              NULL,
-                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                              kCFStringEncodingUTF8));
-    
-    return encodedString;
+    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"!*'();:@&=+$,/?%#[]"];
+    return [unencodedString stringByAddingPercentEncodingWithAllowedCharacters:set];
 }
 
 //URLdecode
-- (NSString *)decodeString:(NSString*)encodedString
-
-{
-    NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
-                                                                                                                     (__bridge CFStringRef)encodedString,
-                                                                                                                     CFSTR(""),
-                                                                                                                     CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
-    return decodedString;
+- (NSString *)decodeString:(NSString*)encodedString {
+    return [encodedString stringByRemovingPercentEncoding];
 }
 
 
@@ -69,10 +53,7 @@
     NSString *tempStr2 = [tempStr1 stringByReplacingOccurrencesOfString:@"\""withString:@"\\\""];
     NSString *tempStr3 = [[@"\""stringByAppendingString:tempStr2] stringByAppendingString:@"\""];
     NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
-    NSString* returnStr = [NSPropertyListSerialization propertyListFromData:tempData
-                                                           mutabilityOption:NSPropertyListImmutable
-                                                                     format:NULL
-                                                           errorDescription:NULL];
+    NSString* returnStr = [NSPropertyListSerialization propertyListWithData:tempData options:NSPropertyListImmutable format:NULL error:nil];
     return [returnStr stringByReplacingOccurrencesOfString:@"\\r\\n"withString:@"\n"];
 }
 

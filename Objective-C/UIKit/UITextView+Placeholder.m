@@ -15,8 +15,9 @@
     [super load];
 
     // is this the best solution?
-    method_exchangeImplementations(class_getInstanceMethod(self.class, NSSelectorFromString(@"dealloc")),
-                                   class_getInstanceMethod(self.class, @selector(swizzledDealloc)));
+    Method m1 = class_getInstanceMethod(self.class, NSSelectorFromString(@"dealloc"));
+    Method m2 = class_getInstanceMethod(self.class, @selector(swizzledDealloc));
+    method_exchangeImplementations(m1,m2);
 }
 
 - (void)swizzledDealloc {

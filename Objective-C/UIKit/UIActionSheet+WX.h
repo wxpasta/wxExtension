@@ -8,9 +8,12 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIActionSheet (WX)
 
-- (BOOL)wx_isEquaTitle:(NSString *)title
-           buttonIndex:(NSInteger)buttonIndex;
+- (BOOL)isButtonWithTitle:(NSString *)title atIndex:(NSInteger)buttonIndex;
 
 @end
+
+NS_ASSUME_NONNULL_END

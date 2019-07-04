@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSURLRequest (WX)
 
-+ (instancetype)wx_requestFileURLWithPath:(NSString *)path;
++ (instancetype)requestWithURLPath:(NSString *)path;
 
 @end
 

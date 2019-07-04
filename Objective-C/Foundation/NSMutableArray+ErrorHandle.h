@@ -1,5 +1,5 @@
 //
-//  NSMutableArray+WXCategories.h
+//  NSMutableArray+ErrorHandle.h
 //  WXCategories
 //
 //  Created by 巴糖 on 2018/9/18.
@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSMutableArray (WXCategories)
+/** 防止越界导致的crash */
+@interface NSMutableArray (ErrorHandle)
 
 /**
  数组中插入数据
@@ -18,13 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param object 数据
  @param index 下标
  */
-- (void)insertObjectVerify:(id)object atIndex:(NSUInteger)index;
+- (void)insertSafeObject:(id)object atIndex:(NSUInteger)index;
 /**
  数组中添加数据
  
  @param object 数据
  */
-- (void)addObjectVerify:(id)object;
+- (void)addSafeObject:(id)object;
 
 @end
 

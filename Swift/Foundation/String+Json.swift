@@ -16,7 +16,7 @@ extension NSString{
             print("无法解析出JSONString")
             return nil
         }
-        let data : NSData! = try? JSONSerialization.data(withJSONObject: dict, options: []) as NSData!
+        let data : NSData! = try? JSONSerialization.data(withJSONObject: dict, options: []) as NSData?
         self.init(data:data as Data,encoding: String.Encoding.utf8.rawValue)
     }
 }

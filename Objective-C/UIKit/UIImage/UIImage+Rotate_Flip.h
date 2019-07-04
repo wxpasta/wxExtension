@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*
  * @brief flip vertical
  */
-- (UIImage*)flipVertical;
+- (nullable UIImage *)flipVertical;
 
 /*
  * @brief flip horizontal and vertical
@@ -71,8 +71,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIImage *)compressImage:(UIImage *)sourceImage toTargetWidth:(CGFloat)targetWidth;
 
-- (UIImage *)imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
-- (UIImage *)imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
+- (nullable UIImage *)imageCompressForSize:(UIImage *)sourceImage
+                                targetSize:(CGSize)size;
+
+- (nullable UIImage *)imageCompressForWidth:(UIImage *)sourceImage
+                                targetWidth:(CGFloat)defineWidth;
 
 /*
  * 自动缩放到指定大小
