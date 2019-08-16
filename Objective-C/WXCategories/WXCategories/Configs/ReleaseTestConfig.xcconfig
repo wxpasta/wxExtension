@@ -1,0 +1,12 @@
+//
+//  ReleaseTestConfig.xcconfig
+//  BJTestDemo
+//
+//  Created by 许宝吉 on 2019/1/23.
+//  Copyright © 2019 许宝吉. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "CommonConfig.xcconfig"

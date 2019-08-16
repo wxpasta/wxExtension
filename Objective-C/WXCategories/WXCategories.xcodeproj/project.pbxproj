@@ -99,6 +99,15 @@
 		61A445AE22B7456200D4976E /* CAShapeLayer+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4457D22B7456100D4976E /* CAShapeLayer+WX.m */; };
 		61A445AF22B7456200D4976E /* CALayer+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4457E22B7456100D4976E /* CALayer+WX.m */; };
 		61A445B222B7667C00D4976E /* UIView+WXShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A445B122B7667C00D4976E /* UIView+WXShortcuts.m */; };
+		61AE5BB722CDE3D500C748C6 /* NSDictionary+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5BB522CDE3D500C748C6 /* NSDictionary+Empty.m */; };
+		61AE5BBA22CDE3EA00C748C6 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5BB822CDE3EA00C748C6 /* NSString+Empty.m */; };
+		61AE5BBD22CDE3FD00C748C6 /* NSBundle+MyBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5BBB22CDE3FD00C748C6 /* NSBundle+MyBundle.m */; };
+		61AE5BC022CDE40C00C748C6 /* NSArray+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5BBE22CDE40C00C748C6 /* NSArray+Empty.m */; };
+		61AE5BC622CDE46300C748C6 /* ReleaseConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */; };
+		61AE5BC722CDE46300C748C6 /* ReleaseTestConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */; };
+		61AE5BC822CDE46300C748C6 /* CommonConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 61AE5BC422CDE46300C748C6 /* CommonConfig.xcconfig */; };
+		61AE5BC922CDE46300C748C6 /* DebugConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */; };
+		61AE5BD322CDE6DB00C748C6 /* SDKSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5BD222CDE6DB00C748C6 /* SDKSettings.m */; };
 		61D76C4222C9A8F300947C7B /* NSArray+SourceDeduplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D76C4122C9A8F300947C7B /* NSArray+SourceDeduplication.m */; };
 		61D76C4522C9AD0600947C7B /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D76C4422C9AD0600947C7B /* UINavigationController+Custom.m */; };
 		61D7758522C9F69800947C7B /* NSDate+DateFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D7758422C9F69800947C7B /* NSDate+DateFromString.m */; };
@@ -331,6 +340,20 @@
 		61A4458022B7456100D4976E /* CALayer+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+WX.h"; sourceTree = "<group>"; };
 		61A445B022B7667C00D4976E /* UIView+WXShortcuts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXShortcuts.h"; sourceTree = "<group>"; };
 		61A445B122B7667C00D4976E /* UIView+WXShortcuts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXShortcuts.m"; sourceTree = "<group>"; };
+		61AE5BB522CDE3D500C748C6 /* NSDictionary+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Empty.m"; sourceTree = "<group>"; };
+		61AE5BB622CDE3D500C748C6 /* NSDictionary+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Empty.h"; sourceTree = "<group>"; };
+		61AE5BB822CDE3EA00C748C6 /* NSString+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Empty.m"; sourceTree = "<group>"; };
+		61AE5BB922CDE3EA00C748C6 /* NSString+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Empty.h"; sourceTree = "<group>"; };
+		61AE5BBB22CDE3FD00C748C6 /* NSBundle+MyBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MyBundle.m"; sourceTree = "<group>"; };
+		61AE5BBC22CDE3FD00C748C6 /* NSBundle+MyBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MyBundle.h"; sourceTree = "<group>"; };
+		61AE5BBE22CDE40C00C748C6 /* NSArray+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Empty.m"; sourceTree = "<group>"; };
+		61AE5BBF22CDE40C00C748C6 /* NSArray+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Empty.h"; sourceTree = "<group>"; };
+		61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseConfig.xcconfig; sourceTree = "<group>"; };
+		61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseTestConfig.xcconfig; sourceTree = "<group>"; };
+		61AE5BC422CDE46300C748C6 /* CommonConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonConfig.xcconfig; sourceTree = "<group>"; };
+		61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugConfig.xcconfig; sourceTree = "<group>"; };
+		61AE5BD122CDE6DB00C748C6 /* SDKSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDKSettings.h; sourceTree = "<group>"; };
+		61AE5BD222CDE6DB00C748C6 /* SDKSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDKSettings.m; sourceTree = "<group>"; };
 		61D76C4022C9A8F300947C7B /* NSArray+SourceDeduplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SourceDeduplication.h"; sourceTree = "<group>"; };
 		61D76C4122C9A8F300947C7B /* NSArray+SourceDeduplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SourceDeduplication.m"; sourceTree = "<group>"; };
 		61D76C4322C9AD0600947C7B /* UINavigationController+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Custom.h"; sourceTree = "<group>"; };
@@ -450,6 +473,9 @@
 				61A4446A22B743B100D4976E /* Main.storyboard */,
 				61A4446722B743B100D4976E /* ViewController.h */,
 				61A4446822B743B100D4976E /* ViewController.m */,
+				61AE5BD122CDE6DB00C748C6 /* SDKSettings.h */,
+				61AE5BD222CDE6DB00C748C6 /* SDKSettings.m */,
+				61AE5BC122CDE46300C748C6 /* Configs */,
 			);
 			path = WXCategories;
 			sourceTree = "<group>";
@@ -667,6 +693,8 @@
 		61A4453C22B7456100D4976E /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				61AE5BB622CDE3D500C748C6 /* NSDictionary+Empty.h */,
+				61AE5BB522CDE3D500C748C6 /* NSDictionary+Empty.m */,
 				61A4453922B7456100D4976E /* NSDictionary+FPPrintChinese.h */,
 				61A4453622B7456100D4976E /* NSDictionary+FPPrintChinese.m */,
 				61F3A44622BC8010007C22F5 /* NSDictionary+JsonString.h */,
@@ -686,6 +714,8 @@
 		61A4454322B7456100D4976E /* NSBundle */ = {
 			isa = PBXGroup;
 			children = (
+				61AE5BBC22CDE3FD00C748C6 /* NSBundle+MyBundle.h */,
+				61AE5BBB22CDE3FD00C748C6 /* NSBundle+MyBundle.m */,
 				61A4454822B7456100D4976E /* NSBundle+Visual.h */,
 				61A4454422B7456100D4976E /* NSBundle+Visual.m */,
 				61A4454922B7456100D4976E /* NSBundle+WX.h */,
@@ -710,6 +740,8 @@
 		61A4455B22B7456100D4976E /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				61AE5BB922CDE3EA00C748C6 /* NSString+Empty.h */,
+				61AE5BB822CDE3EA00C748C6 /* NSString+Empty.m */,
 				61A4456322B7456100D4976E /* NSString+Base64.h */,
 				61A4455D22B7456100D4976E /* NSString+Base64.m */,
 				61E5731922C0BF11001EFD83 /* NSString+Chinese.h */,
@@ -751,6 +783,8 @@
 		61A4456622B7456100D4976E /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
+				61AE5BBF22CDE40C00C748C6 /* NSArray+Empty.h */,
+				61AE5BBE22CDE40C00C748C6 /* NSArray+Empty.m */,
 				61A4456A22B7456100D4976E /* NSArray+ErrorHandle.h */,
 				61A4456722B7456100D4976E /* NSArray+ErrorHandle.m */,
 				61A4453422B7456100D4976E /* NSArray+FPPrintChinese.h */,
@@ -790,6 +824,17 @@
 			);
 			name = QuartzCore;
 			path = ../../QuartzCore;
+			sourceTree = "<group>";
+		};
+		61AE5BC122CDE46300C748C6 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */,
+				61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */,
+				61AE5BC422CDE46300C748C6 /* CommonConfig.xcconfig */,
+				61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		61D7758622C9F6DA00947C7B /* NSDate */ = {
@@ -951,9 +996,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AE5BC622CDE46300C748C6 /* ReleaseConfig.xcconfig in Resources */,
 				61A4447122B743B300D4976E /* LaunchScreen.storyboard in Resources */,
+				61AE5BC922CDE46300C748C6 /* DebugConfig.xcconfig in Resources */,
 				61A4446E22B743B300D4976E /* Assets.xcassets in Resources */,
 				61A4446C22B743B100D4976E /* Main.storyboard in Resources */,
+				61AE5BC722CDE46300C748C6 /* ReleaseTestConfig.xcconfig in Resources */,
+				61AE5BC822CDE46300C748C6 /* CommonConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,6 +1042,7 @@
 				61A445AF22B7456200D4976E /* CALayer+WX.m in Sources */,
 				61A4450922B7454600D4976E /* UITextField+WX.m in Sources */,
 				61A4458122B7456200D4976E /* AVAudioPlayer+FilePath.m in Sources */,
+				61AE5BBA22CDE3EA00C748C6 /* NSString+Empty.m in Sources */,
 				61A4458D22B7456200D4976E /* NSString+FPSandBox.m in Sources */,
 				61A4451222B7454600D4976E /* UIImage+WXOriginal.m in Sources */,
 				61A4458622B7456200D4976E /* UIView+FPLayer.m in Sources */,
@@ -1039,6 +1089,7 @@
 				61E5732322C0BFE0001EFD83 /* UIView+CustomScreen.m in Sources */,
 				61E5731422C0BECD001EFD83 /* NSString+XYEmoticon.m in Sources */,
 				61E5730E22C0BCE0001EFD83 /* NSDictionary+Serializer.m in Sources */,
+				61AE5BBD22CDE3FD00C748C6 /* NSBundle+MyBundle.m in Sources */,
 				61A445AC22B7456200D4976E /* NSMutableDictionary+WX.m in Sources */,
 				61F3A44E22BC83F7007C22F5 /* UITextView+Placeholder.m in Sources */,
 				61A445B222B7667C00D4976E /* UIView+WXShortcuts.m in Sources */,
@@ -1046,6 +1097,7 @@
 				61A4451122B7454600D4976E /* UITabBarItem+WX.m in Sources */,
 				6126943F22CDDDCF0042D648 /* NSString+IPAddress.m in Sources */,
 				61A444FB22B7454600D4976E /* UITableViewCell+ClassName.m in Sources */,
+				61AE5BC022CDE40C00C748C6 /* NSArray+Empty.m in Sources */,
 				61A4458422B7456200D4976E /* UIButton+FPTitle.m in Sources */,
 				61A4459222B7456200D4976E /* NSDictionary+PrintChinese.m in Sources */,
 				61A4450722B7454600D4976E /* UIImage+Rotate_Flip.m in Sources */,
@@ -1058,6 +1110,7 @@
 				61E5732022C0BF98001EFD83 /* UIButton+CustomButton.m in Sources */,
 				61E5730822C0BBDD001EFD83 /* NSArray+Serializer.m in Sources */,
 				61A445A222B7456200D4976E /* NSString+WX.m in Sources */,
+				61AE5BD322CDE6DB00C748C6 /* SDKSettings.m in Sources */,
 				61A444EF22B7454600D4976E /* UIStoryboard+WX.m in Sources */,
 				61F3A44522BC7F98007C22F5 /* NSString+toJson.m in Sources */,
 				61E5731C22C0BF11001EFD83 /* NSString+Chinese.m in Sources */,
@@ -1078,6 +1131,7 @@
 				61F3A43022BC7442007C22F5 /* UIColor+CustomButtonColor.m in Sources */,
 				61A4450522B7454600D4976E /* UITableView+WX.m in Sources */,
 				61A445A622B7456200D4976E /* NSUUID+WX.m in Sources */,
+				61AE5BB722CDE3D500C748C6 /* NSDictionary+Empty.m in Sources */,
 				61A445A522B7456200D4976E /* NSArray+PrintChinese.m in Sources */,
 				61A4450A22B7454600D4976E /* UIWebView+WX.m in Sources */,
 				61D76C4222C9A8F300947C7B /* NSArray+SourceDeduplication.m in Sources */,
@@ -1149,6 +1203,7 @@
 /* Begin XCBuildConfiguration section */
 		61A4448B22B743B300D4976E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1208,6 +1263,7 @@
 		};
 		61A4448C22B743B300D4976E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1261,6 +1317,7 @@
 		};
 		61A4448E22B743B300D4976E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1280,6 +1337,7 @@
 		};
 		61A4448F22B743B300D4976E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1299,6 +1357,7 @@
 		};
 		61A4449122B743B300D4976E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1318,6 +1377,7 @@
 		};
 		61A4449222B743B300D4976E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1337,6 +1397,7 @@
 		};
 		61A4449422B743B300D4976E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC522CDE46300C748C6 /* DebugConfig.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VH77XRMLB7;
@@ -1355,6 +1416,7 @@
 		};
 		61A4449522B743B300D4976E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC222CDE46300C748C6 /* ReleaseConfig.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VH77XRMLB7;
@@ -1371,6 +1433,119 @@
 			};
 			name = Release;
 		};
+		61AE5BCA22CDE47E00C748C6 /* ReleaseTest */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ReleaseTest;
+		};
+		61AE5BCB22CDE47E00C748C6 /* ReleaseTest */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VH77XRMLB7;
+				INFOPLIST_FILE = WXCategories/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = "-Weverything";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxpasta.WXCategories;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseTest;
+		};
+		61AE5BCC22CDE47E00C748C6 /* ReleaseTest */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VH77XRMLB7;
+				INFOPLIST_FILE = WXCategoriesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxpasta.WXCategoriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WXCategories.app/WXCategories";
+			};
+			name = ReleaseTest;
+		};
+		61AE5BCD22CDE47E00C748C6 /* ReleaseTest */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61AE5BC322CDE46300C748C6 /* ReleaseTestConfig.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VH77XRMLB7;
+				INFOPLIST_FILE = WXCategoriesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxpasta.WXCategoriesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WXCategories;
+			};
+			name = ReleaseTest;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1379,6 +1554,7 @@
 			buildConfigurations = (
 				61A4448B22B743B300D4976E /* Debug */,
 				61A4448C22B743B300D4976E /* Release */,
+				61AE5BCA22CDE47E00C748C6 /* ReleaseTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1388,6 +1564,7 @@
 			buildConfigurations = (
 				61A4448E22B743B300D4976E /* Debug */,
 				61A4448F22B743B300D4976E /* Release */,
+				61AE5BCB22CDE47E00C748C6 /* ReleaseTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1397,6 +1574,7 @@
 			buildConfigurations = (
 				61A4449122B743B300D4976E /* Debug */,
 				61A4449222B743B300D4976E /* Release */,
+				61AE5BCC22CDE47E00C748C6 /* ReleaseTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1406,6 +1584,7 @@
 			buildConfigurations = (
 				61A4449422B743B300D4976E /* Debug */,
 				61A4449522B743B300D4976E /* Release */,
+				61AE5BCD22CDE47E00C748C6 /* ReleaseTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,11 +9,15 @@
     return [fileManager createDirectoryAtPath:directorypath withIntermediateDirectories:YES attributes:nil error:nil];
 }
 
-+ (BOOL)wx_createFile:(NSString *)file AtPath:(NSString *)path
-{
++ (BOOL)wx_createFile:(NSString *)file AtPath:(NSString *)path {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *iOSPath = [path stringByAppendingPathComponent:file];
-    return [fileManager createFileAtPath:iOSPath contents:nil attributes:nil];
+    
+    if (![fileManager fileExistsAtPath:iOSPath]) {
+        return [fileManager createFileAtPath:iOSPath contents:nil attributes:nil];
+    } else {
+        return NO;
+    }
 }
 
 //创建目录 在Documents
