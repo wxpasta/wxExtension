@@ -28,4 +28,6 @@
 
 - (BOOL)isValidPortNumber;
 
+// 是否1开头，11位手机号
+- (BOOL)isSimplePhone;
 @end

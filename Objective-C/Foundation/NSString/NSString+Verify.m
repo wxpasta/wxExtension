@@ -89,4 +89,11 @@
     return NO;
 }
 
+- (BOOL)isSimplePhone {
+    if (self.length > 0 && (self.length != 11 || ![self hasPrefix:@"1"])) {
+        return NO;
+    }
+    return YES;
+}
+
 @end
