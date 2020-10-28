@@ -131,6 +131,7 @@ static dispatch_once_t onceToken;
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                     dispatch_group_t downloadGroup = dispatch_group_create();
                     dispatch_group_enter(downloadGroup);
+                    dispatch_group_wait(downloadGroup, dispatch_time(DISPATCH_TIME_NOW, 3000000000)); // Wait 3 seconds before trying again.
                     dispatch_group_leave(downloadGroup);
                     dispatch_async(dispatch_get_main_queue(), ^{
                         VMPWeakSelf;
