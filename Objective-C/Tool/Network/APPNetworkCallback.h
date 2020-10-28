@@ -1,9 +1,9 @@
 //
 //  APPNetworkCallback.h
-//  ErrorHandle
+//  vmp
 //
-//  Created by 许宝吉 on 2018/9/25.
-//  Copyright © 2018年 许宝吉. All rights reserved.
+//  Created by magic-devel on 2020/9/12.
+//  Copyright © 2020 magic-devel. All rights reserved.
 //
 
 #ifndef APPNetworkCallback_h
@@ -17,4 +17,6 @@ typedef void (^WXSuccess)(NSURLSessionDataTask * _Nonnull task, id  _Nullable re
 
 typedef void (^WXFailure)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error);
 
+
+typedef void (^WXCCompletion)(NSURLSessionDataTask * _Nullable task, id  _Nullable responseObject, NSError * _Nullable error, NSInteger code);
 #endif /* APPNetworkCallback_h */

@@ -1,9 +1,9 @@
 //
 //  APPNetworkManager.h
-//  ErrorHandle
+//  vmp
 //
-//  Created by 许宝吉 on 2018/9/18.
-//  Copyright © 2018年 许宝吉. All rights reserved.
+//  Created by magic-devel on 2020/9/12.
+//  Copyright © 2020 magic-devel. All rights reserved.
 //
 
 #import <AFNetworking/AFNetworking.h>
@@ -22,6 +22,18 @@ typedef NS_ENUM(NSUInteger,APPRequestType)
 //命名规范 shared+类名 | default+类名 |  类名
 + (instancetype)sharedNetworkManager;
 
+- (nullable NSURLSessionDataTask *)POSTURLString:(NSString *)URLString
+                                      parameters:(nullable id)parameters
+                                         rogress:(WXDownloadProgress)progressBlock
+                                 completionBlock:(nullable WXCCompletion)completionBlock;
+
+
+- (nullable NSURLSessionDataTask *)GETURLString:(NSString *)URLString
+                                     parameters:(nullable id)parameters
+                                        rogress:(WXDownloadProgress)progressBlock
+                                completionBlock:(nullable WXCCompletion)completionBlock;
+
++ (void)resetNetworkManager;
 
 - (nullable NSURLSessionDataTask *)requestType:(APPRequestType)type
                             URLString:(NSString *)URLString
