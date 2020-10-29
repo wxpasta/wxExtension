@@ -7,7 +7,7 @@
 //
 
 #import "NSDictionary+VMPLog.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 @implementation NSDictionary (VMPLog)
 + (void)load

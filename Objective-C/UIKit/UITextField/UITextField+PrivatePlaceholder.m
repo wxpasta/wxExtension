@@ -17,9 +17,12 @@ static UIColor * tempPlaceHolderTextColor = nil; // iOS 13
 
 - (void)setPlaceHolderTextColor:(UIColor *)color {
     if (@available(iOS 13, *)) {
-        NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName : color}];
-        self.attributedPlaceholder = placeholderString;
-        tempPlaceHolderTextColor = color;
+        NSString *placeholder = self.placeholder;
+        if (placeholder.length > 0) {
+            NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:placeholder attributes:@{NSForegroundColorAttributeName : color}];
+            self.attributedPlaceholder = placeholderString;
+            tempPlaceHolderTextColor = color;
+        }
     }else{
         [self setValue:color forKeyPath:kTextFieldPlaceholderLabelTextColor];
     }

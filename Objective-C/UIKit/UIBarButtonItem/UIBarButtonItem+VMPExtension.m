@@ -7,7 +7,7 @@
 //
 
 #import "UIBarButtonItem+VMPExtension.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 #import "UIView+ManualLayout.h"
 
 static void *UIBarButtonItemCustomPorpertyKey = (void *)@"UIBarButtonItemCustomPorpertyKey";
@@ -21,7 +21,8 @@ static void *UIBarButtonItemCustomPorpertyKey = (void *)@"UIBarButtonItemCustomP
     if (imageName.length == 0) {
         return nil;
     }
-    return [self itemWithTarget:target action:action
+    return [self itemWithTarget:target
+                         action:action
                           image:[UIImage imageNamed:imageName]
                       highImage:[UIImage imageNamed:imageName]];
 }
@@ -38,8 +39,8 @@ static void *UIBarButtonItemCustomPorpertyKey = (void *)@"UIBarButtonItemCustomP
  */
 + (UIBarButtonItem *)itemWithTarget:(id)target
                              action:(SEL)action
-                              image:(UIImage *)image
-                          highImage:(UIImage *)highImage {
+                              image:(nullable UIImage *)image
+                          highImage:(nullable UIImage *)highImage {
     CGFloat contentWidth = 50;
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentWidth, 30)];
     

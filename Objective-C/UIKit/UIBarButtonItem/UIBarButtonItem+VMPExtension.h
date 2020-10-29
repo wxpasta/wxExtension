@@ -39,8 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 + (UIBarButtonItem *)itemWithTarget:(id)target
                              action:(SEL)action
-                              image:(UIImage *)image
-                          highImage:(UIImage *)highImage;
+                              image:(nullable UIImage *)image
+                          highImage:(nullable UIImage *)highImage;
 
 @end
 

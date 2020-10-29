@@ -26,7 +26,7 @@
                                                 size:(CGFloat)size {
     
     CGRect extent = CGRectIntegral(image.extent);
-    CGFloat scale = MIN(size/CGRectGetWidth(extent),
+    CGFloat scale = fmin(size/CGRectGetWidth(extent),
                         size/CGRectGetHeight(extent));
     // 1.创建一个位图图像，绘制到其大小的位图上下文
     size_t width        = CGRectGetWidth(extent) * scale;

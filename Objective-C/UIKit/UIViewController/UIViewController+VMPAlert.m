@@ -7,14 +7,19 @@
 //
 
 #import "UIViewController+VMPAlert.h"
-#import "VMPAPPConst.h"
 #import "UIColor+Hex.h"
 
 
 #pragma mark - Constant
-NSString * const kUIViewControllerAlertTitle = @"";
-CGFloat const kUIViewControllerCornerRadius = 8.0;
-CGFloat const kUIViewControllerFontOfSize = 15.0;
+static NSString * const kAPPConstColorSelectedBlue = @"#507EF0";
+static NSString * const kAPPConstAttributedMessage = @"attributedMessage";
+static NSString * const kAPPConstTitleTextColor = @"titleTextColor";
+static NSString * const kUIViewControllerAlertTitle = @"";
+static NSString * const kAPPConstTitleDetermine = @"确定";
+
+static CGFloat const kUIViewControllerCornerRadius = 8.0;
+static CGFloat const kUIViewControllerFontOfSize = 15.0;
+
 
 #pragma mark - implementation
 @implementation UIViewController (VMPAlert)

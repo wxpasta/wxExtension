@@ -16,10 +16,11 @@
 }
 
 
-- (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat) size {
+- (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image
+                                            withSize:(CGFloat) size {
     CGRect extent = CGRectIntegral(image.extent);
     //设置比例
-    CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
+    CGFloat scale = fmin(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
     // 创建bitmap（位图）;
     size_t width = CGRectGetWidth(extent) * scale;
     size_t height = CGRectGetHeight(extent) * scale;

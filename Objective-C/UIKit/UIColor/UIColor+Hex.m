@@ -35,7 +35,7 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
     switch ([colorString length]) {
         case 3: // #RGB
-            alpha = 1.0f;
+            alpha = 1.0;
             red   = colorComponentFrom(colorString, 0, 1);
             green = colorComponentFrom(colorString, 1, 1);
             blue  = colorComponentFrom(colorString, 2, 1);
@@ -49,7 +49,7 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
             break;
             
         case 6: // #RRGGBB
-            alpha = 1.0f;
+            alpha = 1.0;
             red   = colorComponentFrom(colorString, 0, 2);
             green = colorComponentFrom(colorString, 2, 2);
             blue  = colorComponentFrom(colorString, 4, 2);
@@ -90,9 +90,9 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
                           blue:(CGFloat)blue
                          alpha:(CGFloat)alpha
 {
-    return [UIColor colorWithRed:red/255.f
-                           green:green/255.f
-                            blue:blue/255.f
+    return [UIColor colorWithRed:red/255.0
+                           green:green/255.0
+                            blue:blue/255.0
                            alpha:alpha];
 }
 
