@@ -26,4 +26,5 @@
     return [self isValidateByRegex:CaptchaRegex1]; //|| [self isValidateByRegex:CaptchaRegex2];
 }
 
+
 @end

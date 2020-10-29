@@ -6,14 +6,11 @@
 //  Copyright © 2020 SAP. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (SAPHelper)
-
-#pragma mark - 获取设备名称
-+ (NSString *)sapGetDeviceName;
 
 #pragma mark - 数组转字符串
 + (NSString *)sapArrayToJSONString:(NSMutableArray*)array;

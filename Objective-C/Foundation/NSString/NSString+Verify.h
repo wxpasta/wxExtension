@@ -20,8 +20,6 @@
 
 - (BOOL)pureNumber;
 
-- (BOOL)isNumber;
-
 - (BOOL)isIPAddress;
 
 - (BOOL)isDomainName;
@@ -30,4 +28,11 @@
 
 // 是否1开头，11位手机号
 - (BOOL)isSimplePhone;
+
+//判断是否为整形：
+- (BOOL)isPureInt;
+
+//判断是否为浮点形
+- (BOOL)isPureFloat;
+
 @end

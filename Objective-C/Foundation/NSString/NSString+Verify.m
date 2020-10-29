@@ -45,11 +45,22 @@
     return [self isValidateByRegex:pureNumberRegex];
 }
 
-- (BOOL)isNumber{
-    NSScanner *scan = [NSScanner scannerWithString:self];
-    int var;
-    return [scan scanInt:&var] && [scan isAtEnd];
+//判断是否为整形：
+- (BOOL)isPureInt
+{
+    NSScanner* scan = [NSScanner scannerWithString:self];
+    int val;
+    return[scan scanInt:&val] && [scan isAtEnd];
 }
+
+//判断是否为浮点形
+- (BOOL)isPureFloat
+{
+    NSScanner* scan = [NSScanner scannerWithString:self];
+    float val;
+    return[scan scanFloat:&val] && [scan isAtEnd];
+}
+
 
 - (BOOL)isIPAddress{
     if ([self componentsSeparatedByString:@"."].count == 4) {

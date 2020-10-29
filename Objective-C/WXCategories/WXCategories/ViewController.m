@@ -6,7 +6,9 @@
 //  Copyright © 2019 巴糖. All rights reserved.
 //
 
+
 #import "ViewController.h"
+#import "NSString+DeviceHelper.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSLog(@"%@",[NSString getBatteryMoniter]);
 }
 
 

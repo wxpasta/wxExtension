@@ -7,29 +7,34 @@
 //
 
 #import "NSArray+VMPLog.h"
-#import <objc/runtime.h>
+@import ObjectiveC.runtime;
 
 
 @implementation NSArray (VMPLog)
 
-+ (void)load
-{
++ (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        hd_swizzleSelector([self class], @selector(descriptionWithLocale:indent:), @selector(hd_descriptionWithLocale:indent:));
+        hd_swizzleSelector([self class],
+                           @selector(descriptionWithLocale:indent:),
+                           @selector(hd_descriptionWithLocale:indent:));
     });
 }
  
-- (NSString *)hd_descriptionWithLocale:(id)locale indent:(NSUInteger)level
-{
+- (NSString *)hd_descriptionWithLocale:(id)locale
+                                indent:(NSUInteger)level {
     return [self stringByReplaceUnicode:[self hd_descriptionWithLocale:locale indent:level]];
 }
 
-- (NSString *)stringByReplaceUnicode:(NSString *)unicodeString
-{
+- (NSString *)stringByReplaceUnicode:(NSString *)unicodeString {
     NSMutableString *convertedString = [unicodeString mutableCopy];
-    [convertedString replaceOccurrencesOfString:@"\\U" withString:@"\\u" options:0 range:NSMakeRange(0, convertedString.length)];
+    // 将给定范围内的所有给定字符串替换为另一个给定字符串，并返回替换次数。
+    [convertedString replaceOccurrencesOfString:@"\\U"
+                                     withString:@"\\u"
+                                        options:0
+                                          range:NSMakeRange(0, convertedString.length)];
     CFStringRef transform = CFSTR("Any-Hex/Java");
+    // 对可变字符串执行就地音译。
     CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
     
     return convertedString;
@@ -54,4 +59,5 @@ static inline void hd_swizzleSelector(Class theClass, SEL originalSelector, SEL 
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
 }
+
 @end

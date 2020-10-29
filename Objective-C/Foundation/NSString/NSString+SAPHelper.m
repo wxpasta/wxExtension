@@ -12,14 +12,6 @@
 
 @implementation NSString (SAPHelper)
 
-#pragma mark - 获取设备名称
-+ (NSString *)sapGetDeviceName {
-    UIDevice *device = [UIDevice currentDevice];
-    NSString* str_deviceName = device.name;
-    
-    return str_deviceName;
-}
-
 #pragma mark - 数组转字符串
 + (NSString *)sapArrayToJSONString:(NSMutableArray*)array {
     NSError *error = nil;
