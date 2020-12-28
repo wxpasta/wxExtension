@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576D98D5255A419D0027A5AE /* NSString+WifiHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 576D98D4255A419D0027A5AE /* NSString+WifiHelper.m */; };
 		579FBAAB2549662C003EE49B /* AVAudioPlayer+FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FB86825496628003EE49B /* AVAudioPlayer+FilePath.m */; };
 		579FBAAC2549662C003EE49B /* AVURLAsset+FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FB86925496628003EE49B /* AVURLAsset+FilePath.m */; };
 		579FBAAD2549662C003EE49B /* AppDelegate+XYLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FB86B25496628003EE49B /* AppDelegate+XYLanguage.m */; };
@@ -174,6 +175,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576D98D3255A419D0027A5AE /* NSString+WifiHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WifiHelper.h"; sourceTree = "<group>"; };
+		576D98D4255A419D0027A5AE /* NSString+WifiHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WifiHelper.m"; sourceTree = "<group>"; };
 		579FB86625496628003EE49B /* AVAudioPlayer+FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAudioPlayer+FilePath.h"; sourceTree = "<group>"; };
 		579FB86725496628003EE49B /* AVURLAsset+FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVURLAsset+FilePath.h"; sourceTree = "<group>"; };
 		579FB86825496628003EE49B /* AVAudioPlayer+FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAudioPlayer+FilePath.m"; sourceTree = "<group>"; };
@@ -557,22 +560,22 @@
 		579FB97825496629003EE49B /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				579FB97925496629003EE49B /* NSDictionary+keys.m */,
-				579FB97A25496629003EE49B /* NSDictionary+Serializer.h */,
-				579FB97B25496629003EE49B /* NSDictionary+FPPrintChinese.m */,
-				579FB97C25496629003EE49B /* NSDictionary+VMPLog.h */,
-				579FB97D25496629003EE49B /* NSDictionary+JsonString.h */,
-				579FB97E25496629003EE49B /* NSDictionary+WX.m */,
-				579FB97F25496629003EE49B /* NSDictionary+PrintChinese.m */,
 				579FB98025496629003EE49B /* NSDictionary+Empty.h */,
-				579FB98125496629003EE49B /* NSDictionary+Serializer.m */,
-				579FB98225496629003EE49B /* NSDictionary+keys.h */,
-				579FB98325496629003EE49B /* NSDictionary+VMPLog.m */,
-				579FB98425496629003EE49B /* NSDictionary+FPPrintChinese.h */,
-				579FB98525496629003EE49B /* NSDictionary+PrintChinese.h */,
-				579FB98625496629003EE49B /* NSDictionary+WX.h */,
-				579FB98725496629003EE49B /* NSDictionary+JsonString.m */,
 				579FB98825496629003EE49B /* NSDictionary+Empty.m */,
+				579FB98425496629003EE49B /* NSDictionary+FPPrintChinese.h */,
+				579FB97B25496629003EE49B /* NSDictionary+FPPrintChinese.m */,
+				579FB97D25496629003EE49B /* NSDictionary+JsonString.h */,
+				579FB98725496629003EE49B /* NSDictionary+JsonString.m */,
+				579FB98225496629003EE49B /* NSDictionary+keys.h */,
+				579FB97925496629003EE49B /* NSDictionary+keys.m */,
+				579FB98525496629003EE49B /* NSDictionary+PrintChinese.h */,
+				579FB97F25496629003EE49B /* NSDictionary+PrintChinese.m */,
+				579FB97A25496629003EE49B /* NSDictionary+Serializer.h */,
+				579FB98125496629003EE49B /* NSDictionary+Serializer.m */,
+				579FB97C25496629003EE49B /* NSDictionary+VMPLog.h */,
+				579FB98325496629003EE49B /* NSDictionary+VMPLog.m */,
+				579FB98625496629003EE49B /* NSDictionary+WX.h */,
+				579FB97E25496629003EE49B /* NSDictionary+WX.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -680,6 +683,8 @@
 				579FB9BA25496629003EE49B /* NSString+XYEmoticon.m */,
 				57D8D308254AAD6900A191A8 /* NSString+DeviceHelper.h */,
 				57D8D309254AAD6900A191A8 /* NSString+DeviceHelper.m */,
+				576D98D3255A419D0027A5AE /* NSString+WifiHelper.h */,
+				576D98D4255A419D0027A5AE /* NSString+WifiHelper.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -946,9 +951,9 @@
 			isa = PBXGroup;
 			children = (
 				579FBA8525496629003EE49B /* UINavigationController+Custom.h */,
-				579FBA8625496629003EE49B /* UINavigationController+VMPNaigationBarStyle.m */,
 				579FBA8725496629003EE49B /* UINavigationController+Custom.m */,
 				579FBA8825496629003EE49B /* UINavigationController+VMPNaigationBarStyle.h */,
+				579FBA8625496629003EE49B /* UINavigationController+VMPNaigationBarStyle.m */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -1294,6 +1299,7 @@
 				579FBAED2549662C003EE49B /* NSString+customAttributed.m in Sources */,
 				579FBAEF2549662C003EE49B /* NSString+SAPHelper.m in Sources */,
 				579FBB0D2549662C003EE49B /* NSMutableArray+ErrorHandle.m in Sources */,
+				576D98D5255A419D0027A5AE /* NSString+WifiHelper.m in Sources */,
 				579FBB0C2549662C003EE49B /* NSMutableArray+SAPHelper.m in Sources */,
 				579FBB272549662C003EE49B /* UIButton+ImageName.m in Sources */,
 				579FBB562549662C003EE49B /* UINavigationController+VMPNaigationBarStyle.m in Sources */,
