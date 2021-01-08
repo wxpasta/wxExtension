@@ -12,8 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSView (WXLayer)
 
-@property (nonatomic, copy) NSColor *backgroundColor;
-@property (nonatomic, assign) CGFloat cornerRadius;
+@property (nullable, nonatomic, copy) IBInspectable NSColor *backgroundColor;
+
+@property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
+
 
 @end
 

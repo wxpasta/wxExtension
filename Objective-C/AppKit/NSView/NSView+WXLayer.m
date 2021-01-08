@@ -10,7 +10,7 @@
 
 @implementation NSView (WXLayer)
 
-- (NSColor *)backgroundColor {
+- (nullable NSColor *)backgroundColor {
     CGColorRef colorRef = self.layer.backgroundColor;
     
     if (colorRef != nil) {
@@ -21,7 +21,7 @@
 }
 
 - (void)setBackgroundColor:(NSColor *)backgroundColor {
-    [self setWantsLayer:YES];
+    self.wantsLayer = YES;
     self.layer.backgroundColor = backgroundColor.CGColor;
 }
 
@@ -30,7 +30,7 @@
 }
 
 - (void)setCornerRadius:(CGFloat)cornerRadius {
-    [self setWantsLayer:YES];
+    self.wantsLayer = YES;
     self.layer.cornerRadius = cornerRadius;
 }
 
