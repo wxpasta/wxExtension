@@ -6,7 +6,7 @@
 //  Copyright © 2020 magic-devel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSString (VMPSandbox)
 

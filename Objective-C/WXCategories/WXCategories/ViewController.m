@@ -8,7 +8,8 @@
 
 
 #import "ViewController.h"
-#import "NSString+DeviceHelper.h"
+#import "UISearchBar+CteateUI.h"
+
 
 @interface ViewController ()
 
@@ -19,8 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSLog(@"%@",[NSString getBatteryMoniter]);
+    UISearchBar *searchBar = [UISearchBar searchBarWithBackgroundColor:[UIColor yellowColor]
+                                                                 frame:CGRectMake(40, 100, 200, 40) radius:10];
+    [self.view addSubview:searchBar];
+
 }
 
 

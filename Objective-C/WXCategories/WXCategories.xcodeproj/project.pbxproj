@@ -147,6 +147,8 @@
 		579FBB602549662C003EE49B /* BJStringConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FBAA42549662C003EE49B /* BJStringConstant.m */; };
 		579FBB612549662C003EE49B /* XYUserDefaultsConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 579FBAA92549662C003EE49B /* XYUserDefaultsConstant.m */; };
 		57D8D30A254AAD6900A191A8 /* NSString+DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D8D309254AAD6900A191A8 /* NSString+DeviceHelper.m */; };
+		619B5EB72A52B756001FA7D7 /* UIImage+ColorLump.m in Sources */ = {isa = PBXBuildFile; fileRef = 619B5EB62A52B756001FA7D7 /* UIImage+ColorLump.m */; };
+		619B5EBD2A52BCE7001FA7D7 /* UISearchBar+CteateUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 619B5EBC2A52BCE7001FA7D7 /* UISearchBar+CteateUI.m */; };
 		61A4446622B743B100D4976E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4446522B743B100D4976E /* AppDelegate.m */; };
 		61A4446922B743B100D4976E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A4446822B743B100D4976E /* ViewController.m */; };
 		61A4446C22B743B100D4976E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A4446A22B743B100D4976E /* Main.storyboard */; };
@@ -458,6 +460,10 @@
 		579FBAAA2549662C003EE49B /* BJStringConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJStringConstant.h; sourceTree = "<group>"; };
 		57D8D308254AAD6900A191A8 /* NSString+DeviceHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DeviceHelper.h"; sourceTree = "<group>"; };
 		57D8D309254AAD6900A191A8 /* NSString+DeviceHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DeviceHelper.m"; sourceTree = "<group>"; };
+		619B5EB52A52B756001FA7D7 /* UIImage+ColorLump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorLump.h"; sourceTree = "<group>"; };
+		619B5EB62A52B756001FA7D7 /* UIImage+ColorLump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorLump.m"; sourceTree = "<group>"; };
+		619B5EBB2A52BCE7001FA7D7 /* UISearchBar+CteateUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+CteateUI.h"; sourceTree = "<group>"; };
+		619B5EBC2A52BCE7001FA7D7 /* UISearchBar+CteateUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+CteateUI.m"; sourceTree = "<group>"; };
 		61A4446122B743B100D4976E /* WXCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A4446422B743B100D4976E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		61A4446522B743B100D4976E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -790,6 +796,8 @@
 				579FBA7A25496629003EE49B /* UIViewController */,
 				579FBA1625496629003EE49B /* UIWebView+WX.h */,
 				579FBA7625496629003EE49B /* UIWebView+WX.m */,
+				619B5EBB2A52BCE7001FA7D7 /* UISearchBar+CteateUI.h */,
+				619B5EBC2A52BCE7001FA7D7 /* UISearchBar+CteateUI.m */,
 			);
 			name = UIKit;
 			path = ../../UIKit;
@@ -798,6 +806,8 @@
 		579FBA0825496629003EE49B /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				619B5EB52A52B756001FA7D7 /* UIImage+ColorLump.h */,
+				619B5EB62A52B756001FA7D7 /* UIImage+ColorLump.m */,
 				579FBA0925496629003EE49B /* UIImage+FPOriginal.m */,
 				579FBA0A25496629003EE49B /* UIImage+WXOriginal.h */,
 				579FBA0B25496629003EE49B /* UIImage+WX.m */,
@@ -1253,6 +1263,7 @@
 				579FBAE92549662C003EE49B /* NSData+Operation.m in Sources */,
 				579FBAE52549662C003EE49B /* NSDateFormatter+CachedDateFormat.m in Sources */,
 				579FBADC2549662C003EE49B /* NSDictionary+VMPLog.m in Sources */,
+				619B5EB72A52B756001FA7D7 /* UIImage+ColorLump.m in Sources */,
 				579FBB482549662C003EE49B /* UITextView+Placeholder.m in Sources */,
 				579FBAF82549662C003EE49B /* NSString+VMPGetTime.m in Sources */,
 				579FBB422549662C003EE49B /* UIView+FPSetFrame.m in Sources */,
@@ -1322,6 +1333,7 @@
 				579FBAE42549662C003EE49B /* NSDateFormatter+WX.m in Sources */,
 				579FBB002549662C003EE49B /* NSString+Time.m in Sources */,
 				579FBB5A2549662C003EE49B /* UICollectionView+WX.m in Sources */,
+				619B5EBD2A52BCE7001FA7D7 /* UISearchBar+CteateUI.m in Sources */,
 				579FBAFE2549662C003EE49B /* NSString+Operation.m in Sources */,
 				579FBAFD2549662C003EE49B /* NSString+VMPSandbox.m in Sources */,
 				579FBAEC2549662C003EE49B /* NSString+Prejudge.m in Sources */,
